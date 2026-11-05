@@ -34,7 +34,13 @@ def write_csv(path, rows, fields):
         writer.writerows(rows)
 
 
-def analyse(source, output):
+def analyse(source, output, subject='SUJ1'):
+    notes = {
+        'SUJ1': {'ALERT_RED': 'Publicité signalée ; essai perturbé'},
+        'SUJ2': {name: 'Hors champ signalé ; apparition non datable sur la vidéo'
+                 for name in ['ALERT_ML_LARGE', 'ALERT_ML_LIGHT', 'ALERT_RED', 'ALERT_TEXT']},
+    }[subject]
+
     output.mkdir(parents=True, exist_ok=True)
     workbook = openpyxl.load_workbook(source, read_only=True, data_only=True)
     if len(workbook.worksheets) != 1:
@@ -59,7 +65,7 @@ def analyse(source, output):
         event = d.get('Event') or ''
         if event.upper().startswith('ALERT_'):
             events.append({'temps_s': t, 'alerte': event.upper(),
-                           'reserve': 'Publicité signalée ; essai perturbé' if event.upper() == 'ALERT_RED' else 'Apparition réelle à confirmer'})
+                           'reserve': notes.get(event.upper(), 'Apparition réelle à confirmer')})
         if event == 'HLX FND1 IntervalStart':
             if start is not None:
                 raise ValueError('Intervalles de mapping imbriqués.')
@@ -81,8 +87,8 @@ def analyse(source, output):
     workbook.close()
     if start is not None or len(identities) != 1 or len(recordings) != 1 or not eye:
         raise ValueError('Export incomplet ou plusieurs sujets/enregistrements.')
-    if identities != {'SUJ1'} or projects != {'Project1'}:
-        raise ValueError('Ce premier script est spécifique à SUJ1 / Project1 ; adapter les réserves avant tout autre sujet.')
+    if identities != {subject} or projects != {'Project1'}:
+        raise ValueError('Sujet incompatible avec --subject ou projet autre que Project1.')
     if not events:
         raise ValueError('Aucune annotation ALERT_ trouvée.')
     eye.sort(key=lambda x: x['temps_s'])
@@ -105,8 +111,8 @@ def analyse(source, output):
                'pas_median_ms': round(1000*np.median(np.diff(times)), 3),
                'nombre_marqueurs_alerte': len(events), 'intervalles_mapping': mapping,
                'duree_intervalles_mapping_s': sum(b-a for a,b in mapping),
-               'avertissements': ['SUJ1 / projet 1 uniquement ; analyse exploratoire.',
-                 'ALERT_RED : publicité signalée.',
+               'avertissements': [f'{subject} / projet 1 uniquement ; analyse exploratoire.',
+                 *[f'{name} : {note}' for name, note in notes.items()],
                  'Les marqueurs Tobii ne sont pas des apparitions Figma confirmées.',
                  'Mapping disponible ne signifie ni fixation ni visibilité continue du FND.',
                  'AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.',
@@ -115,6 +121,11 @@ def analyse(source, output):
                  'Pas de carte de chaleur sans image de référence et coordonnées validées.']}
     write_csv(output/'echantillons_pseudonymises.csv', eye, list(eye[0]))
     write_csv(output/'alertes.csv', events, ['temps_s','alerte','reserve'])
+    expected = ['ALERT_FND', 'ALERT_ML_LARGE', 'ALERT_ML_LIGHT', 'ALERT_RED', 'ALERT_TEXT']
+    quality = [{'alerte': name,
+                'nombre_marqueurs': sum(e['alerte'] == name for e in events),
+                'reserve': notes.get(name, 'Apparition réelle à confirmer')} for name in expected]
+    write_csv(output/'qualite_alertes.csv', quality, ['alerte','nombre_marqueurs','reserve'])
     write_csv(output/'indicateurs_AOI.csv', metrics, list(metrics[0]))
     (output/'resume.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
 
@@ -147,8 +158,8 @@ def analyse(source, output):
         ax.text(e['temps_s'], -.65, e['alerte'].replace('ALERT_',''), rotation=25, fontsize=9)
     ax.set_xlim(0,duration)
     ax.set_xlabel('Temps depuis le début de l’enregistrement (s)')
-    ax.set_title('SUJ1 · Projet 1 — regard et annotations d’alerte',loc='left',fontweight='bold',pad=30)
-    fig.text(.02,.025,'Couleur : regard dans l’AOI · Gris : mesure invalide ou AOI non renseignée · Blanc : hors AOI avec mesure valide\nTraits verticaux : annotations Tobii (apparitions à confirmer) · RED : publicité signalée',fontsize=9)
+    ax.set_title(f'{subject} · Projet 1 — regard et annotations d’alerte',loc='left',fontweight='bold',pad=30)
+    fig.text(.02,.025,'Couleur : regard dans l’AOI · Gris : mesure invalide ou AOI non renseignée · Blanc : hors AOI avec mesure valide\nTraits verticaux : annotations Tobii (apparitions à confirmer) · Voir les réserves dans qualite_alertes.csv',fontsize=9)
     fig.tight_layout(rect=(0,.12,1,1))
     for ext in ('png','svg'): fig.savefig(output/f'01_chronologie.{ext}',dpi=180)
     plt.close(fig)
@@ -157,10 +168,10 @@ def analyse(source, output):
     for ax,e in zip(axes[:,0],events):
         plot_states(ax,e['temps_s'],(e['temps_s']-5,e['temps_s']+10))
         ax.axvline(0,color='#c84343',ls='--')
-        ax.set_title(f"{e['alerte']} · marqueur à {e['temps_s']:.2f} s" + (' · PUBLICITÉ SIGNALÉE' if e['alerte']=='ALERT_RED' else ''),loc='left',fontsize=10,fontweight='bold')
+        ax.set_title(f"{e['alerte']} · marqueur à {e['temps_s']:.2f} s" + (' · PUBLICITÉ SIGNALÉE' if subject == 'SUJ1' and e['alerte']=='ALERT_RED' else ''),loc='left',fontsize=10,fontweight='bold')
         ax.set_xlim(-5,10)
     axes[-1,0].set_xlabel('Temps relatif au marqueur Tobii (s) — zéro ≠ apparition confirmée')
-    fig.suptitle('SUJ1 · Regard autour de chaque annotation',fontweight='bold')
+    fig.suptitle(f'{subject} · Regard autour de chaque annotation',fontweight='bold')
     fig.text(.02,.01,'Couleur : dans l’AOI · Gris : invalide / non renseigné · Blanc : hors AOI valide. Aucun délai de détection calculé.',fontsize=9)
     fig.tight_layout(rect=(0,.03,1,.97))
     for ext in ('png','svg'): fig.savefig(output/f'02_fenetres_alertes.{ext}',dpi=180)
@@ -175,7 +186,7 @@ def analyse(source, output):
                 label+f" · couverture {m['couverture_AOI_pct_echantillons_oculaires']:.1f} %",va='center',fontsize=9)
     ax.set_xlim(0,100);ax.invert_yaxis()
     ax.set_xlabel('Échantillons dans l’AOI / échantillons oculaires valides avec cette AOI renseignée (%)')
-    ax.set_title('SUJ1 · Indicateurs descriptifs du regard',loc='left',fontweight='bold')
+    ax.set_title(f'{subject} · Indicateurs descriptifs du regard',loc='left',fontweight='bold')
     fig.text(.02,.025,'Couverture : part des échantillons oculaires valides avec AOI renseignée, parmi tous les échantillons oculaires.\nAOI potentiellement imbriquées et référentiels distincts : ne pas additionner. Ces proportions ne sont pas des durées de fixation.',fontsize=9)
     fig.tight_layout(rect=(0,.14,1,1))
     for ext in ('png','svg'): fig.savefig(output/f'03_indicateurs_AOI.{ext}',dpi=180)
@@ -188,5 +199,6 @@ if __name__ == '__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source',type=Path)
     parser.add_argument('--output',type=Path,default=Path('results/SUJ1'))
+    parser.add_argument('--subject', choices=['SUJ1','SUJ2'], default='SUJ1')
     args=parser.parse_args()
-    analyse(args.source,args.output)
+    analyse(args.source,args.output,args.subject)

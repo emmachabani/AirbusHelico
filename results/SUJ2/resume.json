@@ -1,0 +1,47 @@
+{
+  "duree_s": 103.687237,
+  "echantillons_oculaires": 10124,
+  "au_moins_un_oeil_valide_pct": 90.22,
+  "pas_median_ms": 10.037,
+  "nombre_marqueurs_alerte": 1,
+  "intervalles_mapping": [
+    [
+      19.650225,
+      21.98443
+    ],
+    [
+      30.840496,
+      32.683788
+    ],
+    [
+      50.405916,
+      52.960471
+    ],
+    [
+      61.175379,
+      62.417585
+    ],
+    [
+      72.305493,
+      74.910194
+    ],
+    [
+      87.863663,
+      97.501104
+    ]
+  ],
+  "duree_intervalles_mapping_s": 20.216400000000004,
+  "avertissements": [
+    "SUJ2 / projet 1 uniquement ; analyse exploratoire.",
+    "ALERT_ML_LARGE : Hors champ signalé ; apparition non datable sur la vidéo",
+    "ALERT_ML_LIGHT : Hors champ signalé ; apparition non datable sur la vidéo",
+    "ALERT_RED : Hors champ signalé ; apparition non datable sur la vidéo",
+    "ALERT_TEXT : Hors champ signalé ; apparition non datable sur la vidéo",
+    "Les marqueurs Tobii ne sont pas des apparitions Figma confirmées.",
+    "Mapping disponible ne signifie ni fixation ni visibilité continue du FND.",
+    "AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.",
+    "AOI potentiellement imbriquées : les proportions ne se somment pas.",
+    "Aucun acquittement identifié ; aucune mesure de compréhension ou de détection.",
+    "Pas de carte de chaleur sans image de référence et coordonnées validées."
+  ]
+}

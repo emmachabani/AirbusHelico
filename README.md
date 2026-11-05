@@ -1,6 +1,6 @@
 # Démonstration eye tracking — FND
 
-Première analyse exploratoire de **SUJ1, projet 1** (clignotement manuel).
+Analyse exploratoire de **SUJ1 et SUJ2, projet 1** (clignotement manuel).
 Le participant surveille une route sur l'écran principal et doit détecter les
 alertes sur la tablette représentant le FND. Le projet 2 (automatisation Figma)
 n'est pas encore analysé. Aucun résultat ne constitue une évaluation de compétence pilote.
@@ -67,7 +67,7 @@ python3 -m pip install -r requirements.txt
 python3 scripts/analyse_tobii.py /chemin/SUJ1.xlsx --output results/SUJ1
 ```
 
-Le script attend le schéma de SUJ1, un seul sujet/enregistrement et une seule
+Le script attend le schéma des exports SUJ1/SUJ2, un seul sujet/enregistrement et une seule
 feuille ; les futurs exports nécessiteront une vérification des noms d'AOI.
 La réserve « publicité » est spécifique à SUJ1 et ne doit pas être propagée aux
 autres sujets. Ne pas réutiliser ce script sans adaptation pour un autre sujet.
@@ -89,3 +89,30 @@ session/alerte et un repère commun à Tobii. Examiner ensuite la synchronisatio
 la couverture autour de chaque événement et les réserves des essais avant
 de calculer des délais. Pas de carte de chaleur sans image de référence et
 validation des coordonnées mappées.
+
+## SUJ2 — données disponibles
+
+- 103,687 s ; 10 124 échantillons oculaires ; au moins un œil valide : 90,22 %.
+- Six intervalles de mapping : 20,216 s (19,5 % de l’enregistrement).
+- Une seule annotation : ALERT_FND à 60,219 s. Les quatre autres alertes sont
+  absentes de l’export et signalées hors champ dans les notes de prétraitement.
+  Ne pas les interpréter comme des alertes non détectées ou non présentées.
+- Les colonnes AOI vidéo « Recording 5 » sont non renseignées pour SUJ2 ; ce
+  sont des colonnes présentes dans l’export, sans données exploitables ici.
+- Seule ML sur l’image mappée fournit des valeurs : 727 échantillons dans l’AOI
+  parmi 1 870 valides et renseignés (38,88 %), couvrant seulement 18,47 % des
+  échantillons oculaires. Ce résultat conditionnel ne mesure pas le regard
+  sur l’ensemble de l’essai et ne permet pas une comparaison de performance.
+
+![SUJ2 chronologie](results/SUJ2/01_chronologie.png)
+![SUJ2 autour du marqueur FND](results/SUJ2/02_fenetres_alertes.png)
+![SUJ2 indicateurs](results/SUJ2/03_indicateurs_AOI.png)
+
+```bash
+python3 scripts/analyse_tobii.py /chemin/SUJ2.xlsx --subject SUJ2 --output results/SUJ2
+```
+
+`qualite_alertes.csv` distingue les marqueurs présents et les réserves connues
+pour chacune des cinq alertes attendues. Les heures des alertes absentes ne
+sont pas reconstruites. Les réserves sont propres au sujet : la publicité ne
+concerne que SUJ1. Les fichiers source et échantillons individuels restent exclus de Git.

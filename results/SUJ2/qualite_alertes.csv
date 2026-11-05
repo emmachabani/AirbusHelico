@@ -1,0 +1,6 @@
+﻿alerte,nombre_marqueurs,reserve
+ALERT_FND,1,Apparition réelle à confirmer
+ALERT_ML_LARGE,0,Hors champ signalé ; apparition non datable sur la vidéo
+ALERT_ML_LIGHT,0,Hors champ signalé ; apparition non datable sur la vidéo
+ALERT_RED,0,Hors champ signalé ; apparition non datable sur la vidéo
+ALERT_TEXT,0,Hors champ signalé ; apparition non datable sur la vidéo
