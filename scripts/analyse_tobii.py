@@ -39,6 +39,11 @@ def analyse(source, output, subject='SUJ1'):
         'SUJ1': {'ALERT_RED': 'Publicité signalée ; essai perturbé'},
         'SUJ2': {name: 'Hors champ signalé ; apparition non datable sur la vidéo'
                  for name in ['ALERT_ML_LARGE', 'ALERT_ML_LIGHT', 'ALERT_RED', 'ALERT_TEXT']},
+        'SUJ3': {
+            'ALERT_ML_LARGE': 'Hors champ selon les notes, mais marqueur présent : annotation à vérifier',
+            'ALERT_ML_LIGHT': 'Hors champ puis apparition approximative signalés ; rejeu possible à vérifier',
+            'ALERT_FND': 'Apparition approximative : visibilité incertaine selon les notes',
+        },
     }[subject]
 
     output.mkdir(parents=True, exist_ok=True)
@@ -65,7 +70,7 @@ def analyse(source, output, subject='SUJ1'):
         event = d.get('Event') or ''
         if event.upper().startswith('ALERT_'):
             events.append({'temps_s': t, 'alerte': event.upper(),
-                           'reserve': notes.get(event.upper(), 'Apparition réelle à confirmer')})
+                           'reserve': notes.get(event.upper(), 'Apparition annotée manuellement par Élie')})
         if event == 'HLX FND1 IntervalStart':
             if start is not None:
                 raise ValueError('Intervalles de mapping imbriqués.')
@@ -113,7 +118,7 @@ def analyse(source, output, subject='SUJ1'):
                'duree_intervalles_mapping_s': sum(b-a for a,b in mapping),
                'avertissements': [f'{subject} / projet 1 uniquement ; analyse exploratoire.',
                  *[f'{name} : {note}' for name, note in notes.items()],
-                 'Les marqueurs Tobii ne sont pas des apparitions Figma confirmées.',
+                 'Marqueurs d’apparition ajoutés manuellement par Élie ; précision selon les réserves de prétraitement.',
                  'Mapping disponible ne signifie ni fixation ni visibilité continue du FND.',
                  'AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.',
                  'AOI potentiellement imbriquées : les proportions ne se somment pas.',
@@ -124,7 +129,8 @@ def analyse(source, output, subject='SUJ1'):
     expected = ['ALERT_FND', 'ALERT_ML_LARGE', 'ALERT_ML_LIGHT', 'ALERT_RED', 'ALERT_TEXT']
     quality = [{'alerte': name,
                 'nombre_marqueurs': sum(e['alerte'] == name for e in events),
-                'reserve': notes.get(name, 'Apparition réelle à confirmer')} for name in expected]
+                'reserve': notes.get(name, 'Apparition annotée manuellement par Élie'
+                    if any(e['alerte'] == name for e in events) else 'Aucun marqueur exporté ; cause non documentée')} for name in expected]
     write_csv(output/'qualite_alertes.csv', quality, ['alerte','nombre_marqueurs','reserve'])
     write_csv(output/'indicateurs_AOI.csv', metrics, list(metrics[0]))
     (output/'resume.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
@@ -159,7 +165,7 @@ def analyse(source, output, subject='SUJ1'):
     ax.set_xlim(0,duration)
     ax.set_xlabel('Temps depuis le début de l’enregistrement (s)')
     ax.set_title(f'{subject} · Projet 1 — regard et annotations d’alerte',loc='left',fontweight='bold',pad=30)
-    fig.text(.02,.025,'Couleur : regard dans l’AOI · Gris : mesure invalide ou AOI non renseignée · Blanc : hors AOI avec mesure valide\nTraits verticaux : annotations Tobii (apparitions à confirmer) · Voir les réserves dans qualite_alertes.csv',fontsize=9)
+    fig.text(.02,.025,'Couleur : regard dans l’AOI · Gris : mesure invalide ou AOI non renseignée · Blanc : hors AOI avec mesure valide\nTraits verticaux : apparitions annotées manuellement · Voir les réserves dans qualite_alertes.csv',fontsize=9)
     fig.tight_layout(rect=(0,.12,1,1))
     for ext in ('png','svg'): fig.savefig(output/f'01_chronologie.{ext}',dpi=180)
     plt.close(fig)
@@ -170,7 +176,7 @@ def analyse(source, output, subject='SUJ1'):
         ax.axvline(0,color='#c84343',ls='--')
         ax.set_title(f"{e['alerte']} · marqueur à {e['temps_s']:.2f} s" + (' · PUBLICITÉ SIGNALÉE' if subject == 'SUJ1' and e['alerte']=='ALERT_RED' else ''),loc='left',fontsize=10,fontweight='bold')
         ax.set_xlim(-5,10)
-    axes[-1,0].set_xlabel('Temps relatif au marqueur Tobii (s) — zéro ≠ apparition confirmée')
+    axes[-1,0].set_xlabel('Temps relatif au marqueur Tobii (s) — zéro = apparition annotée manuellement ; réserves à consulter')
     fig.suptitle(f'{subject} · Regard autour de chaque annotation',fontweight='bold')
     fig.text(.02,.01,'Couleur : dans l’AOI · Gris : invalide / non renseigné · Blanc : hors AOI valide. Aucun délai de détection calculé.',fontsize=9)
     fig.tight_layout(rect=(0,.03,1,.97))
@@ -199,6 +205,6 @@ if __name__ == '__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source',type=Path)
     parser.add_argument('--output',type=Path,default=Path('results/SUJ1'))
-    parser.add_argument('--subject', choices=['SUJ1','SUJ2'], default='SUJ1')
+    parser.add_argument('--subject', choices=['SUJ1','SUJ2','SUJ3'], default='SUJ1')
     args=parser.parse_args()
     analyse(args.source,args.output,args.subject)

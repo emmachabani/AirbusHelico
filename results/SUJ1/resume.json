@@ -41,8 +41,8 @@
   "duree_intervalles_mapping_s": 41.845662000000004,
   "avertissements": [
     "SUJ1 / projet 1 uniquement ; analyse exploratoire.",
-    "ALERT_RED : publicité signalée.",
-    "Les marqueurs Tobii ne sont pas des apparitions Figma confirmées.",
+    "ALERT_RED : Publicité signalée ; essai perturbé",
+    "Marqueurs d’apparition ajoutés manuellement par Élie ; précision selon les réserves de prétraitement.",
     "Mapping disponible ne signifie ni fixation ni visibilité continue du FND.",
     "AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.",
     "AOI potentiellement imbriquées : les proportions ne se somment pas.",

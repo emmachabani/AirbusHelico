@@ -1,0 +1,58 @@
+{
+  "duree_s": 136.470911,
+  "echantillons_oculaires": 13444,
+  "au_moins_un_oeil_valide_pct": 98.3,
+  "pas_median_ms": 10.025,
+  "nombre_marqueurs_alerte": 3,
+  "intervalles_mapping": [
+    [
+      8.804989,
+      9.476169
+    ],
+    [
+      15.707504,
+      16.198373
+    ],
+    [
+      29.692806,
+      30.133558
+    ],
+    [
+      41.584293,
+      43.738157
+    ],
+    [
+      63.353707,
+      64.736147
+    ],
+    [
+      75.435519,
+      82.318
+    ],
+    [
+      104.207574,
+      113.364141
+    ],
+    [
+      125.686436,
+      126.898612
+    ],
+    [
+      133.981442,
+      134.382152
+    ]
+  ],
+  "duree_intervalles_mapping_s": 22.791039000000012,
+  "avertissements": [
+    "SUJ3 / projet 1 uniquement ; analyse exploratoire.",
+    "ALERT_ML_LARGE : Hors champ selon les notes, mais marqueur présent : annotation à vérifier",
+    "ALERT_ML_LIGHT : Hors champ puis apparition approximative signalés ; rejeu possible à vérifier",
+    "ALERT_FND : Apparition approximative : visibilité incertaine selon les notes",
+    "Marqueurs d’apparition ajoutés manuellement par Élie ; précision selon les réserves de prétraitement.",
+    "Mapping disponible ne signifie ni fixation ni visibilité continue du FND.",
+    "AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.",
+    "AOI potentiellement imbriquées : les proportions ne se somment pas.",
+    "Aucun acquittement identifié ; aucune mesure de compréhension ou de détection.",
+    "Pas de carte de chaleur sans image de référence et coordonnées validées."
+  ]
+}

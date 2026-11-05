@@ -37,7 +37,7 @@
     "ALERT_ML_LIGHT : Hors champ signalé ; apparition non datable sur la vidéo",
     "ALERT_RED : Hors champ signalé ; apparition non datable sur la vidéo",
     "ALERT_TEXT : Hors champ signalé ; apparition non datable sur la vidéo",
-    "Les marqueurs Tobii ne sont pas des apparitions Figma confirmées.",
+    "Marqueurs d’apparition ajoutés manuellement par Élie ; précision selon les réserves de prétraitement.",
     "Mapping disponible ne signifie ni fixation ni visibilité continue du FND.",
     "AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.",
     "AOI potentiellement imbriquées : les proportions ne se somment pas.",

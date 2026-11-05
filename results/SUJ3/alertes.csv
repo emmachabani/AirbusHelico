@@ -1,0 +1,4 @@
+﻿temps_s,alerte,reserve
+79.207341,ALERT_ML_LARGE,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+102.800033,ALERT_FND,Apparition approximative : visibilité incertaine selon les notes
+124.729702,ALERT_ML_LIGHT,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier

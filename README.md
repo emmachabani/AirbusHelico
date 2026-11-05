@@ -1,6 +1,6 @@
 # Démonstration eye tracking — FND
 
-Analyse exploratoire de **SUJ1 et SUJ2, projet 1** (clignotement manuel).
+Analyse exploratoire de **SUJ1, SUJ2 et SUJ3, projet 1** (clignotement manuel).
 Le participant surveille une route sur l'écran principal et doit détecter les
 alertes sur la tablette représentant le FND. Le projet 2 (automatisation Figma)
 n'est pas encore analysé. Aucun résultat ne constitue une évaluation de compétence pilote.
@@ -20,8 +20,9 @@ Les versions SVG sont disponibles pour les présentations. Les CSV agrégés et
 - Au moins un œil déclaré valide : 97,55 % des échantillons oculaires.
 - Huit intervalles annotés de mapping du FND : 41,846 s, soit environ 31,9 %
   de l'enregistrement. Ce chiffre ne mesure pas directement la visibilité du FND.
-- Cinq annotations d'alerte présentes. Les apparitions réelles et acquittements
-  restent à synchroniser avec Figma ; aucun délai de détection n'est calculé.
+- Cinq annotations d'alerte présentes. Les apparitions ont été annotées manuellement par Élie ;
+  leur précision dépend des réserves de prétraitement. Les acquittements restent
+  à récupérer ; aucun délai de détection n'est calculé.
 - `ALERT_RED` : publicité signalée dans les notes de prétraitement.
 
 ## Méthode et limites
@@ -67,7 +68,7 @@ python3 -m pip install -r requirements.txt
 python3 scripts/analyse_tobii.py /chemin/SUJ1.xlsx --output results/SUJ1
 ```
 
-Le script attend le schéma des exports SUJ1/SUJ2, un seul sujet/enregistrement et une seule
+Le script attend le schéma des exports SUJ1/SUJ2/SUJ3, un seul sujet/enregistrement et une seule
 feuille ; les futurs exports nécessiteront une vérification des noms d'AOI.
 La réserve « publicité » est spécifique à SUJ1 et ne doit pas être propagée aux
 autres sujets. Ne pas réutiliser ce script sans adaptation pour un autre sujet.
@@ -116,3 +117,33 @@ python3 scripts/analyse_tobii.py /chemin/SUJ2.xlsx --subject SUJ2 --output resul
 pour chacune des cinq alertes attendues. Les heures des alertes absentes ne
 sont pas reconstruites. Les réserves sont propres au sujet : la publicité ne
 concerne que SUJ1. Les fichiers source et échantillons individuels restent exclus de Git.
+
+## SUJ3 — données disponibles
+
+- 136,471 s ; 13 444 échantillons oculaires ; au moins un œil valide : 98,30 %.
+- Trois apparitions annotées manuellement par Élie : ML_LARGE à 79,207 s,
+  FND à 102,800 s et ML_LIGHT à 124,730 s.
+- ML_LARGE est signalé hors champ dans les notes malgré la présence d'un marqueur :
+  incohérence à vérifier. FND est approximatif ; ML_LIGHT comporte des notes
+  hors champ et approximatives avec un rejeu possible. L'export ne contient
+  qu'un marqueur ML_LIGHT et ne permet pas de confirmer ce rejeu.
+- Aucun marqueur RED ou TEXT ; la cause de leur absence n'est pas documentée.
+- Neuf périodes de report du regard sur l'image FND : 22,791 s. Il ne s'agit
+  pas du temps de regard vers la tablette.
+- Les trois AOI vidéo sont non renseignées ; seule ML sur l'image de référence
+  fournit des mesures : 56 échantillons dans la zone sur 2 163 valides et renseignés
+  (2,59 %). Ce dénominateur ne couvre que 16,09 % des échantillons oculaires.
+  Aucune comparaison de performance entre participants ne peut en être déduite.
+
+![SUJ3 chronologie](results/SUJ3/01_chronologie.png)
+
+Les figures complètes et tableaux se trouvent dans `results/SUJ3/`. Les figures
+actuelles sont des sorties techniques exploratoires, à simplifier pour une
+présentation Airbus ; les zones absentes ne constituent pas une absence de regard.
+
+```bash
+python3 scripts/analyse_tobii.py /chemin/SUJ3.xlsx --subject SUJ3 --output results/SUJ3
+```
+
+Les mentions des marqueurs ont été corrigées dans les figures des trois sujets :
+il s'agit d'annotations manuelles d'apparition, pas d'événements Figma importés.

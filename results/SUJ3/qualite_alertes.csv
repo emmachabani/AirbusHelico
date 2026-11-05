@@ -1,0 +1,6 @@
+﻿alerte,nombre_marqueurs,reserve
+ALERT_FND,1,Apparition approximative : visibilité incertaine selon les notes
+ALERT_ML_LARGE,1,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+ALERT_ML_LIGHT,1,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+ALERT_RED,0,Aucun marqueur exporté ; cause non documentée
+ALERT_TEXT,0,Aucun marqueur exporté ; cause non documentée
