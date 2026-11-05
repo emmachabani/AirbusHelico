@@ -147,3 +147,24 @@ python3 scripts/analyse_tobii.py /chemin/SUJ3.xlsx --subject SUJ3 --output resul
 
 Les mentions des marqueurs ont été corrigées dans les figures des trois sujets :
 il s'agit d'annotations manuelles d'apparition, pas d'événements Figma importés.
+
+## Figure comparative — disponibilité des données
+
+![Comparaison des trois sujets](results/comparaison/comparaison_disponibilite.png)
+
+Cette figure compare la qualité du suivi oculaire, la proportion de chaque
+essai délimitée pour le mapping et la disponibilité des annotations manuelles
+d’alertes. Elle ne compare pas la performance des participants. Les trois
+pourcentages de mapping utilisent chacun la durée totale de leur enregistrement
+comme dénominateur : SUJ1 31,9 %, SUJ2 19,5 %, SUJ3 16,7 %.
+Les réserves du tableau viennent des notes de prétraitement, distinctes des
+mesures du regard. Les formats SVG et PDF sont fournis pour les présentations.
+
+```bash
+python3 scripts/comparer_sujets.py
+```
+
+Le script découvre les dossiers `results/SUJ*` contenant les résultats
+préalablement analysés. Les futurs sujets nécessitent d’abord leur propre
+analyse et la saisie de leurs réserves ; ne pas appliquer automatiquement
+le profil d’un sujet à un autre.
