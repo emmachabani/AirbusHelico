@@ -1,0 +1,6 @@
+data/
+*.xlsx
+*.mp4
+__pycache__/
+.venv/
+echantillons_pseudonymises.csv
