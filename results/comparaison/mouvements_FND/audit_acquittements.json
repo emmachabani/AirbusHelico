@@ -1,0 +1,189 @@
+[
+  {
+    "sujet": "SUJ1",
+    "colonnes_evenements": [
+      "Event",
+      "Event value",
+      "Eye movement event duration [ms]"
+    ],
+    "evenements": {
+      "RecordingStart": 1,
+      "SyncPortOutHigh": 16,
+      "SyncPortOutLow": 15,
+      "HLX FND1 IntervalStart": 8,
+      "Alert_ML_LIGHT": 1,
+      "HLX FND1 IntervalEnd": 8,
+      "Alert_ML_LARGE": 1,
+      "Alert_FND": 1,
+      "ALERT_RED": 1,
+      "Alert_TEXT": 1,
+      "RecordingEnd": 1
+    },
+    "valeurs_evenements_non_vides": 0,
+    "capteurs": {
+      "None": 54,
+      "Eye Tracker": 12956,
+      "Gyroscope": 15002,
+      "Accelerometer": 15002,
+      "Magnetometer": 1258
+    }
+  },
+  {
+    "sujet": "SUJ2",
+    "colonnes_evenements": [
+      "Event",
+      "Event value",
+      "Eye movement event duration [ms]"
+    ],
+    "evenements": {
+      "RecordingStart": 1,
+      "SyncPortOutHigh": 13,
+      "SyncPortOutLow": 13,
+      "HLX FND1 IntervalStart": 6,
+      "HLX FND1 IntervalEnd": 6,
+      "Alert_FND": 1,
+      "RecordingEnd": 1
+    },
+    "valeurs_evenements_non_vides": 0,
+    "capteurs": {
+      "None": 41,
+      "Gyroscope": 11926,
+      "Accelerometer": 11926,
+      "Eye Tracker": 10124,
+      "Magnetometer": 1000
+    }
+  },
+  {
+    "sujet": "SUJ3",
+    "colonnes_evenements": [
+      "Event",
+      "Event value",
+      "Eye movement event duration [ms]"
+    ],
+    "evenements": {
+      "RecordingStart": 1,
+      "SyncPortOutHigh": 16,
+      "SyncPortOutLow": 16,
+      "HLX FND1 IntervalStart": 9,
+      "HLX FND1 IntervalEnd": 9,
+      "Alert_ML_LARGE": 1,
+      "Alert_FND": 1,
+      "Alert_ML_LIGHT": 1,
+      "RecordingEnd": 1
+    },
+    "valeurs_evenements_non_vides": 0,
+    "capteurs": {
+      "None": 55,
+      "Eye Tracker": 13444,
+      "Gyroscope": 15713,
+      "Accelerometer": 15713,
+      "Magnetometer": 1315
+    }
+  },
+  {
+    "sujet": "SUJ4",
+    "colonnes_evenements": [
+      "Event",
+      "Event value",
+      "Eye movement event duration [ms]"
+    ],
+    "evenements": {
+      "RecordingStart": 1,
+      "SyncPortOutHigh": 18,
+      "SyncPortOutLow": 17,
+      "Alert_ML_LIGHT": 1,
+      "HLX FND1 IntervalStart": 5,
+      "HLX FND1 IntervalEnd": 5,
+      "Alert_FND": 1,
+      "ALERT_RED": 1,
+      "Alert_TEXT": 1,
+      "RecordingEnd": 1
+    },
+    "valeurs_evenements_non_vides": 0,
+    "capteurs": {
+      "None": 51,
+      "Eye Tracker": 15026,
+      "Gyroscope": 17385,
+      "Accelerometer": 17385,
+      "Magnetometer": 1459
+    }
+  },
+  {
+    "sujet": "SUJ5",
+    "colonnes_evenements": [
+      "Event",
+      "Event value",
+      "Eye movement event duration"
+    ],
+    "evenements": {
+      "RecordingStart": 1,
+      "SyncPortOutHigh": 24,
+      "HLX FND IntervalStart": 10,
+      "SyncPortOutLow": 23,
+      "HLX FND IntervalEnd": 10,
+      "ALERT_ML_LIGHT": 1,
+      "ALERT_FND": 1,
+      "RecordingEnd": 1
+    },
+    "valeurs_evenements_non_vides": 0,
+    "capteurs": {
+      "None": 71,
+      "Eye Tracker": 20851,
+      "Gyroscope": 24513,
+      "Accelerometer": 24513,
+      "Magnetometer": 2066
+    }
+  },
+  {
+    "sujet": "SUJ6",
+    "colonnes_evenements": [
+      "Event",
+      "Event value",
+      "Eye movement event duration"
+    ],
+    "evenements": {
+      "RecordingStart": 1,
+      "SyncPortOutHigh": 23,
+      "HLX FND IntervalStart": 13,
+      "SyncPortOutLow": 23,
+      "HLX FND IntervalEnd": 13,
+      "ALERT_ML_LARGE": 1,
+      "ALERT_FND": 1,
+      "ALERT_RED": 1,
+      "RecordingEnd": 1
+    },
+    "valeurs_evenements_non_vides": 0,
+    "capteurs": {
+      "None": 77,
+      "Eye Tracker": 20619,
+      "Gyroscope": 24247,
+      "Accelerometer": 24247,
+      "Magnetometer": 2043
+    }
+  },
+  {
+    "sujet": "SUJ7",
+    "colonnes_evenements": [
+      "Event",
+      "Event value",
+      "Eye movement event duration"
+    ],
+    "evenements": {
+      "RecordingStart": 1,
+      "SyncPortOutHigh": 28,
+      "SyncPortOutLow": 28,
+      "HLX FND IntervalStart": 7,
+      "HLX FND IntervalEnd": 7,
+      "ALERT_FND": 1,
+      "RecordingEnd": 1
+    },
+    "valeurs_evenements_non_vides": 0,
+    "capteurs": {
+      "None": 73,
+      "Eye Tracker": 25158,
+      "Gyroscope": 29172,
+      "Accelerometer": 29172,
+      "Magnetometer": 2459
+    }
+  }
+]

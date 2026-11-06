@@ -418,3 +418,65 @@ et SUJ7 en ont un. Ces quelques fenêtres ne permettent pas d’estimer une
 sensibilité ou une spécificité. Le script d’extraction vérifie sujet, projet
 et concordance du marqueur FND avec les résultats antérieurs avant de créer
 le cache local.
+
+## Déplacement puis stabilisation et vérification des acquittements
+
+```bash
+python3 scripts/stabilisation_fnd.py
+python3 scripts/audit_acquittements.py --sources /workspace/attachments
+```
+
+Les sorties sont dans `results/comparaison/mouvements_FND/`. La nouvelle
+figure `03_deplacement_stabilisation.png` distingue le mouvement candidat,
+la stabilisation retenue et un éventuel retour proche de la position
+oculaire initiale. Les résultats par sujet sont dans `stabilisations_FND.csv`.
+
+Après le mouvement géométrique précédemment défini, on recherche le premier
+intervalle d’au moins 300 ms dont les six médianes de bins restent dans le
+cône et l’intervalle d’amplitude de référence. Sur les échantillons bruts de
+cet intervalle, au moins 80 % doivent être valides, aucun intervalle entre
+mesures valides ne doit dépasser 50 ms et le 90e percentile de la distance
+au centre médian doit rester inférieur ou égal à 2 degrés. Le maintien
+est prolongé de bin en bin autour de ce centre fixe selon les mêmes
+critères de validité et de dispersion ; il ne représente pas le temps total
+passé dans l’AOI ni forcément une fixation Tobii unique. Les seuils sont
+exploratoires ; neuf combinaisons 200/300/500 ms × 1/2/3 degrés sont testées.
+
+Un retour est signalé lorsque trois bins valides consécutifs (150 ms de
+bins) sont à moins de 5 degrés de la position oculaire initiale. Cela ne
+prouve pas un retour à la route : le repère reste lié aux lunettes, sans
+compensation des rotations de tête. Une absence de retour signifie seulement
+qu’aucun retour répondant aux critères n’a été trouvé avant +5 s.
+
+Le motif déplacement puis stabilisation est retrouvé pour six sujets selon
+le seuil principal ; SUJ4 reste sans candidat avec une couverture partielle.
+SUJ6 et SUJ7 présentent aussi ce motif dans la période témoin. Les témoins
+SUJ1/2/5 ne sont pas évaluables. SUJ7 est sensible aux critères (4 des 9
+combinaisons retiennent une stabilisation), ce qui limite sa robustesse.
+
+Chez SUJ1, le premier maintien retenu commence à 1,90 s et dure environ
+450 ms ; 100 % des échantillons valides et renseignés de cet épisode sont
+dans l’AOI FND et sont classés Fixation par Tobii. Cela ne change pas le
+premier regard dans l’AOI (0,79 s) : le maintien est une autre mesure.
+Le CSV rapporte aussi la proportion des échantillons classés Fixation pour
+chaque épisode. Ce n’est ni un compte de fixations ni une validation
+indépendante, puisque les deux traitements utilisent le même regard.
+
+### Peut-on dater un clic sur le FND ?
+
+L’audit des sept Excel ne trouve aucune colonne de clic/toucher/bouton ni
+aucun événement explicitement identifié comme acquittement. `Event value`
+est vide sur les sept fichiers. Les événements présents sont les débuts/fins
+d’enregistrement, les repères d’alarme, les intervalles de mapping et les
+signaux SyncPortOutHigh/Low. Ces derniers ne sont pas interprétés comme des
+clics sans documentation de leur correspondance. L’inventaire est publié
+dans `audit_acquittements.json`, sans valeurs d’événements ni métadonnées
+personnelles. Il ne prouve pas que personne n’a cliqué ; il signifie qu’un
+acquittement ne peut pas être identifié dans ces exports.
+
+Pour ajouter l’acquittement, récupérer les temps relevés par Justine ou un
+export horodaté des interactions Figma, avec identifiant de sujet/session et
+un repère commun à Tobii. Autre possibilité : annotation manuelle d’un clic
+visible dans la vidéo. La consigne exacte (cliquer où, effet attendu sur
+l’alarme) reste à confirmer au point protocole. Un maintien du regard ne
+permet pas de déduire un clic, un acquittement ou une compréhension.
