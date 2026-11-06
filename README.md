@@ -528,3 +528,64 @@ est classé Fixation, dans FND vidéo, avec un point mappé 248/547 px.
 La capture illustre donc une position basse similaire sur une autre alarme,
 sous réserve de la lecture du curseur et de la correspondance de la vidéo.
 Le contact visible ne permet pas à lui seul de dater l’activation de l’interface.
+
+## Vue spatiale du regard sur le FND pour les sept sujets
+
+À la demande de l’utilisatrice, la vue en séquence de fixations est remplacée
+pour cette présentation par des positions sur le FND, numérotées dans
+l’ordre et colorées par le temps après l’alarme. Les sorties se trouvent
+dans `results/comparaison/positions_FND/` : vue commune, sept images
+individuelles, PDF avec vue commune puis une page par sujet, tableau agrégé
+et audit des sources.
+
+```bash
+python3 scripts/positions_fnd_7_sujets.py --sources /workspace/attachments
+```
+
+La fenêtre commune est 0 à 8 s après ALERT_FND, annoté manuellement. Les
+coordonnées proviennent de `Mapped gaze point X/Y` sur HLX FND1 (projet 1)
+ou HLX FND (projet 2). Le script ne reconstruit pas de position depuis
+l’amplitude du mouvement oculaire ; ce sont les coordonnées mappées
+présentes dans les exports. Il vérifie sujet, projet, dimensions et repère.
+
+On conserve les lignes Eye Tracker où au moins un œil est valide, avec
+coordonnées dans les limites de l’image et type de mouvement Fixation
+identifié par Tobii. Un segment est coupé si l’index change ou si deux
+points mappés successifs sont séparés de plus de 50 ms. Seuls les segments
+de cinq points ou plus, couvrant au moins 40 ms, sont représentés. Le point
+affiché est leur position médiane, pas tous les échantillons individuels.
+
+Les numéros suivent l’ordre des segments retenus ; les regards non mappés
+ou écartés peuvent s’intercaler. Une fixation Tobii peut donc être
+représentée en plusieurs segments si le mapping est interrompu. Les
+numéros ne désignent ni des étapes de tâche connues ni les mêmes actions
+entre sujets. Les traits fins relient un numéro à son point seulement ;
+aucune trajectoire n’est interpolée entre les positions.
+
+La couleur utilise partout la même échelle de 0 à 8 secondes, du violet
+au jaune. Les coordonnées sont normalisées en pourcentage de l’image
+propre à chaque projet, sans affirmer que les deux images et leurs zones
+sont géométriquement équivalentes. Le fond de l’interface n’est pas
+disponible comme image de référence isolée et n’est pas inventé.
+
+La couverture affichée est la proportion des échantillons oculaires de
+la fenêtre qui sont valides et mappés dans l’image (tous types de mouvement
+confondus). Elle ne mesure ni le temps de regard vers le FND ni la couverture
+exacte des seuls segments représentés. Le repère de SUJ3 reste approximatif.
+
+Le bas de la tablette comme région d’acquittement reste une hypothèse
+non confirmée. Aucune position n’est appelée clic ou acquittement. Les
+figures ne constituent pas une comparaison de performance. Les données
+Excel et échantillons individuels restent exclus de Git.
+
+Pour redessiner cette vue depuis les tableaux agrégés déjà publiés, sans
+réouvrir les Excel ni disposer des données brutes :
+
+```bash
+python3 scripts/positions_fnd_7_sujets.py --render-only
+```
+
+Pour SUJ2, SUJ5 et SUJ6, un seul segment mappé remplit les critères dans
+la fenêtre retenue. Il ne faut pas en déduire que le sujet n’a eu qu’un
+seul regard dans toute la scène. Les figures montrent uniquement les
+segments mappés disponibles et retenus, sans compléter les lacunes.
