@@ -1,6 +1,7 @@
 # Démonstration eye tracking — FND
 
-Analyse exploratoire de **SUJ1, SUJ2 et SUJ3, projet 1** (clignotement manuel).
+Analyse exploratoire des sept sujets : **SUJ1 à SUJ4, projet 1** (clignotement manuel),
+et **SUJ5 à SUJ7, projet 2** (clignotement automatique).
 Le participant surveille une route sur l'écran principal et doit détecter les
 alertes sur la tablette représentant le FND. Le projet 2 (automatisation Figma)
 n'est pas encore analysé. Aucun résultat ne constitue une évaluation de compétence pilote.
@@ -68,7 +69,7 @@ python3 -m pip install -r requirements.txt
 python3 scripts/analyse_tobii.py /chemin/SUJ1.xlsx --output results/SUJ1
 ```
 
-Le script attend le schéma des exports SUJ1/SUJ2/SUJ3, un seul sujet/enregistrement et une seule
+Le script prend en charge les schémas des exports SUJ1 à SUJ7 et attend, un seul sujet/enregistrement et une seule
 feuille ; les futurs exports nécessiteront une vérification des noms d'AOI.
 La réserve « publicité » est spécifique à SUJ1 et ne doit pas être propagée aux
 autres sujets. Ne pas réutiliser ce script sans adaptation pour un autre sujet.
@@ -77,7 +78,7 @@ autres sujets. Ne pas réutiliser ce script sans adaptation pour un autre sujet.
 
 L'Excel original n'est pas versionné. `data/`, les Excel, vidéos et les CSV
 échantillon par échantillon sont exclus de Git. Les sorties suivies contiennent
-uniquement des temps relatifs, SUJ1 et des indicateurs descriptifs, sans noms,
+uniquement des temps relatifs, des identifiants SUJ1 à SUJ7 et des indicateurs descriptifs, sans noms,
 dates d'acquisition ou captures. Il s'agit de pseudonymisation et non d'une
 garantie d'anonymat. Conserver la correspondance des participants chez Airbus.
 Vérifier les règles Airbus et la visibilité du dépôt avant d'ajouter des données
@@ -150,7 +151,7 @@ il s'agit d'annotations manuelles d'apparition, pas d'événements Figma import�
 
 ## Figure comparative — disponibilité des données
 
-![Comparaison des trois sujets](results/comparaison/comparaison_disponibilite.png)
+![Comparaison des sept sujets](results/comparaison/comparaison_disponibilite.png)
 
 Cette figure compare la qualité du suivi oculaire, la proportion de chaque
 essai délimitée pour le mapping et la disponibilité des annotations manuelles
@@ -205,5 +206,20 @@ python3 scripts/comparer_sujets.py
 Les sorties pseudonymisées sont dans `results/SUJ5`, `results/SUJ6` et
 `results/SUJ7`. La comparaison indique P1 ou P2 pour chaque sujet. Elle décrit
 la disponibilité des données, pas les performances ni un effet manuel/auto.
-Le dépôt contient six sujets : SUJ1, SUJ2, SUJ3, SUJ5, SUJ6 et SUJ7. Aucun
-fichier SUJ4 n’a été reçu. Les Excel et échantillons individuels restent exclus.
+Le dépôt contient les sept sujets SUJ1 à SUJ7. Les Excel et échantillons
+individuels restent exclus.
+
+## SUJ4 — projet 1
+
+L’export confirme `Project1`. Quatre marqueurs manuels sont présents :
+ML_LIGHT, FND, RED et TEXT. ML_LARGE est absent, conformément à la note de
+prétraitement « hors champ ». Les notes sont conservées dans `qualite_alertes.csv`.
+
+```bash
+python3 scripts/analyse_tobii.py /chemin/SUJ4.xlsx --subject SUJ4 --output results/SUJ4
+python3 scripts/comparer_sujets.py
+```
+
+Les figures et tableaux se trouvent dans `results/SUJ4/`. La comparaison dans
+`results/comparaison/` réunit les sept sujets et distingue P1 (SUJ1–4) et P2
+(SUJ5–7). Elle ne mesure ni un taux de détection ni l’efficacité des alertes.

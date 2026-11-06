@@ -80,7 +80,7 @@ def main():
     for spine in ax3.spines.values():spine.set_visible(False)
     ax3.set_title('3. Apparitions d’alertes annotées manuellement par Élie',loc='left',fontweight='bold',pad=42)
     fig.suptitle('Eye tracking · Ce que les trois premiers enregistrements permettent d’exploiter' if len(data)==3 else f'Eye tracking · Disponibilité des données de {len(data)} sujets',x=.08,ha='left',fontsize=19,fontweight='bold',y=.98)
-    fig.text(.08,.925,'P1 : clignotement manuel · SUJ1–3  |  P2 : clignotement automatique · SUJ5–7\nComparaison de disponibilité uniquement ; zones de référence différentes entre projets.',fontsize=11,color='#526174')
+    fig.text(.08,.925,'P1 : clignotement manuel · SUJ1–4  |  P2 : clignotement automatique · SUJ5–7\nComparaison de disponibilité uniquement ; zones de référence différentes entre projets.',fontsize=11,color='#526174')
     fig.text(.08,.105,'* Réserves de prétraitement : SUJ1 RED perturbé par une publicité ; SUJ3 FND et ML LIGHT incertains ;\n  SUJ3 ML LARGE signalé hors champ malgré un marqueur présent. Rejeu éventuel de ML LIGHT à vérifier.\n  P2 : les notes initiales de prétraitement ne sont pas appliquées, faute de rattachement confirmé à ce projet.',fontsize=10,color='#526174')
     fig.text(.08,.035,'Lecture : un bon suivi oculaire ne garantit pas des données interprétables sur chaque alerte.\nLes périodes de mapping ne sont pas du temps de regard vers le FND. Ces résultats ne comparent pas les performances des participants.',fontsize=11,fontweight='bold',color='#253449')
     fig.subplots_adjust(top=.82,bottom=.19,left=.08,right=.95)

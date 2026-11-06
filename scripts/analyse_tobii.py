@@ -48,6 +48,7 @@ def analyse(source, output, subject='SUJ1'):
             'ALERT_ML_LIGHT': 'Hors champ puis apparition approximative signalés ; rejeu possible à vérifier',
             'ALERT_FND': 'Apparition approximative : visibilité incertaine selon les notes',
         },
+        'SUJ4': {'ALERT_ML_LARGE': 'Hors champ signalé ; apparition non datable sur la vidéo'},
         'SUJ5': {}, 'SUJ6': {}, 'SUJ7': {},
     }[subject]
 
@@ -227,6 +228,6 @@ if __name__ == '__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source',type=Path)
     parser.add_argument('--output',type=Path,default=Path('results/SUJ1'))
-    parser.add_argument('--subject', choices=['SUJ1','SUJ2','SUJ3','SUJ5','SUJ6','SUJ7'], default='SUJ1')
+    parser.add_argument('--subject', choices=['SUJ1','SUJ2','SUJ3','SUJ4','SUJ5','SUJ6','SUJ7'], default='SUJ1')
     args=parser.parse_args()
     analyse(args.source,args.output,args.subject)

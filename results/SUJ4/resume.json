@@ -1,0 +1,49 @@
+{
+  "projet": 1,
+  "aoi_source": {
+    "FND (vidéo)": "AOI hit [Recording 5 - FND]",
+    "Écran principal (vidéo)": "AOI hit [Recording 5 - Main screen]",
+    "ML (vidéo)": "AOI hit [Recording 5 - ML]",
+    "ML (image mappée)": "AOI hit [HLX FND1 - ML_HLX_FND1]"
+  },
+  "horodatage_sans_unite_verifie_par_duree": false,
+  "dernier_horodatage_export_s": 151.877993,
+  "duree_s": 151.877993,
+  "echantillons_oculaires": 15026,
+  "au_moins_un_oeil_valide_pct": 82.45,
+  "pas_median_ms": 10.021,
+  "nombre_marqueurs_alerte": 4,
+  "intervalles_mapping": [
+    [
+      31.49522,
+      46.602548
+    ],
+    [
+      64.90568,
+      77.037628
+    ],
+    [
+      90.622243,
+      95.691361
+    ],
+    [
+      114.515436,
+      117.821392
+    ],
+    [
+      139.550769,
+      142.846713
+    ]
+  ],
+  "duree_intervalles_mapping_s": 38.91029399999999,
+  "avertissements": [
+    "SUJ4 / projet 1 ; analyse exploratoire.",
+    "ALERT_ML_LARGE : Hors champ signalé ; apparition non datable sur la vidéo",
+    "Marqueurs d’apparition ajoutés manuellement par Élie ; précision selon les réserves de prétraitement.",
+    "Mapping disponible ne signifie ni fixation ni visibilité continue du FND.",
+    "AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.",
+    "AOI potentiellement imbriquées : les proportions ne se somment pas.",
+    "Aucun acquittement identifié ; aucune mesure de compréhension ou de détection.",
+    "Pas de carte de chaleur sans image de référence et coordonnées validées."
+  ]
+}
