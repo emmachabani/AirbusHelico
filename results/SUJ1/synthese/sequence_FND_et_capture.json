@@ -1,0 +1,24 @@
+{
+  "apparition_FND_s": 67.873922,
+  "image_FND_largeur_hauteur_px": [
+    507.0,
+    673.0
+  ],
+  "hypothese_utilisatrice": "Acquittement possiblement dans le bas de la tablette ; non confirmé, aucune zone de clic délimitée.",
+  "capture_recue_curseur_lu_s": 112.256,
+  "echantillon_proche_capture": [
+    {
+      "temps_s": 112.254205,
+      "type_mouvement": "Fixation",
+      "x_image_FND": 248.0,
+      "y_image_FND": 547.0
+    }
+  ],
+  "capture_depuis_TEXT_s": 2.145661000000004,
+  "limites": [
+    "Fixations identifiées par Tobii ; bornes observées sur échantillons valides et fenêtre tronquée.",
+    "Les positions sur l’image ne sont pas des zones fonctionnelles définies.",
+    "Aucun clic ni acquittement horodaté ; région de réponse à confirmer.",
+    "La capture correspond à une autre alarme que FND si le curseur est bien 112,256 s."
+  ]
+}

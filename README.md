@@ -480,3 +480,51 @@ un repère commun à Tobii. Autre possibilité : annotation manuelle d’un clic
 visible dans la vidéo. La consigne exacte (cliquer où, effet attendu sur
 l’alarme) reste à confirmer au point protocole. Un maintien du regard ne
 permet pas de déduire un clic, un acquittement ou une compréhension.
+
+## SUJ1 — hypothèse consultation puis action en bas du FND
+
+La capture fournie montre un doigt au contact de la tablette et un regard
+reporté près de sa partie centrale basse. L’utilisatrice propose comme
+hypothèse un acquittement en bas de la tablette, sans certitude. Cette
+hypothèse est conservée comme telle : aucune AOI de clic précise n’est
+inventée, aucune fixation n’est appelée acquittement.
+
+```bash
+python3 scripts/sequence_fnd_suj1.py --source /chemin/SUJ1.xlsx
+```
+
+Les sorties sont dans `results/SUJ1/synthese/` : `04_sequence_zones_FND`
+(PNG/SVG), un PDF, un tableau agrégé des fixations Tobii et un audit des
+repères de la capture. Le script regroupe les lignes Eye Tracker valides
+(au moins un œil) par index de fixation Tobii, dans la fenêtre −1 à +8 s.
+Les bornes sont les premiers/derniers échantillons valides observés, pas
+une redéfinition de la durée officielle de fixation. Seuls les groupes
+dont l’intervalle observé dépasse 80 ms sont affichés. Les coordonnées
+mappées sont résumées par leur médiane, sur les points dans l’image FND.
+Les proportions AOI sont calculées sur les échantillons renseignés. Une
+fixation peut contenir des points hors FND : son étiquette majoritaire
+ne signifie pas que chaque point est dans la zone.
+
+Après l’annotation FND, on observe :
+- +0,79 s : regard près du haut de l’image FND (fixation 129, médiane 261/6 px).
+- +1,26 à +1,54 s : bref retour dans l’AOI écran principal (fixation 131).
+- +1,63 s : regard vers le milieu du FND (fixation 132, 266/302,5 px).
+- +1,79 à +3,46 s : fixation Tobii plus longue, regard mappé principalement
+  dans le bas central (fixation 133, médiane 244/518 px, 95,5 % des points
+  renseignés dans l’AOI vidéo FND). Le maintien géométrique précédemment
+  retenu à +1,90 s est une sous-séquence de cette fixation : il était déjà
+  dans cette région basse. Il ne faut pas additionner ces deux durées.
+- +3,48 à +3,71 s : nouvelle fixation plus à droite tout en restant dans
+  la région basse (fixation 134, médiane 318/508 px). Cette transition
+  suit la fixation longue mais ne constitue pas un événement de clic.
+
+Ces positions rendent plausible une exploration suivie d’un regard vers
+une région d’action, si l’acquittement était bien situé en bas. Elles ne
+prouvent ni l’identification de l’alarme regardée, ni un clic.
+
+Le curseur de la capture semble être à 112,256 s, soit environ 2,15 s
+après TEXT et non après FND (67,874 s). L’échantillon voisin à 112,254 s
+est classé Fixation, dans FND vidéo, avec un point mappé 248/547 px.
+La capture illustre donc une position basse similaire sur une autre alarme,
+sous réserve de la lecture du curseur et de la correspondance de la vidéo.
+Le contact visible ne permet pas à lui seul de dater l’activation de l’interface.
