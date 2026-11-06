@@ -623,3 +623,50 @@ ne sont donc pas encore enregistrés dans Git. Le dossier de contexte est
 prêt à les recevoir lorsqu’ils seront joints comme fichiers.
 Le rapport final n’est pas encore rédigé : intégrer les conclusions de la
 réunion lorsqu’elles seront fournies. Aucune exécution différée n’est programmée.
+
+## Exploration du FND entre maintien et retour
+
+La figure déplacement/maintien/retour est épurée : aucune ancienne limite de
+5 s ni comparaison de fenêtres n’est affichée. Un nouveau nom de fichier
+`05_deplacement_maintien_retour_epure.png` (et SVG/PDF) évite de réutiliser
+un ancien aperçu. Les paramètres et valeurs sont inchangés.
+
+La cartographie temporelle complémentaire est dans
+`results/comparaison/regions_FND/FND_maintien_exploration_retour.png`, avec
+versions SVG/PDF. Une bande sous chaque sujet montre les régions haut,
+milieu et bas de l’image FND sur les douze secondes. Un cadre indique
+l’intervalle entre la fin du maintien retenu et le retour de position
+oculaire ; sans retour, cet intervalle est arrêté à +12 s. SUJ4 n’a pas
+de maintien retenu : sa bande complète reste visible, mais aucun intervalle
+« entre maintien et retour » n’est construit artificiellement.
+
+```bash
+python3 scripts/regions_fnd.py --sources /workspace/attachments
+# Puis redessiner depuis les régions agrégées, sans les Excel :
+python3 scripts/regions_fnd.py --render-only
+```
+
+Les trois régions sont les tiers verticaux de l’image de référence, pas
+des AOI fonctionnelles validées. Le script utilise les coordonnées mappées
+des échantillons Eye Tracker avec au moins un œil valide et type Fixation
+Tobii. Les points hors de l’image sont exclus. Pour chaque bin de 100 ms,
+au moins cinq de ces points doivent être présents et au moins 80 % de ces
+points doivent appartenir au même tiers. Sinon, la région est « non
+attribuable ». Ce statut inclut notamment les lacunes de mapping, mesures
+invalides, mouvements non classés Fixation, points hors image, bins trop
+peu renseignés et régions mélangées. Il ne signifie pas « regard ailleurs ».
+
+Les durées par région sont les durées attribuées par ces bins, après
+découpage exact aux limites de l’intervalle, pas les durées officielles
+de fixations. La barre à droite utilise comme dénominateur toute la durée
+entre la fin du maintien et le retour (ou +12 s) et conserve en gris la
+part non attribuable. Aucune lacune n’est comblée. Les successions dans
+`regions_entre_maintien_retour.csv` conservent les `?` pour ces périodes :
+haut … ? … bas n’est pas une trajectoire observée continue haut → bas.
+
+Le JSON agrégé par bins contient les états, effectifs et paramètres, avec
+audit des sources. Les couleurs sont identiques entre sujets. Les régions
+sont définies sur chaque image de projet ; leur fonction et leur équivalence
+entre projets restent à confirmer. Un passage haut/bas n’est ni un clic
+ni un acquittement. Le repère de retour reste celui des yeux par rapport
+aux lunettes, sans compensation de tête et sans confirmation de la route.

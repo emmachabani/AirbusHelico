@@ -88,3 +88,27 @@ Voir [la proposition d’instrumentation](synchronisation_prototype.md).
 Le repère visuel et un journal horodaté d’événements doivent être conçus ensemble.
 Les données pourront ensuite distinguer apparition, regard, appui et réponse
 effective de l’interface. Aucun mécanisme de logging Figma n’est encore implémenté.
+
+## Complément : exploration entre maintien et retour
+
+L’utilisatrice demande de retirer les références à l’ancienne fenêtre sur
+la figure. La version épurée conserve les mêmes événements sans afficher
+cette histoire de traitement. Une nouvelle figure
+[cartographie temporelle haut/milieu/bas](../../results/comparaison/regions_FND/FND_maintien_exploration_retour.png)
+montre les régions de l’image FND visibles entre la fin du maintien et le
+retour. Le cadre noir indique cet intervalle et le gris reste « non
+attribuable », jamais « regard ailleurs ».
+
+Résultats descriptifs à confronter à la vidéo : chez SUJ1, les observations
+comprennent bas, milieu, de nouveau bas et haut avant le retour, avec
+des lacunes ; seuls 35 % de cet intervalle sont attribuables à une région
+selon le critère retenu. SUJ5 montre essentiellement le bas sur la partie
+attribuable (69 % de l’intervalle). SUJ7 a des observations dans plusieurs
+hauteurs mais seulement 44 % de l’intervalle est attribuable. Ne pas
+présenter les régions séparées par du gris comme une trajectoire continue.
+
+Les limites des tiers sont géométriques (1/3 et 2/3 de l’image), sans
+correspondance fonctionnelle validée. À la réunion, demander les zones
+exactes de l’alarme et de réponse avant de remplacer ces tiers par des
+AOI « alarme » / « bouton » et avant de nommer des étapes de détection
+ou d’acquittement.
