@@ -1,0 +1,55 @@
+{
+  "projet": 2,
+  "aoi_source": {
+    "ML (image mappée)": "AOI hit [HLX FND - HLX_FND_ML]"
+  },
+  "horodatage_sans_unite_verifie_par_duree": true,
+  "dernier_horodatage_export_s": 253.823619,
+  "duree_s": 253.824,
+  "echantillons_oculaires": 25158,
+  "au_moins_un_oeil_valide_pct": 89.96,
+  "pas_median_ms": 10.026,
+  "nombre_marqueurs_alerte": 1,
+  "intervalles_mapping": [
+    [
+      63.604525,
+      68.313062
+    ],
+    [
+      104.628735,
+      109.84816
+    ],
+    [
+      129.012896,
+      130.064784
+    ],
+    [
+      136.185843,
+      141.555538
+    ],
+    [
+      179.363949,
+      182.519687
+    ],
+    [
+      239.713136,
+      244.752283
+    ],
+    [
+      251.724861,
+      253.768595
+    ]
+  ],
+  "duree_intervalles_mapping_s": 26.588164000000013,
+  "avertissements": [
+    "SUJ7 / projet 2 ; analyse exploratoire.",
+    "Écart durée déclarée / dernier horodatage exporté : 0.000381 s.",
+    "Les notes initiales SUJ5–SUJ7 ne sont pas appliquées : leur rattachement au projet 2 reste à confirmer.",
+    "Marqueurs d’apparition ajoutés manuellement par Élie ; précision selon les réserves de prétraitement.",
+    "Mapping disponible ne signifie ni fixation ni visibilité continue du FND.",
+    "AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.",
+    "AOI potentiellement imbriquées : les proportions ne se somment pas.",
+    "Aucun acquittement identifié ; aucune mesure de compréhension ou de détection.",
+    "Pas de carte de chaleur sans image de référence et coordonnées validées."
+  ]
+}

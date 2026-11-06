@@ -1,0 +1,79 @@
+{
+  "projet": 2,
+  "aoi_source": {
+    "ML (image mappée)": "AOI hit [HLX FND - HLX_FND_ML]"
+  },
+  "horodatage_sans_unite_verifie_par_duree": true,
+  "dernier_horodatage_export_s": 209.664982,
+  "duree_s": 210.208,
+  "echantillons_oculaires": 20619,
+  "au_moins_un_oeil_valide_pct": 93.6,
+  "pas_median_ms": 10.026,
+  "nombre_marqueurs_alerte": 3,
+  "intervalles_mapping": [
+    [
+      0.221133,
+      0.962416
+    ],
+    [
+      9.658163,
+      9.858511
+    ],
+    [
+      31.918479,
+      37.979427
+    ],
+    [
+      56.112227,
+      79.183935
+    ],
+    [
+      88.641061,
+      89.212074
+    ],
+    [
+      97.947917,
+      101.263882
+    ],
+    [
+      116.100759,
+      116.671775
+    ],
+    [
+      122.271925,
+      126.729972
+    ],
+    [
+      132.82104,
+      134.283623
+    ],
+    [
+      139.433001,
+      142.859137
+    ],
+    [
+      169.407234,
+      174.786951
+    ],
+    [
+      181.849664,
+      186.307746
+    ],
+    [
+      198.83042,
+      204.901386
+    ]
+  ],
+  "duree_intervalles_mapping_s": 59.78781200000004,
+  "avertissements": [
+    "SUJ6 / projet 2 ; analyse exploratoire.",
+    "Écart durée déclarée / dernier horodatage exporté : 0.543018 s.",
+    "Les notes initiales SUJ5–SUJ7 ne sont pas appliquées : leur rattachement au projet 2 reste à confirmer.",
+    "Marqueurs d’apparition ajoutés manuellement par Élie ; précision selon les réserves de prétraitement.",
+    "Mapping disponible ne signifie ni fixation ni visibilité continue du FND.",
+    "AOI vidéo et AOI image mappée : référentiels et dénominateurs distincts.",
+    "AOI potentiellement imbriquées : les proportions ne se somment pas.",
+    "Aucun acquittement identifié ; aucune mesure de compréhension ou de détection.",
+    "Pas de carte de chaleur sans image de référence et coordonnées validées."
+  ]
+}

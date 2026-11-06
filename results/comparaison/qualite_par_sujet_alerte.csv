@@ -1,16 +1,31 @@
-﻿sujet,alerte,marqueurs,statut,reserve
-SUJ1,ALERT_FND,1,annoté,Apparition annotée manuellement par Élie
-SUJ1,ALERT_ML_LARGE,1,annoté,Apparition annotée manuellement par Élie
-SUJ1,ALERT_ML_LIGHT,1,annoté,Apparition annotée manuellement par Élie
-SUJ1,ALERT_RED,1,réserve,Publicité signalée ; essai perturbé
-SUJ1,ALERT_TEXT,1,annoté,Apparition annotée manuellement par Élie
-SUJ2,ALERT_FND,1,annoté,Apparition annotée manuellement par Élie
-SUJ2,ALERT_ML_LARGE,0,hors champ,Hors champ signalé ; apparition non datable sur la vidéo
-SUJ2,ALERT_ML_LIGHT,0,hors champ,Hors champ signalé ; apparition non datable sur la vidéo
-SUJ2,ALERT_RED,0,hors champ,Hors champ signalé ; apparition non datable sur la vidéo
-SUJ2,ALERT_TEXT,0,hors champ,Hors champ signalé ; apparition non datable sur la vidéo
-SUJ3,ALERT_FND,1,réserve,Apparition approximative : visibilité incertaine selon les notes
-SUJ3,ALERT_ML_LARGE,1,réserve,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
-SUJ3,ALERT_ML_LIGHT,1,réserve,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
-SUJ3,ALERT_RED,0,absent,Aucun marqueur exporté ; cause non documentée
-SUJ3,ALERT_TEXT,0,absent,Aucun marqueur exporté ; cause non documentée
+﻿sujet,projet,alerte,marqueurs,statut,reserve
+SUJ1,1,ALERT_FND,1,annoté,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,1,annoté,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LIGHT,1,annoté,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_RED,1,réserve,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_TEXT,1,annoté,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_FND,1,annoté,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_ML_LARGE,0,hors champ,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LIGHT,0,hors champ,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_RED,0,hors champ,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,0,hors champ,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ3,1,ALERT_FND,1,réserve,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_ML_LARGE,1,réserve,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_ML_LIGHT,1,réserve,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_RED,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_FND,1,annoté,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LARGE,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_ML_LIGHT,1,annoté,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_RED,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_FND,1,annoté,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LARGE,1,annoté,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LIGHT,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_RED,1,annoté,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_TEXT,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_FND,1,annoté,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_ML_LARGE,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_RED,0,absent,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,0,absent,Aucun marqueur exporté ; cause non documentée

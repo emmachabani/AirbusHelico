@@ -168,3 +168,42 @@ Le script découvre les dossiers `results/SUJ*` contenant les résultats
 préalablement analysés. Les futurs sujets nécessitent d’abord leur propre
 analyse et la saisie de leurs réserves ; ne pas appliquer automatiquement
 le profil d’un sujet à un autre.
+
+## Projet 2 — clignotement automatique : SUJ5, SUJ6, SUJ7
+
+Ces trois fichiers appartiennent au projet 2, conformément aux indications de
+l’utilisatrice et au champ `Project name = Project2` de chaque export.
+
+Une seule AOI est exportée : `AOI hit [HLX FND - HLX_FND_ML]`, sur le média
+`HLX FND`. Le projet 1 utilise un autre média (`HLX FND1`) et une autre
+définition de colonne AOI. L’équivalence géométrique des zones n’est pas
+établie : leurs proportions de regard ne permettent pas de conclure à un effet
+du mode de clignotement. Les zones vidéo du projet 1 ne sont pas inventées
+pour les exports du projet 2.
+
+Les en-têtes de temps du projet 2 n’indiquent pas d’unité. Le script interprète
+les horodatages en microsecondes et vérifie leur cohérence avec le champ durée
+en millisecondes (écart maximal 1 %). Il s’arrête en cas d’incohérence. La
+durée déclarée est utilisée pour l’axe et la couverture de mapping. Le dernier
+horodatage exporté est conservé séparément : SUJ6 se termine environ 0,543 s
+avant sa durée déclarée, sans extrapoler des échantillons sur cette fin.
+Les en-têtes Unicode sont normalisés.
+
+Les anciennes notes SUJ5–SUJ7 ne précisaient pas le projet : elles ne sont pas
+appliquées automatiquement à ces exports. Les absences de marqueur restent
+« cause non documentée » tant que leur correspondance n’est pas confirmée.
+Des marqueurs ML_LARGE et RED existent notamment dans SUJ6 ; on ne peut donc pas
+reprendre sans vérification les anciennes mentions « hors champ ».
+
+```bash
+python3 scripts/analyse_tobii.py /chemin/SUJ5.xlsx --subject SUJ5 --output results/SUJ5
+python3 scripts/analyse_tobii.py /chemin/SUJ6.xlsx --subject SUJ6 --output results/SUJ6
+python3 scripts/analyse_tobii.py /chemin/SUJ7.xlsx --subject SUJ7 --output results/SUJ7
+python3 scripts/comparer_sujets.py
+```
+
+Les sorties pseudonymisées sont dans `results/SUJ5`, `results/SUJ6` et
+`results/SUJ7`. La comparaison indique P1 ou P2 pour chaque sujet. Elle décrit
+la disponibilité des données, pas les performances ni un effet manuel/auto.
+Le dépôt contient six sujets : SUJ1, SUJ2, SUJ3, SUJ5, SUJ6 et SUJ7. Aucun
+fichier SUJ4 n’a été reçu. Les Excel et échantillons individuels restent exclus.

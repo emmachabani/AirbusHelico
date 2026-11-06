@@ -14,7 +14,7 @@ os.environ.setdefault('XDG_CACHE_HOME', str(Path(tempfile.gettempdir())/'tobii-c
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch, Patch
+from matplotlib.patches import FancyBboxPatch
 import numpy as np
 
 
@@ -39,7 +39,7 @@ def main():
     fig = plt.figure(figsize=(15, 10 + max(0,len(data)-3)*1.2))
     grid = fig.add_gridspec(2,2,height_ratios=[1,1.25],hspace=.55,wspace=.35)
     ax1, ax2, ax3 = fig.add_subplot(grid[0,0]), fig.add_subplot(grid[0,1]), fig.add_subplot(grid[1,:])
-    names=[name for name,_,_ in data]
+    names=[f"{name} · P{s.get('projet', 1)}" for name,s,_ in data]
     valid=[s['au_moins_un_oeil_valide_pct'] for _,s,_ in data]
     coverage=[100*s['duree_intervalles_mapping_s']/s['duree_s'] for _,s,_ in data]
     y=np.arange(len(data))
@@ -73,16 +73,15 @@ def main():
                 status='absent';label='Non annoté\nCause inconnue'
             ax3.add_patch(FancyBboxPatch((j-.44,i-.35),.88,.7,boxstyle='round,pad=0.02,rounding_size=0.05',facecolor=colors[status],edgecolor='none'))
             ax3.text(j,i,label,ha='center',va='center',fontsize=10,color='#253449')
-            table.append({'sujet':name,'alerte':alert,'marqueurs':count,'statut':status,'reserve':note})
+            table.append({'sujet':name,'projet':s.get('projet',1),'alerte':alert,'marqueurs':count,'statut':status,'reserve':note})
     ax3.set_xlim(-.6,4.6);ax3.set_ylim(len(data)-.5,-.8)
     ax3.set_yticks(y,names);ax3.set_xticks(range(5),['FND','ML LARGE','ML LIGHT','RED','TEXT'])
     ax3.xaxis.tick_top();ax3.tick_params(length=0,pad=12)
     for spine in ax3.spines.values():spine.set_visible(False)
     ax3.set_title('3. Apparitions d’alertes annotées manuellement par Élie',loc='left',fontweight='bold',pad=42)
     fig.suptitle('Eye tracking · Ce que les trois premiers enregistrements permettent d’exploiter' if len(data)==3 else f'Eye tracking · Disponibilité des données de {len(data)} sujets',x=.08,ha='left',fontsize=19,fontweight='bold',y=.98)
-    duration='  ·  '.join(f"{n} : {s['duree_s']:.1f} s" for n,s,_ in data)
-    fig.text(.08,.925,'Projet 1 · Clignotement manuel  |  '+duration,fontsize=11,color='#526174')
-    fig.text(.08,.105,'* Réserves de prétraitement : SUJ1 RED perturbé par une publicité ; SUJ3 FND et ML LIGHT incertains ;\n  SUJ3 ML LARGE signalé hors champ malgré un marqueur présent. Le rejeu éventuel de ML LIGHT reste à vérifier.',fontsize=10,color='#526174')
+    fig.text(.08,.925,'P1 : clignotement manuel · SUJ1–3  |  P2 : clignotement automatique · SUJ5–7\nComparaison de disponibilité uniquement ; zones de référence différentes entre projets.',fontsize=11,color='#526174')
+    fig.text(.08,.105,'* Réserves de prétraitement : SUJ1 RED perturbé par une publicité ; SUJ3 FND et ML LIGHT incertains ;\n  SUJ3 ML LARGE signalé hors champ malgré un marqueur présent. Rejeu éventuel de ML LIGHT à vérifier.\n  P2 : les notes initiales de prétraitement ne sont pas appliquées, faute de rattachement confirmé à ce projet.',fontsize=10,color='#526174')
     fig.text(.08,.035,'Lecture : un bon suivi oculaire ne garantit pas des données interprétables sur chaque alerte.\nLes périodes de mapping ne sont pas du temps de regard vers le FND. Ces résultats ne comparent pas les performances des participants.',fontsize=11,fontweight='bold',color='#253449')
     fig.subplots_adjust(top=.82,bottom=.19,left=.08,right=.95)
     for ext in ['png','svg','pdf']:
