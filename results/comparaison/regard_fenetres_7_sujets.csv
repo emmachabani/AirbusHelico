@@ -1,0 +1,36 @@
+﻿sujet,projet,alarme,repere_s,echantillons_fenetre,echantillons_valides_ML_renseignee,echantillons_dans_ML,reserve
+SUJ1,1,ALERT_FND,67.873922,1076,595,0,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,42.948827,1090,669,0,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LIGHT,20.858843,1084,908,114,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_RED,83.852817,1090,326,0,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_TEXT,110.110339,1088,528,0,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_FND,60.21864,1072,120,0,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_ML_LARGE,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LIGHT,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_RED,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ3,1,ALERT_FND,102.800033,1090,643,0,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_ML_LARGE,79.207341,1088,564,10,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_ML_LIGHT,124.729702,1088,121,0,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_RED,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ4,1,ALERT_FND,89.935971,1076,419,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_ML_LARGE,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ4,1,ALERT_ML_LIGHT,27.583161,1094,365,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_RED,113.77911,1092,283,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_TEXT,138.78435,1090,241,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_FND,97.016629,1088,212,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LARGE,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_ML_LIGHT,40.514402,1084,733,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_RED,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_FND,139.027234,1084,342,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LARGE,97.431977,1090,327,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LIGHT,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_RED,169.081609,1080,526,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_TEXT,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_FND,132.614376,1086,430,35,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_ML_LARGE,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_RED,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,,,,,Aucun marqueur exporté ; cause non documentée

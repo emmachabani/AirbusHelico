@@ -223,3 +223,29 @@ python3 scripts/comparer_sujets.py
 Les figures et tableaux se trouvent dans `results/SUJ4/`. La comparaison dans
 `results/comparaison/` réunit les sept sujets et distingue P1 (SUJ1–4) et P2
 (SUJ5–7). Elle ne mesure ni un taux de détection ni l’efficacité des alertes.
+
+## Regard autour des cinq types d’alarme — sept sujets
+
+![Regard autour des alarmes](results/comparaison/regard_7_sujets_5_alarmes.png)
+
+Une ligne par sujet, une colonne par alarme, fenêtre de −3 à +8 s autour du
+marqueur d’apparition manuel. Les bandes hautes vertes représentent les
+échantillons valides dans ML, les bandes basses bleues les échantillons valides
+hors ML. Le fond gris n’est pas une preuve d’absence de regard ni de détection.
+Les cases sans repère ne sont pas alignées artificiellement. Les réserves de
+prétraitement restent affichées. 19 des 35 cases ont un repère d’apparition.
+
+Cette figure illustre comment examiner la dynamique du regard autour de
+plusieurs formats d’alarme. Elle ne mesure pas directement le regard sur chaque
+alarme : seule l’AOI ML est utilisée, et sa correspondance avec l’emplacement
+de chaque alarme n’est pas établie. Les AOI diffèrent entre projets. Aucun
+classement de sujets, taux de détection ou effet du clignotement n’est déduit.
+
+```bash
+python3 scripts/regard_par_alarme.py
+```
+
+Le script nécessite les CSV locaux `echantillons_pseudonymises.csv`, exclus de
+Git, obtenus en relançant les analyses des Excel sources dans un environnement
+autorisé. Le CSV publié contient uniquement les effectifs par fenêtre, les
+repères relatifs et les réserves, jamais les échantillons individuels.
