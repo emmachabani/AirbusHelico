@@ -277,3 +277,59 @@ python3 scripts/regard_toutes_aoi.py
 Les versions PNG, SVG et PDF sont dans `results/comparaison/` et le tableau
 `regard_fenetres_toutes_AOI.csv` fournit les effectifs par fenêtre et par AOI.
 Les CSV d’échantillons nécessaires au script restent exclus de Git.
+
+## Synthèse SUJ1 pour la démonstration Airbus
+
+Les trois figures et le PDF de trois pages sont dans `results/SUJ1/synthese/` :
+
+1. Vue d’ensemble : chronologie du regard dans les cinq AOI, proportions
+   conditionnelles et couverture de chaque AOI, qualité et contexte de l’essai.
+2. Zoom autour des cinq alarmes, de −3 à +10 secondes, avec toutes les AOI.
+3. Délai du premier regard observé vers la tablette FND et vers ML vidéo.
+
+```bash
+python3 scripts/synthese_suj1.py
+```
+
+Le script nécessite les CSV locaux d’échantillons de SUJ1, produits par
+`analyse_tobii.py` et exclus de Git. Les figures, résultats agrégés et code
+sont versionnés. Les données pupillaires/cinématiques ne sont pas analysées
+dans cette synthèse du regard. Rectangle n’a pas de fonction supposée.
+
+### Définition des délais
+
+Le repère zéro est l’apparition de l’alarme annotée manuellement par Élie.
+On recherche le premier échantillon avec au moins un œil valide et AOI = 1
+après ce repère, dans une fenêtre de 10 s, arrêtée avant l’alarme suivante
+ou la fin de l’enregistrement. Si un échantillon valide dans l’AOI au plus
+25 ms avant le repère est présent, le statut est « déjà dans AOI » et le
+délai vaut zéro. Cette tolérance décrit un état échantillonné, pas une
+précision de l’annotation vidéo. Une absence d’entrée observée reste vide
+dans le CSV, sans affecter un délai arbitraire de 10 s.
+
+Le CSV conserve l’état au repère, la couverture AOI sur la fenêtre et le plus
+grand intervalle entre mesures valides avant l’entrée. Les lacunes supérieures
+à 50 ms (seuil descriptif) ou l’état indisponible au repère sont signalés
+sur la figure. Des regards peuvent avoir été manqués pendant les lacunes.
+Aucune interpolation, exigence de fixation ou de durée minimale du regard
+n’est appliquée. Le résultat est un premier échantillon de regard observé,
+pas un temps de détection ou de compréhension confirmé.
+
+Pour FND vidéo : FND 0,79 s ; ML_LARGE 2,15 s ; ML_LIGHT 0,72 s ;
+TEXT 1,58 s. RED 2,73 s est grisé et écarté des conclusions de comparaison
+car une publicité a perturbé l’essai. La zone FND est large ; l’arrivée sur
+la tablette ne prouve pas que l’élément d’alarme a été regardé. Le CSV fournit
+aussi ML image FND, avec sa couverture et ses absences d’entrée ; cette AOI
+n’est pas fusionnée avec ML vidéo.
+
+### Proposition de présentation
+
+« Cette démonstration permet de suivre où se porte le regard pendant l’essai,
+puis de rapprocher ce regard de l’apparition de différentes alarmes. Nous
+pouvons distinguer le premier regard vers l’instrument du premier regard
+vers une zone plus précise. Avec des apparitions synchronisées, des zones
+d’alarme validées, des acquittements et plusieurs répétitions, ces mesures
+pourraient soutenir une comparaison des formats d’alarme. »
+
+Un seul sujet et un seul essai par format : les valeurs sont des exemples
+descriptifs, sans classement d’efficacité, test statistique ou généralisation.

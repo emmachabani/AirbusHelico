@@ -1,0 +1,16 @@
+﻿sujet,alarme,AOI,apparition_annotee_s,fenetre_apres_alarme_s,delai_premier_regard_observe_s,statut,etat_t0,couverture_AOI_fenetre_pct,plus_grand_intervalle_sans_mesure_valide_avant_entree_s,lacune_superieure_50ms_avant_entree,reserve
+SUJ1,ALERT_FND,FND (vidéo),67.873922,10.0,0.791402000000005,premier échantillon dans AOI,hors AOI,99.07,0.010052000000001726,False,Apparition annotée manuellement par Élie
+SUJ1,ALERT_FND,ML (vidéo),67.873922,10.0,,aucune entrée observée dans la fenêtre,hors AOI,99.07,0.09019600000000594,True,Apparition annotée manuellement par Élie
+SUJ1,ALERT_FND,ML (image mappée),67.873922,10.0,,aucune entrée observée dans la fenêtre,indisponible,61.28,3.0173479999999984,True,Apparition annotée manuellement par Élie
+SUJ1,ALERT_ML_LARGE,FND (vidéo),42.948827,10.0,2.1538679999999957,premier échantillon dans AOI,hors AOI,97.98,0.010072999999998444,False,Apparition annotée manuellement par Élie
+SUJ1,ALERT_ML_LARGE,ML (vidéo),42.948827,10.0,2.6748079999999987,premier échantillon dans AOI,hors AOI,97.98,0.010072999999998444,False,Apparition annotée manuellement par Élie
+SUJ1,ALERT_ML_LARGE,ML (image mappée),42.948827,10.0,,aucune entrée observée dans la fenêtre,indisponible,87.08,1.0819619999999972,True,Apparition annotée manuellement par Élie
+SUJ1,ALERT_ML_LIGHT,FND (vidéo),20.858843,10.0,0.7212889999999987,premier échantillon dans AOI,hors AOI,91.16,0.03004500000000121,False,Apparition annotée manuellement par Élie
+SUJ1,ALERT_ML_LIGHT,ML (vidéo),20.858843,10.0,1.7231009999999998,premier échantillon dans AOI,hors AOI,91.16,0.03004500000000121,False,Apparition annotée manuellement par Élie
+SUJ1,ALERT_ML_LIGHT,ML (image mappée),20.858843,10.0,1.8533749999999998,premier échantillon dans AOI,hors AOI,83.13,0.03004500000000121,False,Apparition annotée manuellement par Élie
+SUJ1,ALERT_RED,FND (vidéo),83.852817,10.0,2.734966,premier échantillon dans AOI,hors AOI,100.0,0.010050000000006776,False,Publicité signalée ; essai perturbé
+SUJ1,ALERT_RED,ML (vidéo),83.852817,10.0,3.566438000000005,premier échantillon dans AOI,hors AOI,100.0,0.029988000000003012,False,Publicité signalée ; essai perturbé
+SUJ1,ALERT_RED,ML (image mappée),83.852817,10.0,,aucune entrée observée dans la fenêtre,indisponible,32.73,3.999139999999997,True,Publicité signalée ; essai perturbé
+SUJ1,ALERT_TEXT,FND (vidéo),110.110339,10.0,1.5828490000000102,premier échantillon dans AOI,hors AOI,98.39,0.010049999999992565,False,Apparition annotée manuellement par Élie
+SUJ1,ALERT_TEXT,ML (vidéo),110.110339,10.0,1.5828490000000102,premier échantillon dans AOI,hors AOI,98.39,0.010049999999992565,False,Apparition annotée manuellement par Élie
+SUJ1,ALERT_TEXT,ML (image mappée),110.110339,10.0,,aucune entrée observée dans la fenêtre,hors AOI,24.12,7.61569999999999,True,Apparition annotée manuellement par Élie
