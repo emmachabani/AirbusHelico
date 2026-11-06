@@ -24,8 +24,9 @@ AOIS = {
     'Écran principal (vidéo)': 'AOI hit [Recording 5 - Main screen]',
     'ML (vidéo)': 'AOI hit [Recording 5 - ML]',
     'ML (image mappée)': 'AOI hit [HLX FND1 - ML_HLX_FND1]',
+    'Rectangle (vidéo, à identifier)': 'AOI hit [Recording 5 - Rectangle]',
 }
-COLORS = ['#22a6b3', '#4568b0', '#e5a23c', '#a16cc1']
+COLORS = ['#22a6b3', '#4568b0', '#e5a23c', '#a16cc1', '#c16b8d']
 
 
 def write_csv(path, rows, fields):

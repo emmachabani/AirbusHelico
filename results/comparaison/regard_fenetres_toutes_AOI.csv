@@ -1,0 +1,176 @@
+﻿sujet,projet,alarme,AOI,repere_s,statut,echantillons_valides_AOI,echantillons_dans_AOI,reserve
+SUJ1,1,ALERT_FND,FND (vidéo),67.873922,mesures dans la fenêtre,1067,257,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_FND,Écran principal (vidéo),67.873922,mesures dans la fenêtre,1067,453,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_FND,ML (vidéo),67.873922,mesures dans la fenêtre,1067,0,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_FND,ML (image mappée),67.873922,mesures dans la fenêtre,595,0,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_FND,"Rectangle (vidéo, à identifier)",67.873922,mesures dans la fenêtre,1067,17,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,FND (vidéo),42.948827,mesures dans la fenêtre,997,208,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,Écran principal (vidéo),42.948827,mesures dans la fenêtre,997,291,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,ML (vidéo),42.948827,mesures dans la fenêtre,997,59,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,ML (image mappée),42.948827,mesures dans la fenêtre,669,0,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,"Rectangle (vidéo, à identifier)",42.948827,mesures dans la fenêtre,997,170,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LIGHT,FND (vidéo),20.858843,mesures dans la fenêtre,1025,200,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LIGHT,Écran principal (vidéo),20.858843,mesures dans la fenêtre,1025,325,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LIGHT,ML (vidéo),20.858843,mesures dans la fenêtre,1025,39,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LIGHT,ML (image mappée),20.858843,mesures dans la fenêtre,908,114,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LIGHT,"Rectangle (vidéo, à identifier)",20.858843,mesures dans la fenêtre,1025,103,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_RED,FND (vidéo),83.852817,mesures dans la fenêtre,1090,309,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_RED,Écran principal (vidéo),83.852817,mesures dans la fenêtre,1090,498,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_RED,ML (vidéo),83.852817,mesures dans la fenêtre,1090,102,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_RED,ML (image mappée),83.852817,mesures dans la fenêtre,326,0,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_RED,"Rectangle (vidéo, à identifier)",83.852817,mesures dans la fenêtre,1090,0,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_TEXT,FND (vidéo),110.110339,mesures dans la fenêtre,1066,197,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_TEXT,Écran principal (vidéo),110.110339,mesures dans la fenêtre,1066,129,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_TEXT,ML (vidéo),110.110339,mesures dans la fenêtre,1066,8,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_TEXT,ML (image mappée),110.110339,mesures dans la fenêtre,528,0,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_TEXT,"Rectangle (vidéo, à identifier)",110.110339,mesures dans la fenêtre,1066,75,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_FND,FND (vidéo),60.21864,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_FND,Écran principal (vidéo),60.21864,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_FND,ML (vidéo),60.21864,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_FND,ML (image mappée),60.21864,mesures dans la fenêtre,120,0,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_FND,"Rectangle (vidéo, à identifier)",60.21864,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_ML_LARGE,FND (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LARGE,Écran principal (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LARGE,ML (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LARGE,ML (image mappée),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LARGE,"Rectangle (vidéo, à identifier)",,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LIGHT,FND (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LIGHT,Écran principal (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LIGHT,ML (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LIGHT,ML (image mappée),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LIGHT,"Rectangle (vidéo, à identifier)",,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_RED,FND (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_RED,Écran principal (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_RED,ML (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_RED,ML (image mappée),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_RED,"Rectangle (vidéo, à identifier)",,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,FND (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,Écran principal (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,ML (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,ML (image mappée),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,"Rectangle (vidéo, à identifier)",,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ3,1,ALERT_FND,FND (vidéo),102.800033,non renseignée,0,0,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_FND,Écran principal (vidéo),102.800033,non renseignée,0,0,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_FND,ML (vidéo),102.800033,non renseignée,0,0,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_FND,ML (image mappée),102.800033,mesures dans la fenêtre,643,0,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_FND,"Rectangle (vidéo, à identifier)",102.800033,non renseignée,0,0,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_ML_LARGE,FND (vidéo),79.207341,non renseignée,0,0,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_ML_LARGE,Écran principal (vidéo),79.207341,non renseignée,0,0,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_ML_LARGE,ML (vidéo),79.207341,non renseignée,0,0,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_ML_LARGE,ML (image mappée),79.207341,mesures dans la fenêtre,564,10,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_ML_LARGE,"Rectangle (vidéo, à identifier)",79.207341,non renseignée,0,0,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_ML_LIGHT,FND (vidéo),124.729702,non renseignée,0,0,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_ML_LIGHT,Écran principal (vidéo),124.729702,non renseignée,0,0,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_ML_LIGHT,ML (vidéo),124.729702,non renseignée,0,0,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_ML_LIGHT,ML (image mappée),124.729702,mesures dans la fenêtre,121,0,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_ML_LIGHT,"Rectangle (vidéo, à identifier)",124.729702,non renseignée,0,0,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_RED,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_RED,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_RED,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_RED,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_RED,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ4,1,ALERT_FND,FND (vidéo),89.935971,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_FND,Écran principal (vidéo),89.935971,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_FND,ML (vidéo),89.935971,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_FND,ML (image mappée),89.935971,mesures dans la fenêtre,419,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_FND,"Rectangle (vidéo, à identifier)",89.935971,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_ML_LARGE,FND (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ4,1,ALERT_ML_LARGE,Écran principal (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ4,1,ALERT_ML_LARGE,ML (vidéo),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ4,1,ALERT_ML_LARGE,ML (image mappée),,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ4,1,ALERT_ML_LARGE,"Rectangle (vidéo, à identifier)",,repère absent,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ4,1,ALERT_ML_LIGHT,FND (vidéo),27.583161,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_ML_LIGHT,Écran principal (vidéo),27.583161,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_ML_LIGHT,ML (vidéo),27.583161,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_ML_LIGHT,ML (image mappée),27.583161,mesures dans la fenêtre,365,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_ML_LIGHT,"Rectangle (vidéo, à identifier)",27.583161,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_RED,FND (vidéo),113.77911,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_RED,Écran principal (vidéo),113.77911,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_RED,ML (vidéo),113.77911,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_RED,ML (image mappée),113.77911,mesures dans la fenêtre,283,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_RED,"Rectangle (vidéo, à identifier)",113.77911,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_TEXT,FND (vidéo),138.78435,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_TEXT,Écran principal (vidéo),138.78435,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_TEXT,ML (vidéo),138.78435,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_TEXT,ML (image mappée),138.78435,mesures dans la fenêtre,241,0,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_TEXT,"Rectangle (vidéo, à identifier)",138.78435,non renseignée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_FND,FND (vidéo),97.016629,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_FND,Écran principal (vidéo),97.016629,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_FND,ML (vidéo),97.016629,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_FND,ML (image mappée),97.016629,mesures dans la fenêtre,212,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_FND,"Rectangle (vidéo, à identifier)",97.016629,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LARGE,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_ML_LARGE,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_ML_LARGE,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_ML_LARGE,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_ML_LARGE,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_ML_LIGHT,FND (vidéo),40.514402,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LIGHT,Écran principal (vidéo),40.514402,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LIGHT,ML (vidéo),40.514402,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LIGHT,ML (image mappée),40.514402,mesures dans la fenêtre,733,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LIGHT,"Rectangle (vidéo, à identifier)",40.514402,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_RED,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_RED,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_RED,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_RED,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_RED,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_FND,FND (vidéo),139.027234,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_FND,Écran principal (vidéo),139.027234,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_FND,ML (vidéo),139.027234,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_FND,ML (image mappée),139.027234,mesures dans la fenêtre,342,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_FND,"Rectangle (vidéo, à identifier)",139.027234,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LARGE,FND (vidéo),97.431977,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LARGE,Écran principal (vidéo),97.431977,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LARGE,ML (vidéo),97.431977,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LARGE,ML (image mappée),97.431977,mesures dans la fenêtre,327,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LARGE,"Rectangle (vidéo, à identifier)",97.431977,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LIGHT,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_ML_LIGHT,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_ML_LIGHT,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_ML_LIGHT,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_ML_LIGHT,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_RED,FND (vidéo),169.081609,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_RED,Écran principal (vidéo),169.081609,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_RED,ML (vidéo),169.081609,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_RED,ML (image mappée),169.081609,mesures dans la fenêtre,526,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_RED,"Rectangle (vidéo, à identifier)",169.081609,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_TEXT,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_TEXT,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_TEXT,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_TEXT,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_TEXT,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_FND,FND (vidéo),132.614376,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_FND,Écran principal (vidéo),132.614376,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_FND,ML (vidéo),132.614376,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_FND,ML (image mappée),132.614376,mesures dans la fenêtre,430,35,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_FND,"Rectangle (vidéo, à identifier)",132.614376,non exportée,0,0,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_ML_LARGE,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LARGE,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LARGE,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LARGE,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LARGE,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_RED,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_RED,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_RED,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_RED,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_RED,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,FND (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,Écran principal (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,ML (vidéo),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,ML (image mappée),,repère absent,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,"Rectangle (vidéo, à identifier)",,repère absent,,,Aucun marqueur exporté ; cause non documentée

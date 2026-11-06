@@ -39,7 +39,7 @@ rapporte ce dénominateur à tous les échantillons oculaires.
 Les AOI vidéo FND, Main screen et ML sont distinctes de l'AOI ML sur l'image
 mappée `HLX FND1`. Elles peuvent être imbriquées ; ne pas additionner leurs
 pourcentages ni assimiler les référentiels. L'AOI `Rectangle`, de signification
-inconnue, n'est pas analysée. `HLX FND1` est aussi un nom de média/mapping dans
+inconnue, est affichée sans interprétation dans la vue de toutes les AOI. `HLX FND1` est aussi un nom de média/mapping dans
 cet export : il n'est pas traité comme une colonne AOI supplémentaire.
 
 Les graphiques représentent des échantillons de regard, pas des fixations
@@ -249,3 +249,31 @@ Le script nécessite les CSV locaux `echantillons_pseudonymises.csv`, exclus de
 Git, obtenus en relançant les analyses des Excel sources dans un environnement
 autorisé. Le CSV publié contient uniquement les effectifs par fenêtre, les
 repères relatifs et les réserves, jamais les échantillons individuels.
+
+## Toutes les AOI — sept sujets et cinq alarmes
+
+![Toutes les AOI](results/comparaison/regard_7_sujets_5_alarmes_toutes_AOI.png)
+
+La figure détaillée remplace la restriction à ML pour explorer toutes les
+zones exportées : FND vidéo, écran principal vidéo, ML vidéo, ML sur l’image
+FND, et Rectangle vidéo (contenu à identifier). Cinq pistes aux mêmes positions
+dans chacune des 35 cases sujet/alarme. Les couleurs indiquent les échantillons
+dans l’AOI, le bleu-gris les échantillons valides hors AOI, le gris clair
+les mesures absentes/invalides. Les AOI peuvent se chevaucher.
+
+Les quatre pistes vidéo sont non exportées pour le projet 2 et non renseignées
+pour certains sujets du projet 1 ; ces états ne sont pas assimilés à zéro regard.
+Le statut est calculé sur le fichier complet ; une fenêtre peut néanmoins ne
+contenir aucune mesure valide d’une AOI renseignée ailleurs dans l’essai. Les
+repères absents ne sont pas reconstruits. Les réserves d’Élie restent visibles.
+Rectangle est inclus à la demande de montrer toutes les AOI, sans supposer
+qu’il correspond à une alarme. Aucune comparaison de détection n’est déduite.
+
+```bash
+# Relancer analyse_tobii.py pour SUJ1–4 afin d’inclure Rectangle dans les CSV locaux, puis :
+python3 scripts/regard_toutes_aoi.py
+```
+
+Les versions PNG, SVG et PDF sont dans `results/comparaison/` et le tableau
+`regard_fenetres_toutes_AOI.csv` fournit les effectifs par fenêtre et par AOI.
+Les CSV d’échantillons nécessaires au script restent exclus de Git.

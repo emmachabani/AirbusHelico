@@ -1,4 +1,14 @@
 {
+  "projet": 1,
+  "aoi_source": {
+    "FND (vidéo)": "AOI hit [Recording 5 - FND]",
+    "Écran principal (vidéo)": "AOI hit [Recording 5 - Main screen]",
+    "ML (vidéo)": "AOI hit [Recording 5 - ML]",
+    "ML (image mappée)": "AOI hit [HLX FND1 - ML_HLX_FND1]",
+    "Rectangle (vidéo, à identifier)": "AOI hit [Recording 5 - Rectangle]"
+  },
+  "horodatage_sans_unite_verifie_par_duree": false,
+  "dernier_horodatage_export_s": 103.687237,
   "duree_s": 103.687237,
   "echantillons_oculaires": 10124,
   "au_moins_un_oeil_valide_pct": 90.22,
@@ -32,7 +42,7 @@
   ],
   "duree_intervalles_mapping_s": 20.216400000000004,
   "avertissements": [
-    "SUJ2 / projet 1 uniquement ; analyse exploratoire.",
+    "SUJ2 / projet 1 ; analyse exploratoire.",
     "ALERT_ML_LARGE : Hors champ signalé ; apparition non datable sur la vidéo",
     "ALERT_ML_LIGHT : Hors champ signalé ; apparition non datable sur la vidéo",
     "ALERT_RED : Hors champ signalé ; apparition non datable sur la vidéo",

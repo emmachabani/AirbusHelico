@@ -1,4 +1,14 @@
 {
+  "projet": 1,
+  "aoi_source": {
+    "FND (vidéo)": "AOI hit [Recording 5 - FND]",
+    "Écran principal (vidéo)": "AOI hit [Recording 5 - Main screen]",
+    "ML (vidéo)": "AOI hit [Recording 5 - ML]",
+    "ML (image mappée)": "AOI hit [HLX FND1 - ML_HLX_FND1]",
+    "Rectangle (vidéo, à identifier)": "AOI hit [Recording 5 - Rectangle]"
+  },
+  "horodatage_sans_unite_verifie_par_duree": false,
+  "dernier_horodatage_export_s": 131.058194,
   "duree_s": 131.058194,
   "echantillons_oculaires": 12956,
   "au_moins_un_oeil_valide_pct": 97.55,
@@ -40,7 +50,7 @@
   ],
   "duree_intervalles_mapping_s": 41.845662000000004,
   "avertissements": [
-    "SUJ1 / projet 1 uniquement ; analyse exploratoire.",
+    "SUJ1 / projet 1 ; analyse exploratoire.",
     "ALERT_RED : Publicité signalée ; essai perturbé",
     "Marqueurs d’apparition ajoutés manuellement par Élie ; précision selon les réserves de prétraitement.",
     "Mapping disponible ne signifie ni fixation ni visibilité continue du FND.",

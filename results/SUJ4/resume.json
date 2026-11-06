@@ -4,7 +4,8 @@
     "FND (vidéo)": "AOI hit [Recording 5 - FND]",
     "Écran principal (vidéo)": "AOI hit [Recording 5 - Main screen]",
     "ML (vidéo)": "AOI hit [Recording 5 - ML]",
-    "ML (image mappée)": "AOI hit [HLX FND1 - ML_HLX_FND1]"
+    "ML (image mappée)": "AOI hit [HLX FND1 - ML_HLX_FND1]",
+    "Rectangle (vidéo, à identifier)": "AOI hit [Recording 5 - Rectangle]"
   },
   "horodatage_sans_unite_verifie_par_duree": false,
   "dernier_horodatage_export_s": 151.877993,
