@@ -52,8 +52,8 @@ def baseline(s,start):
     return center,radius
 
 
-def binned(s,start,center):
-    times=np.arange(-.475,5.,BIN)+start
+def binned(s,start,center,end_seconds=5.):
+    times=np.arange(-.475,end_seconds,BIN)+start
     values=np.full((len(times),2),np.nan)
     for i,t in enumerate(times):
         mask=(s['t']>=t-BIN/2)&(s['t']<t+BIN/2)&s['valid']

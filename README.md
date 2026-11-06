@@ -589,3 +589,37 @@ Pour SUJ2, SUJ5 et SUJ6, un seul segment mappé remplit les critères dans
 la fenêtre retenue. Il ne faut pas en déduire que le sujet n’a eu qu’un
 seul regard dans toute la scène. Les figures montrent uniquement les
 segments mappés disponibles et retenus, sans compléter les lacunes.
+
+## Version améliorée de la figure déplacement / maintien / retour
+
+La nouvelle figure est dans
+`results/comparaison/mouvements_FND/04_deplacement_maintien_retour_12s.png`
+(et SVG/PDF). L’ancienne figure reste conservée pour tracer l’évolution de
+l’analyse. Le motif initial et ses paramètres sont inchangés sur 0–5 s ;
+seule la recherche du retour est étendue à +12 s, avec le même critère
+(écart ≤ 5° durant trois bins valides de 50 ms).
+
+```bash
+python3 scripts/stabilisation_fnd_v2.py
+```
+
+Deux retours étaient observés avant +5 s ; cinq sont observés avant +12 s.
+La figure matérialise l’ancienne limite, les données disponibles, les durées
+de maintien et les retours. SUJ6 est « non observé avant +12 s », SUJ4
+« non évalué : motif initial non retrouvé », plutôt qu’un retour manquant
+assimilé à une absence de réaction. Les résultats sont dans
+`retours_FND_5s_vs_12s.csv`. Les angles sont toujours relatifs aux lunettes,
+sans compensation de tête ni preuve de retour vers l’écran de la route.
+
+## Contexte conservé pour la réunion et le rapport ultérieur
+
+Voir [la note de contexte et les questions de protocole](docs/contexte/point_reunion_et_rapport.md),
+[la proposition de synchronisation du prototype](docs/contexte/synchronisation_prototype.md)
+et [l’inventaire des captures](docs/contexte/captures/README.md).
+
+Les captures collées dans la conversation ont été décrites, mais leurs
+fichiers PNG/JPG originaux ne sont pas accessibles dans le workspace et
+ne sont donc pas encore enregistrés dans Git. Le dossier de contexte est
+prêt à les recevoir lorsqu’ils seront joints comme fichiers.
+Le rapport final n’est pas encore rédigé : intégrer les conclusions de la
+réunion lorsqu’elles seront fournies. Aucune exécution différée n’est programmée.

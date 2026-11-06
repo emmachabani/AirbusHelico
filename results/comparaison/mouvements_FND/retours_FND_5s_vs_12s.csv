@@ -1,0 +1,8 @@
+﻿sujet,projet,mouvement_s,stabilisation_s,duree_stabilisation_s,retour_ancienne_fenetre_5s,retour_fenetre_12s,statut_retour,couverture_bins_valides_0_5s_pct,couverture_bins_valides_apres_maintien_pct,reserve
+SUJ1,1,0.5999999999999996,1.8999999999999995,0.44999999999999973,,7.049999999999998,retour observé,99.0,95.85492227979275,Position oculaire / lunettes ; lieu non confirmé
+SUJ2,1,0.7999999999999998,1.0499999999999998,0.39999999999999947,,5.199999999999998,retour observé,93.0,93.36492890995261,Position oculaire / lunettes ; lieu non confirmé
+SUJ3,1,1.3999999999999995,1.3999999999999995,0.44999999999999973,2.6499999999999995,2.6499999999999995,retour observé,98.0,98.52216748768473,Apparition approximative
+SUJ4,1,,,,,,non évalué : motif initial non retrouvé,62.0,,Position oculaire / lunettes ; lieu non confirmé
+SUJ5,2,1.1999999999999997,1.8999999999999995,0.2999999999999998,3.799999999999999,3.799999999999999,retour observé,98.0,98.9795918367347,Position oculaire / lunettes ; lieu non confirmé
+SUJ6,2,0.34999999999999987,0.5499999999999998,0.5999999999999996,,,non observé avant +12 s,99.0,96.7741935483871,Position oculaire / lunettes ; lieu non confirmé
+SUJ7,2,3.4499999999999993,4.049999999999999,0.3000000000000007,,10.999999999999998,retour observé,96.0,85.62091503267973,Position oculaire / lunettes ; lieu non confirmé
