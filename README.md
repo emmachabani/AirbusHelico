@@ -333,3 +333,88 @@ pourraient soutenir une comparaison des formats d’alarme. »
 
 Un seul sujet et un seul essai par format : les valeurs sont des exemples
 descriptifs, sans classement d’efficacité, test statistique ou généralisation.
+
+## Essai exploratoire : mouvements autour d’ALERT_FND chez sept sujets
+
+Les résultats sont dans `results/comparaison/mouvements_FND/` : synthèse des
+candidats, signaux angulaires et gyroscope, trajectoires et PDF de trois pages.
+L’objectif est de tester une ressemblance de réorientation, sans inférer la
+destination du regard chez les sujets sans AOI.
+
+```bash
+python3 scripts/extraire_fnd.py --sources /workspace/attachments
+python3 scripts/mouvements_fnd.py
+```
+
+Les caches `local_analysis/fnd/` sont exclus de Git. Les sources sont recherchées
+par nom SUJ1.xlsx à SUJ7.xlsx, sans ambiguïté autorisée. Seules les fenêtres
+−12 à +12 s, les signaux et temps relatifs sont conservés localement. Les
+empreintes SHA-256 sont consignées dans l’audit, sans métadonnées personnelles.
+
+### Référence et signal
+
+SUJ1 : médiane des directions de regard valides sur l’écran principal pendant
+les 0,5 s avant FND, puis médiane des points dans l’AOI FND durant les 0,25 s
+suivant sa première entrée (0,791 s). Le déplacement est presque vertical :
+environ −11 px horizontalement et +396 px verticalement dans la vidéo ; environ
+22,8 degrés dans le plan yaw/pitch du regard relatif aux lunettes.
+
+Les sept exports contiennent des directions de regard gauche dont la norme
+est uniformément proche de 100000. Le script vérifie cette échelle commune
+à 1 % près. Les angles sont calculés par atan2, qui annule le facteur d’échelle,
+sans modifier arbitrairement chaque composante. Seul l’œil gauche déclaré
+valide est utilisé : ce choix évite un mélange d’yeux et est indiqué dans les
+figures. Il ne reproduit pas la règle binoculaire des analyses AOI précédentes.
+
+### Heuristique de ressemblance
+
+Pour chaque sujet, le regard est centré sur la médiane des 0,5 s avant le repère.
+Au moins 20 points de référence sont exigés et une dispersion initiale p90
+supérieure à la moitié de l’amplitude SUJ1 rend la recherche non concluante.
+On calcule des médianes en bins de 50 ms, avec au moins trois points valides
+par bin. Un candidat est le début de deux bins consécutifs (100 ms de bins)
+dont le déplacement a une amplitude de 50 à 200 % de SUJ1 et une direction
+à moins de 45 degrés de la référence. Il n’y a aucune interpolation des
+lacunes. Ces bins ne prouvent pas une fixation ni une continuité à chaque
+instant des 100 ms. Fenêtre de recherche : 0 à 5 s après l’alarme.
+
+La même recherche est appliquée de −7 à −2 s, avec sa propre référence
+antérieure de 0,5 s. Cette fenêtre témoin n’est pas garantie exempte d’autres
+événements. Son statut et sa dispersion sont publiés. Une sensibilité utilise
+huit combinaisons : seuil bas 50/75 %, haut 150/200 %, cône 30/45 degrés.
+Les barres de sensibilité ne sont pas des intervalles de confiance.
+
+### Résultat et interprétation
+
+Un candidat est trouvé chez SUJ1, SUJ2, SUJ3, SUJ5, SUJ6 et SUJ7 ; SUJ1
+est la référence d’apprentissage, pas un test indépendant. Aucun candidat
+n’est trouvé pour SUJ4, avec seulement 62 % des bins post-alarme renseignés.
+Pour SUJ6 et SUJ7, un mouvement semblable est aussi trouvé avant l’alarme :
+la forme du mouvement ne suffit donc pas à identifier une réponse à FND.
+Le repère FND de SUJ3 est approximatif selon les notes de prétraitement.
+
+Le délai SUJ1 de l’heuristique (0,60 s) est distinct de sa première entrée
+dans l’AOI FND (0,79 s) : le seuil correspond à un déplacement partiel.
+Les valeurs ne doivent pas être présentées comme des temps de détection.
+
+Les gyroscopes montrent une activité relative au niveau médian des deux
+secondes précédentes, après centrage par axe. Les unités absolues de l’export
+restent ambiguës ; aucune intégration ou rotation de tête reconstruite n’est
+effectuée. L’activité est une indication de mouvement, pas une compensation
+de tête. Les directions angulaires restent dans le repère des lunettes.
+Une rotation de tête peut modifier la relation entre mouvement oculaire et
+lieu observé ; elle peut aussi masquer une réorientation dans ce repère.
+
+Cette analyse ne démontre ni regard vers le FND, ni détection, ni causalité
+avec l’alarme chez les autres sujets. Elle identifie des séquences candidates
+à confronter aux vidéos. Les mêmes amplitudes peuvent viser d’autres objets ;
+absence de candidat ne signifie pas absence de réaction. Il n’y a pas de test
+statistique, de taux de réussite ou de classement des deux projets.
+
+Les témoins SUJ1, SUJ2 et SUJ5 sont non évaluables selon le critère de
+dispersion initiale ; ils ne doivent pas être décrits comme des contrôles
+négatifs. SUJ3 et SUJ4 n’ont pas de candidat dans la fenêtre témoin ; SUJ6
+et SUJ7 en ont un. Ces quelques fenêtres ne permettent pas d’estimer une
+sensibilité ou une spécificité. Le script d’extraction vérifie sujet, projet
+et concordance du marqueur FND avec les résultats antérieurs avant de créer
+le cache local.

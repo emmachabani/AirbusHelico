@@ -1,0 +1,126 @@
+{
+  "reference_suj1": {
+    "arrivee_FND_s": 0.791402000000005,
+    "deplacement_pixels": [
+      -11.0,
+      396.0
+    ],
+    "deplacement_yaw_pitch_deg": [
+      0.024125279011987466,
+      -22.79691785396836
+    ],
+    "amplitude_deg": 22.79693061948623
+  },
+  "methode": {
+    "repere": "direction œil gauche / lunettes",
+    "bin_s": 0.05,
+    "points_valides_min_par_bin": 3,
+    "baseline_s": [
+      -0.5,
+      0
+    ],
+    "fenetre_s": [
+      0,
+      5
+    ],
+    "temoin_s": [
+      -7,
+      -2
+    ],
+    "rapport_amplitudes": [
+      0.5,
+      2
+    ],
+    "cone_deg": 45,
+    "bins_consecutifs": 2,
+    "sensibilite_parametres": [
+      [
+        0.5,
+        1.5,
+        30.0
+      ],
+      [
+        0.5,
+        1.5,
+        45.0
+      ],
+      [
+        0.5,
+        2.0,
+        30.0
+      ],
+      [
+        0.5,
+        2.0,
+        45.0
+      ],
+      [
+        0.75,
+        1.5,
+        30.0
+      ],
+      [
+        0.75,
+        1.5,
+        45.0
+      ],
+      [
+        0.75,
+        2.0,
+        30.0
+      ],
+      [
+        0.75,
+        2.0,
+        45.0
+      ]
+    ],
+    "gyro": "indice relatif, aucune intégration/correction"
+  },
+  "audit_sources": {
+    "SUJ1": {
+      "source_sha256": "ab8fd0434ee4a805f00a0ccad495b8d7fc1e548f7cd58e93ada3761b43c61072",
+      "norm_min": 99999.3963281779,
+      "norm_max": 100000.62532804483
+    },
+    "SUJ2": {
+      "source_sha256": "4314f786b5d8c2ae2e7f1e78c18fb497d3fb261753eb5e0787a200ad91edb9d6",
+      "norm_min": 99999.36932301123,
+      "norm_max": 100000.61452311181
+    },
+    "SUJ3": {
+      "source_sha256": "98f7cca80c8e0cadbb5bbc2470bdd4e6ef2e8664723c5d83340cae702f0ea402",
+      "norm_min": 99999.36404797783,
+      "norm_max": 100000.58914326454
+    },
+    "SUJ4": {
+      "source_sha256": "c99b97bf386a90ce57912533d1e8d0983ecc97447981fa71540445a416f8cac2",
+      "norm_min": 99999.40562323359,
+      "norm_max": 100000.60568816571
+    },
+    "SUJ5": {
+      "source_sha256": "30d2d89e6cffd8f33aa10deb5352a1d34b63a38f76fb3f031b3eadcf8771f5c3",
+      "norm_min": 99999.42282333433,
+      "norm_max": 100000.65122287955
+    },
+    "SUJ6": {
+      "source_sha256": "3f63fa077a5b8b2331876be71537e3984201baac976d9b7ec73854031e23fd68",
+      "norm_min": 99999.3321227697,
+      "norm_max": 100000.63522298246
+    },
+    "SUJ7": {
+      "source_sha256": "bedb75f2d38977c8df960422cf7e9e7db6abc10c94214b68fa0a095344fd2e10",
+      "norm_min": 99999.33874781373,
+      "norm_max": 100000.6532228665
+    }
+  },
+  "limites": [
+    "Seuils heuristiques, pas de significativité statistique.",
+    "Référence apprise sur SUJ1 et évaluée sur SUJ1 : contrôle de cohérence, pas validation indépendante.",
+    "Témoin antérieur non garanti exempt d’autres événements ou regards vers la tablette.",
+    "Bin de 50 ms ; aucune interpolation à travers les lacunes.",
+    "Angles yaw/pitch : approximation locale de déplacement, pas distance géodésique ni lieu visé.",
+    "Pas de reconstruction de tête ; gyro relatif seulement, unités absolues exportées ambiguës.",
+    "Un candidat peut être un regard vers tout autre objet ; absence de candidat ne prouve pas absence de détection."
+  ]
+}
