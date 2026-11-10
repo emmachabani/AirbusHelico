@@ -1,3 +1,20 @@
+## Grande figure par alarme
+
+[Cinq grandes zones, sept sujets dans chacune](grande_figure_5_zones_alarmes_7_sujets.png)
+· [SVG pour zoomer](grande_figure_5_zones_alarmes_7_sujets.svg).
+
+Même mesure et même échelle temporelle partout. Les fonds légers distinguent
+les projets P1 et P2 ; ils ne codent pas une performance. Point bleu = premier
+point mappé dans le FND ; étoile rose = durée externe apparition → appui.
+Les réserves sur le mapping, les repères et l’alignement restent identiques.
+Les numéros des zones correspondent aux formats, pas à un ordre d’essais validé.
+
+```bash
+python3 scripts/grande_figure_par_alarme.py
+```
+
+---
+
 ## Nouvelle présentation : comparer les alarmes au sein de chaque sujet
 
 [Les cinq alarmes regroupées par sujet](comparaison_5_alarmes_par_sujet_regard_appui.png)
