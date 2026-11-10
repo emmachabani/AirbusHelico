@@ -1,0 +1,79 @@
+{
+  "fenetre_s": [
+    0,
+    12
+  ],
+  "methode": "intervalles entre échantillons, dernière période médiane, lacunes >50 ms non prolongées ; aucune interpolation",
+  "sujets": [
+    {
+      "sujet": "SUJ1",
+      "durees_s": {
+        "FND_hors_ML": 3.09556400000001,
+        "ML": 0,
+        "FND_ML_inconnu": 0,
+        "indetermine": 8.90443599999999
+      },
+      "source_sha256": "ab8fd0434ee4a805f00a0ccad495b8d7fc1e548f7cd58e93ada3761b43c61072"
+    },
+    {
+      "sujet": "SUJ2",
+      "durees_s": {
+        "FND_hors_ML": 1.242246999999999,
+        "ML": 0,
+        "FND_ML_inconnu": 0,
+        "indetermine": 10.757753000000001
+      },
+      "source_sha256": "4314f786b5d8c2ae2e7f1e78c18fb497d3fb261753eb5e0787a200ad91edb9d6"
+    },
+    {
+      "sujet": "SUJ3",
+      "durees_s": {
+        "FND_hors_ML": 4.347760000000022,
+        "ML": 0,
+        "FND_ML_inconnu": 0,
+        "indetermine": 7.652239999999978
+      },
+      "source_sha256": "98f7cca80c8e0cadbb5bbc2470bdd4e6ef2e8664723c5d83340cae702f0ea402"
+    },
+    {
+      "sujet": "SUJ4",
+      "durees_s": {
+        "FND_hors_ML": 1.8432739999999939,
+        "ML": 0,
+        "FND_ML_inconnu": 0,
+        "indetermine": 10.156726000000006
+      },
+      "source_sha256": "c99b97bf386a90ce57912533d1e8d0983ecc97447981fa71540445a416f8cac2"
+    },
+    {
+      "sujet": "SUJ5",
+      "durees_s": {
+        "FND_hors_ML": 2.1238419999999962,
+        "ML": 0,
+        "FND_ML_inconnu": 0,
+        "indetermine": 9.876158000000004
+      },
+      "source_sha256": "30d2d89e6cffd8f33aa10deb5352a1d34b63a38f76fb3f031b3eadcf8771f5c3"
+    },
+    {
+      "sujet": "SUJ6",
+      "durees_s": {
+        "FND_hors_ML": 3.4261549999999943,
+        "ML": 0,
+        "FND_ML_inconnu": 0,
+        "indetermine": 8.573845000000006
+      },
+      "source_sha256": "3f63fa077a5b8b2331876be71537e3984201baac976d9b7ec73854031e23fd68"
+    },
+    {
+      "sujet": "SUJ7",
+      "durees_s": {
+        "FND_hors_ML": 3.626464000000027,
+        "ML": 0.9217009999999846,
+        "FND_ML_inconnu": 0,
+        "indetermine": 7.451834999999988
+      },
+      "source_sha256": "bedb75f2d38977c8df960422cf7e9e7db6abc10c94214b68fa0a095344fd2e10"
+    }
+  ]
+}
