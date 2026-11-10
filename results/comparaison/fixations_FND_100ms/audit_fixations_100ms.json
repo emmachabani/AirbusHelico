@@ -1,0 +1,44 @@
+{
+  "seuil_s": 0.1,
+  "fenetre_s": 10,
+  "ecart_max_entre_points_s": 0.025,
+  "continuite": "tout point non mappé, invalide, non Fixation ou changement d’index casse le segment ; aucune interpolation",
+  "sujets": [
+    {
+      "sujet": "SUJ1",
+      "source_sha256": "ab8fd0434ee4a805f00a0ccad495b8d7fc1e548f7cd58e93ada3761b43c61072",
+      "segments_bruts": 59
+    },
+    {
+      "sujet": "SUJ2",
+      "source_sha256": "4314f786b5d8c2ae2e7f1e78c18fb497d3fb261753eb5e0787a200ad91edb9d6",
+      "segments_bruts": 48
+    },
+    {
+      "sujet": "SUJ3",
+      "source_sha256": "98f7cca80c8e0cadbb5bbc2470bdd4e6ef2e8664723c5d83340cae702f0ea402",
+      "segments_bruts": 52
+    },
+    {
+      "sujet": "SUJ4",
+      "source_sha256": "c99b97bf386a90ce57912533d1e8d0983ecc97447981fa71540445a416f8cac2",
+      "segments_bruts": 13
+    },
+    {
+      "sujet": "SUJ5",
+      "source_sha256": "30d2d89e6cffd8f33aa10deb5352a1d34b63a38f76fb3f031b3eadcf8771f5c3",
+      "segments_bruts": 31
+    },
+    {
+      "sujet": "SUJ6",
+      "source_sha256": "3f63fa077a5b8b2331876be71537e3984201baac976d9b7ec73854031e23fd68",
+      "segments_bruts": 61
+    },
+    {
+      "sujet": "SUJ7",
+      "source_sha256": "bedb75f2d38977c8df960422cf7e9e7db6abc10c94214b68fa0a095344fd2e10",
+      "segments_bruts": 69
+    }
+  ],
+  "fixations_retenues": 15
+}

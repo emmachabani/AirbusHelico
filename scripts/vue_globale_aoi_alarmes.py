@@ -26,7 +26,7 @@ def extract(subject,sources):
     target=cache/(subject+'.npz')
     if target.exists():
         d=np.load(target,allow_pickle=False)
-        if str(d['sha'])==sha:return {k:d[k] for k in d.files}
+        if str(d['sha'])==sha and 'fixation_id' in d.files:return {k:d[k] for k in d.files}
     project=1 if int(subject[3:])<=4 else 2
     media='HLX FND1' if project==1 else 'HLX FND';mlname=f'AOI hit [{media} - '+('ML_HLX_FND1]' if project==1 else 'HLX_FND_ML]')
     w=openpyxl.load_workbook(source,read_only=True,data_only=True);it=w.active.values;headers=next(it)
@@ -34,7 +34,7 @@ def extract(subject,sources):
         found=[i for i,h in enumerate(headers) if h==prefix or h.startswith(prefix+' [')]
         if len(found)!=1:raise ValueError(prefix)
         return found[0]
-    prefixes=['Validity left','Validity right',f'Mapped gaze point X [{media}]',f'Mapped gaze point Y [{media}]',f'Width [{media}]',f'Height [{media}]',mlname]
+    prefixes=['Validity left','Validity right',f'Mapped gaze point X [{media}]',f'Mapped gaze point Y [{media}]',f'Width [{media}]',f'Height [{media}]',mlname,'Eye movement type','Eye movement type index']
     inds=[key(n) for n in prefixes];sensor=key('Sensor');rows=[];times=[]
     for row in it:
         if len(row)<=sensor or row[sensor]!='Eye Tracker':continue
@@ -45,9 +45,10 @@ def extract(subject,sources):
     valid=(a[:,0]=='Valid')|(a[:,1]=='Valid')
     def num(j):return np.array([np.nan if x is None else float(x) for x in a[:,j]])
     x,y,width,height,ml=[num(j) for j in range(2,7)]
+    is_fixation=a[:,7]=='Fixation';fixation_id=num(8)
     inside=valid&np.isfinite(x)&np.isfinite(y)&(x>=0)&(x<=width)&(y>=0)&(y<=height)
     state=np.zeros(len(t),dtype=np.int8);state[inside&(ml==0)]=1;state[inside&(ml==1)]=2;state[inside&~np.isin(ml,[0,1])]=3
-    result=dict(t=t,state=state,valid=valid,sha=np.array(sha));np.savez_compressed(target,**result)
+    result=dict(t=t,state=state,valid=valid,is_fixation=is_fixation,fixation_id=fixation_id,sha=np.array(sha));np.savez_compressed(target,**result)
     return result
 
 def main(sources):

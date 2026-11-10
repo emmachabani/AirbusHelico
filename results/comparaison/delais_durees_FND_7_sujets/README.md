@@ -1,3 +1,12 @@
+## Mise à jour du critère : première fixation soutenue ≥100 ms
+
+Les anciennes figures ci-dessous montrent le premier **échantillon** mappé.
+Pour la comparaison actuelle, utiliser les [nouvelles figures de premières
+fixations mappées ≥100 ms](../fixations_FND_100ms/README.md), avec les mêmes
+appuis externes. Les mesures historiques ne sont pas renommées en fixations.
+
+---
+
 ## Grande figure par alarme
 
 [Cinq grandes zones, sept sujets dans chacune](grande_figure_5_zones_alarmes_7_sujets.png)
