@@ -1,0 +1,130 @@
+{
+  "date_document": "2026-11-10",
+  "pages": [
+    {
+      "page": 1,
+      "titre": "Présentation et objectif"
+    },
+    {
+      "page": 2,
+      "titre": "Repères de lecture et sommaire"
+    },
+    {
+      "page": 3,
+      "titre": "1 · Quelles données avons-nous pour les sept sujets ?",
+      "source": "results/comparaison/comparaison_7_sujets.pdf",
+      "page_source_zero_base": 0,
+      "source_sha256": "055de49058d4455a0f895155d3504c1e51b787d11cb257d95f40b132e32615ac"
+    },
+    {
+      "page": 4,
+      "titre": "2 · SUJ1 : vue d’ensemble du regard",
+      "source": "results/SUJ1/synthese/SUJ1_synthese_complete.pdf",
+      "page_source_zero_base": 0,
+      "source_sha256": "a436d9eae489db2aad1ef1485b553e603409fa52b114bcf997e1865b23e52376"
+    },
+    {
+      "page": 5,
+      "titre": "3 · SUJ1 : le regard autour des cinq types d’alarme",
+      "source": "results/SUJ1/synthese/SUJ1_synthese_complete.pdf",
+      "page_source_zero_base": 1,
+      "source_sha256": "a436d9eae489db2aad1ef1485b553e603409fa52b114bcf997e1865b23e52376"
+    },
+    {
+      "page": 6,
+      "titre": "4 · SUJ1 : rapidité d’orientation du regard",
+      "source": "results/SUJ1/synthese/SUJ1_synthese_complete.pdf",
+      "page_source_zero_base": 2,
+      "source_sha256": "a436d9eae489db2aad1ef1485b553e603409fa52b114bcf997e1865b23e52376"
+    },
+    {
+      "page": 7,
+      "titre": "5 · ALERT_FND : déplacement, maintien et retour",
+      "source": "results/comparaison/mouvements_FND/ALERT_FND_deplacement_maintien_retour_epure.pdf",
+      "page_source_zero_base": 0,
+      "source_sha256": "33ba9d04d4c067d1a4587c297a11927f26ae301518d2883d4914dd3a53d7c64f"
+    },
+    {
+      "page": 8,
+      "titre": "6 · Entre le maintien et le retour : quelles régions du FND ?",
+      "source": "results/comparaison/regions_FND/FND_maintien_exploration_retour.pdf",
+      "page_source_zero_base": 0,
+      "source_sha256": "14f3c185fb23db178b81fc46c00a86466b8389a4f8220ff547221193d83e6a50"
+    },
+    {
+      "page": 9,
+      "titre": "7 · ALERT_FND : positions sur le FND et ordre du regard",
+      "source": "results/comparaison/positions_FND/positions_FND_7_sujets_ordre_temps.pdf",
+      "page_source_zero_base": 0,
+      "source_sha256": "bc34bf84cece03e290f67297ca86ead350e79be8a9017f393d59e69a9ee21960"
+    },
+    {
+      "page": 10,
+      "titre": "Questions de protocole et synchronisation"
+    },
+    {
+      "page": 11,
+      "titre": "Annexe A · Sept sujets, cinq alarmes : regard vers ML",
+      "source": "results/comparaison/regard_7_sujets_5_alarmes.pdf",
+      "page_source_zero_base": 0,
+      "source_sha256": "9749fb20f9ccc72133a9e9b30928775cee219c456310dc64c49c620bcc78b6b9"
+    },
+    {
+      "page": 12,
+      "titre": "Annexe B · Sept sujets, cinq alarmes : toutes les AOI exportées",
+      "source": "results/comparaison/regard_7_sujets_5_alarmes_toutes_AOI.pdf",
+      "page_source_zero_base": 0,
+      "source_sha256": "499b982122769674c43566df6d242dad2497733953062bec3b4c94683088168d"
+    },
+    {
+      "page": 13,
+      "titre": "Annexe C1 · SUJ1 : positions numérotées sur le FND",
+      "source": "results/comparaison/positions_FND/positions_FND_7_sujets_ordre_temps.pdf",
+      "page_source_zero_base": 1,
+      "source_sha256": "bc34bf84cece03e290f67297ca86ead350e79be8a9017f393d59e69a9ee21960"
+    },
+    {
+      "page": 14,
+      "titre": "Annexe C2 · SUJ2 : positions numérotées sur le FND",
+      "source": "results/comparaison/positions_FND/positions_FND_7_sujets_ordre_temps.pdf",
+      "page_source_zero_base": 2,
+      "source_sha256": "bc34bf84cece03e290f67297ca86ead350e79be8a9017f393d59e69a9ee21960"
+    },
+    {
+      "page": 15,
+      "titre": "Annexe C3 · SUJ3 : positions numérotées sur le FND",
+      "source": "results/comparaison/positions_FND/positions_FND_7_sujets_ordre_temps.pdf",
+      "page_source_zero_base": 3,
+      "source_sha256": "bc34bf84cece03e290f67297ca86ead350e79be8a9017f393d59e69a9ee21960"
+    },
+    {
+      "page": 16,
+      "titre": "Annexe C4 · SUJ4 : positions numérotées sur le FND",
+      "source": "results/comparaison/positions_FND/positions_FND_7_sujets_ordre_temps.pdf",
+      "page_source_zero_base": 4,
+      "source_sha256": "bc34bf84cece03e290f67297ca86ead350e79be8a9017f393d59e69a9ee21960"
+    },
+    {
+      "page": 17,
+      "titre": "Annexe C5 · SUJ5 : positions numérotées sur le FND",
+      "source": "results/comparaison/positions_FND/positions_FND_7_sujets_ordre_temps.pdf",
+      "page_source_zero_base": 5,
+      "source_sha256": "bc34bf84cece03e290f67297ca86ead350e79be8a9017f393d59e69a9ee21960"
+    },
+    {
+      "page": 18,
+      "titre": "Annexe C6 · SUJ6 : positions numérotées sur le FND",
+      "source": "results/comparaison/positions_FND/positions_FND_7_sujets_ordre_temps.pdf",
+      "page_source_zero_base": 6,
+      "source_sha256": "bc34bf84cece03e290f67297ca86ead350e79be8a9017f393d59e69a9ee21960"
+    },
+    {
+      "page": 19,
+      "titre": "Annexe C7 · SUJ7 : positions numérotées sur le FND",
+      "source": "results/comparaison/positions_FND/positions_FND_7_sujets_ordre_temps.pdf",
+      "page_source_zero_base": 7,
+      "source_sha256": "bc34bf84cece03e290f67297ca86ead350e79be8a9017f393d59e69a9ee21960"
+    }
+  ],
+  "description": "Support de discussion ; pas un rapport final ni une évaluation de performance."
+}

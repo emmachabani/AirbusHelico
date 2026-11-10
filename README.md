@@ -670,3 +670,20 @@ sont définies sur chaque image de projet ; leur fonction et leur équivalence
 entre projets restent à confirmer. Un passage haut/bas n’est ni un clic
 ni un acquittement. Le repère de retour reste celui des yeux par rapport
 aux lunettes, sans compensation de tête et sans confirmation de la route.
+# Support pour la réunion avec Élie
+
+Le [PDF commenté du 10 novembre 2026](reports/Support_reunion_Elie_eye_tracking_2026-11-10.pdf)
+regroupe les figures prévues pour le mail, la synthèse SUJ1, les figures
+déplacement/maintien/retour et haut/milieu/bas, ainsi que les positions
+numérotées des sept sujets en annexe. Ses 19 pages comprennent les explications
+de lecture, les limites d’interprétation et les questions de protocole.
+Il s’agit d’un support de discussion préalable au rapport après réunion.
+
+Pour le régénérer à partir des résultats présents dans le dépôt :
+
+```bash
+python3 -m pip install -r requirements-report.txt
+python3 scripts/support_reunion.py --date 2026-11-10
+```
+
+Le manifeste associé conserve les sources et leurs empreintes SHA-256.
