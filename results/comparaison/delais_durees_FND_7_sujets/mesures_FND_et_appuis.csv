@@ -1,0 +1,36 @@
+sujet,projet,alarme,apparition_Tobii_s,appui_declare_s,fenetre_disponible_s,delai_premier_point_FND_s,statut_premier_point,temps_FND_s,temps_ML_s,regard_valide_non_mappe_s,regard_indisponible_s,presence_mapping_juste_avant_repere,reserve
+SUJ1,1,ALERT_ML_LIGHT,20.858843,,10.0,0.6612299999999998,premier point mappé observé,2.8050769999999936,1.1620719999999984,6.2632660000000016,0.9316570000000048,False,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,42.948827,,10.0,1.0819619999999972,premier point mappé observé,3.6966150000000013,0.0,6.102960000000003,0.20042499999999563,False,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_FND,67.873922,,10.0,0.8014540000000068,premier point mappé observé,3.09556400000001,0.0,6.77422199999998,0.13021400000000938,False,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_RED,83.852817,,10.0,2.724917000000005,premier point mappé observé,3.215800999999985,0.0,6.784199000000015,0,False,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_TEXT,110.110339,,10.0,0.7213080000000076,premier point mappé observé,1.6430249999999802,0.0,8.17669500000001,0.18028000000001043,False,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_ML_LIGHT,,,,,repère absent,,,,,False,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LARGE,,,,,repère absent,,,,,False,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_FND,60.21864,,9.999999999999993,0.9617390000000015,premier point mappé observé,1.242246999999999,0.0,8.266891999999999,0.49086099999999533,False,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_RED,,,,,repère absent,,,,,False,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,,,,,repère absent,,,,,False,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ3,1,ALERT_ML_LIGHT,124.729702,,10.0,0.9617339999999928,premier point mappé observé,1.5729969999999867,0.0,8.38706400000001,0.039939000000003944,False,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_ML_LARGE,79.207341,,10.0,0.8815879999999936,premier point mappé observé,1.7833640000000202,0.10019699999999432,7.766046999999986,0.4505889999999937,False,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_FND,102.800033,,10.0,1.4125410000000045,premier point mappé observé,4.237547000000035,0.0,5.592102999999952,0.17035000000001332,False,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_RED,,,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,,,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ4,1,ALERT_ML_LIGHT,27.583161,,10.000000000000004,3.9170589999999983,premier point mappé observé,0.5508279999999921,0.0,8.207108000000016,1.2420639999999956,False,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_ML_LARGE,,,,,repère absent,,,,,False,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ4,1,ALERT_FND,89.935971,,10.0,0.6912720000000121,premier point mappé observé,1.8432739999999939,0.0,6.804466000000033,1.3522599999999727,False,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_RED,113.77911,,10.0,0.7413260000000008,premier point mappé observé,1.1725669999999866,0.0,7.525561000000167,1.3018719999998467,False,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_TEXT,138.78435,,10.0,0.7714190000000087,premier point mappé observé,1.3020859999999743,0.0,6.8348100000000045,1.8631040000000212,False,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LIGHT,40.514402,8.15,10.0,3.957137000000003,premier point mappé observé,2.855187000000001,0.0,6.974442000000003,0.17037099999999583,False,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LARGE,,4.09,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_FND,97.016629,3.68,10.0,1.2422450000000111,premier point mappé observé,2.1238419999999962,0.0,7.806049999999999,0.07010800000000472,False,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_RED,,4.06,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,,5.69,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_ML_LIGHT,,5.49,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_ML_LARGE,97.431977,2.47,10.0,0.520939999999996,premier point mappé observé,3.3159849999999977,0.0,6.383410000000012,0.30060499999999024,False,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_FND,139.027234,3.61,10.0,0.4107670000000212,premier point mappé observé,3.4261549999999943,0.0,6.433546000000007,0.14029899999999884,False,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_RED,169.081609,2.81,10.0,0.33062500000002615,premier point mappé observé,3.806836000000004,0.0,6.042894999999987,0.15026900000000865,False,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_TEXT,,3.62,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,,4.47,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LARGE,,5.28,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_FND,132.614376,7.99,10.0,3.576467000000008,premier point mappé observé,4.548165000000012,0.9217009999999846,4.590328999999969,0.8615060000000199,False,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_RED,,4.22,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,,16.6,,,repère absent,,,,,False,Aucun marqueur exporté ; cause non documentée
