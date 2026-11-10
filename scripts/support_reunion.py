@@ -105,6 +105,20 @@ def main(doc_date):
         page.merge_transformed_page(original,Transformation().scale(scale).translate(tx,ty),over=True)
 
     def figure_page(title,subtitle,source,index,reading,meaning):
+        excluded = source == 'results/SUJ1/synthese/SUJ1_synthese_complete.pdf' or source.endswith('regard_7_sujets_5_alarmes_toutes_AOI.pdf')
+        if excluded:
+            stream,c=shell(len(writer.pages)+1,'Figure retirée · AOI manuelles non retenues',stamp)
+            y=para(c,'<b>Correction après clarification d’Élie</b>',45,H-150,W-90,'big')-25
+            for text in [
+                'La figure précédemment présentée ici mélangeait des AOI commencées à la main. Élie précise qu’elles ne doivent pas être analysées. Elle est donc retirée de ce support.',
+                'Cela concerne les vues toutes AOI, les séquences route/tablette et les délais SUJ1 calculés à partir de ces zones. Les chiffres précédents ne doivent plus être cités comme résultats exploitables.',
+                'Périmètre retenu : coordonnées de regard mappées automatiquement sur la photo du FND et AOI master liste dessinée sur cette photo. La photo de référence n’est pas, à elle seule, une AOI couvrant tout le FND.',
+                'Les vues spatiales et les tiers haut/milieu/bas utilisent les coordonnées mappées, sans utiliser les AOI manuelles. Ils restent descriptifs et ne permettent pas d’identifier un clic.',
+            ]: y=para(c,text,45,y,W-90,'body')-22
+            add(finish(stream,c),'Retrait des AOI manuelles : '+title)
+            return
+        if 'deplacement_maintien_retour' in source:
+            subtitle='Exploratoire : la référence SUJ1 doit être revalidée sans les AOI manuelles. Les destinations route/FND ne sont pas confirmées.'
         stream,c=shell(len(writer.pages)+1,title,stamp,subtitle)
         para(c,'<b>Comment lire</b><br/>'+reading,40,137,(W-104)/2,'small')
         para(c,'<b>Interprétation pour la démonstration</b><br/>'+meaning,W/2+12,137,(W-104)/2,'small')
@@ -134,17 +148,17 @@ def main(doc_date):
     y=H-115
     y=table(c,[['Pages','Contenu','Utilisation'],
         ['3','Disponibilité des données des sept sujets','Situer la qualité et les limites du montage.'],
-        ['4–6','SUJ1 : ensemble, alarmes, délais du premier regard','Exemple détaillé, avec plusieurs AOI renseignées.'],
+        ['4–6','SUJ1 : ensemble, alarmes, délais du premier regard','Figures retirées : AOI manuelles non retenues.'],
         ['7–9','ALERT_FND : maintien, exploration, positions sur le FND','Comparer des observations, en gardant les lacunes visibles.'],
         ['10','Questions pour Élie et proposition de synchronisation','Préparer une acquisition et une interprétation plus solides.'],
-        ['11–12','Annexes : regard autour des cinq alarmes, sept sujets','Figures prévues pour le mail, conservées pour consultation.'],
+        ['11–12','Annexes : regard autour des cinq alarmes, sept sujets','ML conservée ; vue toutes AOI retirée.'],
         ['13–19','Annexes : une page de positions numérotées par sujet','Zoomer et examiner l’ordre des positions mappées.'],
     ],40,y,[60,400,W-540],11)-30
     y=para(c,'<b>Quatre notions à garder distinctes</b>',45,y,W-90,'big')-15
     for text in [
         '<b>Premier regard observé :</b> premier échantillon valide dans une zone après le repère d’alarme. Cela ne prouve pas que l’alarme est comprise.',
         '<b>Fixation Tobii et maintien géométrique :</b> deux traitements différents. Un regard relativement stable dans le repère des lunettes n’est pas nécessairement une fixation unique sur le même objet dans la pièce.',
-        '<b>Mapping :</b> report des points de regard sur une image de référence du FND. Une lacune de mapping ne signifie pas une absence de regard vers le FND.',
+        '<b>Mapping automatique :</b> Élie a fourni une photo du FND à Tobii et dessiné la master liste sur cette photo. Seules ces données sont retenues ; les autres AOI commencées à la main sont exclues. Une lacune de mapping ne signifie pas une absence de regard vers le FND.',
         '<b>Acquittement :</b> aucun clic n’est identifiable dans les sept exports reçus. Regarder le bas du FND ne permet pas de dater un appui.',
     ]:y=para(c,text,45,y,W-110,'body')-13
     add(finish(stream,c),'Repères de lecture et sommaire')

@@ -18,24 +18,15 @@
     },
     {
       "page": 4,
-      "titre": "2 · SUJ1 : vue d’ensemble du regard",
-      "source": "results/SUJ1/synthese/SUJ1_synthese_complete.pdf",
-      "page_source_zero_base": 0,
-      "source_sha256": "a436d9eae489db2aad1ef1485b553e603409fa52b114bcf997e1865b23e52376"
+      "titre": "Retrait des AOI manuelles : 2 · SUJ1 : vue d’ensemble du regard"
     },
     {
       "page": 5,
-      "titre": "3 · SUJ1 : le regard autour des cinq types d’alarme",
-      "source": "results/SUJ1/synthese/SUJ1_synthese_complete.pdf",
-      "page_source_zero_base": 1,
-      "source_sha256": "a436d9eae489db2aad1ef1485b553e603409fa52b114bcf997e1865b23e52376"
+      "titre": "Retrait des AOI manuelles : 3 · SUJ1 : le regard autour des cinq types d’alarme"
     },
     {
       "page": 6,
-      "titre": "4 · SUJ1 : rapidité d’orientation du regard",
-      "source": "results/SUJ1/synthese/SUJ1_synthese_complete.pdf",
-      "page_source_zero_base": 2,
-      "source_sha256": "a436d9eae489db2aad1ef1485b553e603409fa52b114bcf997e1865b23e52376"
+      "titre": "Retrait des AOI manuelles : 4 · SUJ1 : rapidité d’orientation du regard"
     },
     {
       "page": 7,
@@ -71,10 +62,7 @@
     },
     {
       "page": 12,
-      "titre": "Annexe B · Sept sujets, cinq alarmes : toutes les AOI exportées",
-      "source": "results/comparaison/regard_7_sujets_5_alarmes_toutes_AOI.pdf",
-      "page_source_zero_base": 0,
-      "source_sha256": "499b982122769674c43566df6d242dad2497733953062bec3b4c94683088168d"
+      "titre": "Retrait des AOI manuelles : Annexe B · Sept sujets, cinq alarmes : toutes les AOI exportées"
     },
     {
       "page": 13,

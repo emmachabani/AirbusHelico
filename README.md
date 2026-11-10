@@ -1,3 +1,12 @@
+> **Correction après clarification d’Élie :** seules les coordonnées mappées
+> automatiquement sur la photo du FND et l’AOI master liste dessinée sur cette
+> photo sont retenues. Les autres AOI commencées à la main sont exclues.
+> Les anciennes synthèses toutes AOI et les délais SUJ1 fondés sur les AOI vidéo
+> sont obsolètes. Le PDF de réunion a été corrigé en retirant ces figures.
+> Le motif déplacement/maintien/retour reste exploratoire et sa référence doit
+> être revalidée sans ces AOI. Voir la correction prioritaire dans
+> [les notes de contexte](docs/contexte/point_reunion_et_rapport.md).
+
 # Démonstration eye tracking — FND
 
 Analyse exploratoire des sept sujets : **SUJ1 à SUJ4, projet 1** (clignotement manuel),

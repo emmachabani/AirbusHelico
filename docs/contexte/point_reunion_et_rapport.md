@@ -1,3 +1,27 @@
+# Correction prioritaire après clarification d’Élie
+
+Élie a fourni une photo du FND à Tobii pour l’Automatic Gaze Mapping,
+puis dessiné la master liste sur cette image de référence. Les coordonnées
+mappées et l’AOI master liste sur image constituent le périmètre retenu.
+Toutes les autres AOI ont seulement été commencées à la main et doivent
+être exclues, même si leurs colonnes contiennent des valeurs chez SUJ1.
+La photo de référence ne constitue pas en soi une AOI FND globale validée.
+
+Conséquences : retirer les synthèses toutes AOI, les interprétations
+route/tablette et les délais fondés sur les AOI vidéo. Les valeurs
+0,79 s, 2,15 s, etc. ne doivent plus être présentées comme résultats
+exploitables. Les figures historiques restent traçables, mais sont obsolètes.
+Les positions mappées et les tiers géométriques peuvent être conservés.
+Le motif déplacement/maintien/retour et ses fenêtres restent exploratoires :
+sa référence SUJ1 doit être revalidée indépendamment des AOI exclues.
+Les destinations route/FND et un acquittement ne sont pas confirmés.
+Les temps du commentaire se rapportent au traitement automatique de mapping ;
+ne pas les confondre avec un temps de détection ou d’acquittement.
+
+Les notes historiques ci-dessous doivent être lues sous cette correction.
+
+---
+
 # Contexte à conserver pour le rapport après la réunion
 
 Note de travail, pas le rapport final. L’utilisatrice prévoit de demander le
