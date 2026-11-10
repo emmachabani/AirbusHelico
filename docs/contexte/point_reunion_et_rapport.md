@@ -153,6 +153,7 @@ L’utilisatrice fournit une capture identifiant les formats :
 Les numéros ne sont pas assimilés à un ordre temporel des essais.
 Un tableau donne 15 temps de réaction pour SUJ5–7 ; voir
 [les données transcrites et leur statut](../../inputs/projet2/README.md).
-L’unité et les bornes de mesure sont à confirmer avant calcul de délais
-ou synchronisation avec Tobii. Ces durées externes ne changent pas
+L’utilisatrice confirme : secondes, de l’apparition de l’alarme à
+l’appui d’acquittement. Il reste à vérifier la correspondance des essais
+et des repères d’apparition avant de placer les appuis sur la timeline Tobii. Ces durées externes ne changent pas
 le constat d’absence de clic identifiable dans les exports Tobii seuls.

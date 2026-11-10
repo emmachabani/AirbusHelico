@@ -21,15 +21,16 @@ la comparaison n’isole donc pas nécessairement le seul effet graphique.
 ## Statut des valeurs
 
 Les valeurs sont transcrites sans modification dans
-`temps_reaction_declares.csv`. L’unité (probablement secondes) et les
-bornes exactes de mesure restent à confirmer : apparition, appui,
-acquittement accepté ou disparition. Aucun horodatage absolu des appuis
+`temps_reaction_declares.csv`. L’utilisatrice confirme que les valeurs sont en secondes, entre
+l’apparition de l’alarme et l’appui d’acquittement. Elles mesurent un délai
+de réponse comportementale ; elles ne datent pas la détection consciente
+ni l’acceptation de l’acquittement par le prototype. Aucun horodatage absolu des appuis
 n’est fourni. Ces données sont externes aux exports Tobii et ne sont
 pas des délais de premier regard.
 
 Ne pas additionner ces durées aux marqueurs manuels Tobii pour créer des
-horodatages d’acquittement avant validation des bornes, de la correspondance
-des essais et de la synchronisation. La présence de cinq durées par sujet
+horodatages d’acquittement avant validation de la correspondance
+des essais, de l’équivalence des repères d’apparition et de la synchronisation. La présence de cinq durées par sujet
 ne fournit pas les marqueurs d’apparition manquants dans les exports.
 Les notes de prétraitement et leurs réserves sont conservées.
 
