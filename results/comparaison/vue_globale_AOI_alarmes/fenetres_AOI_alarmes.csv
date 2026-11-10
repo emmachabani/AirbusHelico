@@ -1,0 +1,36 @@
+sujet,projet,alarme,repere_s,appui_declare_s,appui_place,ML_s,FND_hors_ML_s,FND_ML_inconnu_s,indetermine_s,reserve
+SUJ1,1,ALERT_FND,67.873922,,0,0.0,3.09556400000001,0.0,14.90443599999999,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LARGE,42.948827,,0,0.0,4.297729999999994,0.0,13.702270000000006,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_ML_LIGHT,20.858843,,0,1.1620719999999984,1.843365999999989,0.0,14.994562000000013,Apparition annotée manuellement par Élie
+SUJ1,1,ALERT_RED,83.852817,,0,0.0,3.566465999999977,0.0,14.433534000000023,Publicité signalée ; essai perturbé
+SUJ1,1,ALERT_TEXT,110.110339,,0,0.0,1.6430249999999802,0.0,16.35697500000002,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_FND,60.21864,,0,2.1538730000000044,1.5828169999999986,0.0,14.263309999999997,Apparition annotée manuellement par Élie
+SUJ2,1,ALERT_ML_LARGE,,,0,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_ML_LIGHT,,,0,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_RED,,,0,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ2,1,ALERT_TEXT,,,0,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ3,1,ALERT_FND,102.800033,,0,0.0,4.347760000000022,0.0,13.652239999999978,Apparition approximative : visibilité incertaine selon les notes
+SUJ3,1,ALERT_ML_LARGE,79.207341,,0,0.10019699999999432,1.6831670000000258,0.0,16.21663599999998,"Hors champ selon les notes, mais marqueur présent : annotation à vérifier"
+SUJ3,1,ALERT_ML_LIGHT,124.729702,,0,0.0,1.5729969999999867,0.0,16.427003000000013,Hors champ puis apparition approximative signalés ; rejeu possible à vérifier
+SUJ3,1,ALERT_RED,,,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ3,1,ALERT_TEXT,,,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ4,1,ALERT_FND,89.935971,,0,0.0,1.8432739999999939,0.0,16.156726000000006,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_ML_LARGE,,,0,,,,,Hors champ signalé ; apparition non datable sur la vidéo
+SUJ4,1,ALERT_ML_LIGHT,27.583161,,0,0.0,0.8514739999999925,0.0,17.148526000000007,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_RED,113.77911,,0,0.0,1.1725669999999866,0.0,16.827433000000013,Apparition annotée manuellement par Élie
+SUJ4,1,ALERT_TEXT,138.78435,,0,0.0,1.3020859999999743,0.0,16.697914000000026,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_FND,97.016629,3.68,1,0.0,2.1238419999999962,0.0,15.876158000000004,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_ML_LARGE,,4.09,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_ML_LIGHT,40.514402,8.15,1,0.0,2.855187000000001,0.0,15.144813,Apparition annotée manuellement par Élie
+SUJ5,2,ALERT_RED,,4.06,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ5,2,ALERT_TEXT,,5.69,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_FND,139.027234,3.61,1,0.0,3.4261549999999943,0.0,14.573845000000006,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LARGE,97.431977,2.47,1,0.0,3.3159849999999977,0.0,14.684015000000002,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_ML_LIGHT,,5.49,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ6,2,ALERT_RED,169.081609,2.81,1,0.0,4.7085500000000025,0.0,13.291449999999998,Apparition annotée manuellement par Élie
+SUJ6,2,ALERT_TEXT,,3.62,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_FND,132.614376,7.99,1,0.9217009999999846,3.626464000000027,0.0,13.451834999999988,Apparition annotée manuellement par Élie
+SUJ7,2,ALERT_ML_LARGE,,5.28,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_ML_LIGHT,,4.47,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_RED,,4.22,0,,,,,Aucun marqueur exporté ; cause non documentée
+SUJ7,2,ALERT_TEXT,,16.6,0,,,,,Aucun marqueur exporté ; cause non documentée
