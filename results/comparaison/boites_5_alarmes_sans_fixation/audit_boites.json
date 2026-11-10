@@ -1,0 +1,129 @@
+{
+  "source": "results/comparaison/delais_durees_FND_7_sujets/mesures_FND_et_appuis.csv",
+  "regle": "premier point mappé, sans seuil de fixation",
+  "exclusion_boites": "SUJ1 ALERT_RED : publicité ; point gris conservé hors boîte",
+  "quartiles": "numpy.percentile, interpolation linéaire",
+  "moustaches": "observations dans Q1−1.5 IQR et Q3+1.5 IQR",
+  "statistiques": [
+    {
+      "mesure": "delai_premier_point_FND_s",
+      "alarme": "ALERT_ML_LIGHT",
+      "n": 4,
+      "mediane_s": 2.4393964999999955,
+      "q1_s": 0.8866079999999945,
+      "q3_s": 3.9270784999999995,
+      "minimum_s": 0.6612299999999998,
+      "maximum_s": 3.957137000000003,
+      "moustache_basse_s": 0.6612299999999998,
+      "moustache_haute_s": 3.957137000000003
+    },
+    {
+      "mesure": "delai_premier_point_FND_s",
+      "alarme": "ALERT_ML_LARGE",
+      "n": 3,
+      "mediane_s": 0.8815879999999936,
+      "q1_s": 0.7012639999999948,
+      "q3_s": 0.9817749999999954,
+      "minimum_s": 0.520939999999996,
+      "maximum_s": 1.0819619999999972,
+      "moustache_basse_s": 0.520939999999996,
+      "moustache_haute_s": 1.0819619999999972
+    },
+    {
+      "mesure": "delai_premier_point_FND_s",
+      "alarme": "ALERT_FND",
+      "n": 7,
+      "mediane_s": 0.9617390000000015,
+      "q1_s": 0.7463630000000094,
+      "q3_s": 1.3273930000000078,
+      "minimum_s": 0.4107670000000212,
+      "maximum_s": 3.576467000000008,
+      "moustache_basse_s": 0.4107670000000212,
+      "moustache_haute_s": 1.4125410000000045
+    },
+    {
+      "mesure": "delai_premier_point_FND_s",
+      "alarme": "ALERT_RED",
+      "n": 2,
+      "mediane_s": 0.5359755000000135,
+      "q1_s": 0.4333002500000198,
+      "q3_s": 0.6386507500000072,
+      "minimum_s": 0.33062500000002615,
+      "maximum_s": 0.7413260000000008,
+      "moustache_basse_s": 0.33062500000002615,
+      "moustache_haute_s": 0.7413260000000008
+    },
+    {
+      "mesure": "delai_premier_point_FND_s",
+      "alarme": "ALERT_TEXT",
+      "n": 2,
+      "mediane_s": 0.7463635000000082,
+      "q1_s": 0.7338357500000079,
+      "q3_s": 0.7588912500000085,
+      "minimum_s": 0.7213080000000076,
+      "maximum_s": 0.7714190000000087,
+      "moustache_basse_s": 0.7213080000000076,
+      "moustache_haute_s": 0.7714190000000087
+    },
+    {
+      "mesure": "appui_declare_s",
+      "alarme": "ALERT_ML_LIGHT",
+      "n": 3,
+      "mediane_s": 5.49,
+      "q1_s": 4.98,
+      "q3_s": 6.82,
+      "minimum_s": 4.47,
+      "maximum_s": 8.15,
+      "moustache_basse_s": 4.47,
+      "moustache_haute_s": 8.15
+    },
+    {
+      "mesure": "appui_declare_s",
+      "alarme": "ALERT_ML_LARGE",
+      "n": 3,
+      "mediane_s": 4.09,
+      "q1_s": 3.2800000000000002,
+      "q3_s": 4.6850000000000005,
+      "minimum_s": 2.47,
+      "maximum_s": 5.28,
+      "moustache_basse_s": 2.47,
+      "moustache_haute_s": 5.28
+    },
+    {
+      "mesure": "appui_declare_s",
+      "alarme": "ALERT_FND",
+      "n": 3,
+      "mediane_s": 3.68,
+      "q1_s": 3.645,
+      "q3_s": 5.835,
+      "minimum_s": 3.61,
+      "maximum_s": 7.99,
+      "moustache_basse_s": 3.61,
+      "moustache_haute_s": 7.99
+    },
+    {
+      "mesure": "appui_declare_s",
+      "alarme": "ALERT_RED",
+      "n": 3,
+      "mediane_s": 4.06,
+      "q1_s": 3.4349999999999996,
+      "q3_s": 4.14,
+      "minimum_s": 2.81,
+      "maximum_s": 4.22,
+      "moustache_basse_s": 2.81,
+      "moustache_haute_s": 4.22
+    },
+    {
+      "mesure": "appui_declare_s",
+      "alarme": "ALERT_TEXT",
+      "n": 3,
+      "mediane_s": 5.69,
+      "q1_s": 4.655,
+      "q3_s": 11.145000000000001,
+      "minimum_s": 3.62,
+      "maximum_s": 16.6,
+      "moustache_basse_s": 3.62,
+      "moustache_haute_s": 16.6
+    }
+  ]
+}

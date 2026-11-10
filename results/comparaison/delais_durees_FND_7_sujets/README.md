@@ -1,3 +1,11 @@
+## Dernière demande : retour au premier point, sans règle de fixation
+
+La comparaison en [boîtes à moustaches avec points individuels](../boites_5_alarmes_sans_fixation/README.md)
+utilise les premiers échantillons mappés historiques, sans le critère de 100 ms.
+Les figures à fixation soutenue restent disponibles comme analyse alternative.
+
+---
+
 ## Mise à jour du critère : première fixation soutenue ≥100 ms
 
 Les anciennes figures ci-dessous montrent le premier **échantillon** mappé.
