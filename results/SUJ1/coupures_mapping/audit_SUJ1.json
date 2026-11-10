@@ -1,0 +1,188 @@
+{
+  "sujet": "SUJ1",
+  "source_sha256": "ab8fd0434ee4a805f00a0ccad495b8d7fc1e548f7cd58e93ada3761b43c61072",
+  "echantillons": 12956,
+  "types_mouvement": {
+    "Unclassified": 316,
+    "Saccade": 1510,
+    "Fixation": 10815,
+    "EyesNotFound": 315
+  },
+  "duree_observee_s": 131.05709299999998,
+  "mapping_present_s": 16.269328999999964,
+  "mapping_dans_FND_s": 16.269328999999964,
+  "mapping_hors_image_s": 0.0,
+  "mapping_absent_regard_valide_s": 111.57201599999999,
+  "mapping_absent_regard_invalide_s": 3.2157480000000103,
+  "classes": {
+    "excursion_retour_candidate": {
+      "nombre": 2,
+      "duree_s": 3.646582999999996
+    },
+    "non_tranche": {
+      "nombre": 39,
+      "duree_s": 111.10111
+    },
+    "regard_majoritairement_invalide": {
+      "nombre": 1,
+      "duree_s": 0.04007100000000108
+    }
+  },
+  "parametres": {
+    "ancrages_avant_apres_s": 0.15,
+    "ancrages_min_points": 5,
+    "continuite_duree_max_s": 0.25,
+    "continuite_validite_min": 0.9,
+    "continuite_angle_max_deg": 2,
+    "continuite_excursion_p90_max_deg": 2,
+    "continuite_distance_ancrages_max_pct_diag_FND": 5,
+    "continuite_excursion_video_p90_max_pct_diag": 3,
+    "excursion_validite_min": 0.8,
+    "excursion_angle_retour_max_deg": 3,
+    "excursion_p90_min_deg": 5,
+    "excursion_video_p90_min_pct_diag": 5
+  },
+  "limites": [
+    "Aucune AOI vidéo manuelle utilisée. Aucun point interpolé.",
+    "Les classes décrivent une compatibilité, pas une preuve de localisation.",
+    "Les saccades ne sont pas une preuve de sortie du FND ; mouvements de tête non compensés.",
+    "Les durées utilisent les intervalles entre échantillons, dernière mesure prolongée de la période médiane."
+  ],
+  "coupures_autour_FND_moins2_plus12": [
+    {
+      "coupure": 22,
+      "debut_s": 63.526044,
+      "fin_s": 68.675376,
+      "duree_s": 5.149332000000001,
+      "part_regard_valide": 0.9863875547352546,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.04474708171206226,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 8.639547424178907,
+      "excursion_p90_deg": 27.740585457013015,
+      "distance_bords_image_FND_pct_diagonale": 8.05626585600161,
+      "excursion_video_p90_pct_diagonale": 22.06124205304811
+    },
+    {
+      "coupure": 23,
+      "debut_s": 68.885771,
+      "fin_s": 69.476826,
+      "duree_s": 0.5910549999999972,
+      "part_regard_valide": 1.0,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.22807017543859648,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 6.047704298177506,
+      "excursion_p90_deg": 20.91372846616098,
+      "distance_bords_image_FND_pct_diagonale": 34.848954111475784,
+      "excursion_video_p90_pct_diagonale": 16.60804833071105
+    },
+    {
+      "coupure": 24,
+      "debut_s": 71.630689,
+      "fin_s": 73.123424,
+      "duree_s": 1.4927349999999961,
+      "part_regard_valide": 0.9932801200481011,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.19463087248322147,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 12.25525797274376,
+      "excursion_p90_deg": 36.16045721668655,
+      "distance_bords_image_FND_pct_diagonale": 13.31452664719721,
+      "excursion_video_p90_pct_diagonale": 27.959372799829467
+    },
+    {
+      "coupure": 25,
+      "debut_s": 73.243641,
+      "fin_s": 73.253675,
+      "duree_s": 0.01003400000000454,
+      "part_regard_valide": 1.0,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.0,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 10.796641642871545,
+      "excursion_p90_deg": 13.17245190281723,
+      "distance_bords_image_FND_pct_diagonale": 30.90662937305177,
+      "excursion_video_p90_pct_diagonale": 7.190131347199224
+    },
+    {
+      "coupure": 26,
+      "debut_s": 73.263662,
+      "fin_s": 73.273664,
+      "duree_s": 0.010002000000000066,
+      "part_regard_valide": 1.0,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.0,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 10.305062796161808,
+      "excursion_p90_deg": 11.631215023929508,
+      "distance_bords_image_FND_pct_diagonale": 29.935840204208002,
+      "excursion_video_p90_pct_diagonale": 8.027010945227609
+    },
+    {
+      "coupure": 27,
+      "debut_s": 73.333821,
+      "fin_s": 73.343807,
+      "duree_s": 0.00998599999999783,
+      "part_regard_valide": 1.0,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.0,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 4.381411782594907,
+      "excursion_p90_deg": 0.6502717789381056,
+      "distance_bords_image_FND_pct_diagonale": 10.785688175235665,
+      "excursion_video_p90_pct_diagonale": 0.47229979386529075
+    },
+    {
+      "coupure": 28,
+      "debut_s": 73.39388,
+      "fin_s": 74.345619,
+      "duree_s": 0.9517390000000034,
+      "part_regard_valide": 0.9157909889160775,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.24210526315789474,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 7.792984651586268,
+      "excursion_p90_deg": 32.44715434283486,
+      "distance_bords_image_FND_pct_diagonale": 30.580834330391482,
+      "excursion_video_p90_pct_diagonale": 25.46196694338233
+    },
+    {
+      "coupure": 29,
+      "debut_s": 74.756347,
+      "fin_s": 74.786417,
+      "duree_s": 0.030069999999994934,
+      "part_regard_valide": 1.0,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.6666666666666666,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 8.356419819319987,
+      "excursion_p90_deg": 17.033243897212817,
+      "distance_bords_image_FND_pct_diagonale": 48.721755614433654,
+      "excursion_video_p90_pct_diagonale": 10.204245686195403
+    },
+    {
+      "coupure": 30,
+      "debut_s": 74.866561,
+      "fin_s": 86.577734,
+      "duree_s": 11.711173000000002,
+      "part_regard_valide": 0.9897388587804141,
+      "ancrages_FND_avant_apres": true,
+      "oeil_direction": "left",
+      "part_type_saccade": 0.12380122057541412,
+      "classe": "non_tranche",
+      "angle_avant_apres_deg": 12.25121041322972,
+      "excursion_p90_deg": 25.972838615996242,
+      "distance_bords_image_FND_pct_diagonale": 9.59034310677181,
+      "excursion_video_p90_pct_diagonale": 20.501310742717628
+    }
+  ]
+}
