@@ -136,3 +136,12 @@ correspondance fonctionnelle validée. À la réunion, demander les zones
 exactes de l’alarme et de réponse avant de remplacer ces tiers par des
 AOI « alarme » / « bouton » et avant de nommer des étapes de détection
 ou d’acquittement.
+
+## Précision sur les formats d’alarme
+
+L’utilisatrice précise que, pour ALERT_FND, **tout le FND clignote**.
+Les autres formats concernent notamment une alarme dans la master liste,
+une présentation rouge ou du texte. Faire confirmer la correspondance précise
+ML_LARGE / ML_LIGHT / RED / TEXT avec les zones et changements visuels.
+Ne pas supposer que la master liste est la cible de ALERT_FND ni utiliser
+l’absence de point ML comme un critère de non-détection de cette alarme.
