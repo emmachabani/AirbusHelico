@@ -1,3 +1,10 @@
+## Présentation préférée : trois bandes distinctes
+
+[ML / FND hors ML / hors FND présumé, puis absence de données](trois_etats/regard_7_sujets_5_alarmes_trois_bandes_appuis.png).
+Voir [la définition et les limites des catégories](trois_etats/README.md).
+
+---
+
 ## Version actuelle : une ligne par zone
 
 [Figure à deux lignes par case](regard_7_sujets_5_alarmes_FND_ML_lignes_appuis.png)
