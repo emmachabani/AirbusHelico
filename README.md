@@ -1,3 +1,10 @@
+## Présentation PowerPoint modifiable
+
+[Présentation Airbus — 22 diapositives](presentations/Presentation_Airbus_eye_tracking_modifiable.pptx)
+· [Contenu, modification et reproduction](presentations/README.md).
+Textes et graphiques principaux en objets PowerPoint natifs ; cinq figures
+originales en annexe et détails méthodologiques dans les notes du présentateur.
+
 > **Correction après clarification d’Élie :** seules les coordonnées mappées
 > automatiquement sur la photo du FND et l’AOI master liste dessinée sur cette
 > photo sont retenues. Les autres AOI commencées à la main sont exclues.

@@ -1,0 +1,164 @@
+{
+  "diapositives": [
+    {
+      "diapositive": 1,
+      "titre": "Eye tracking et alarmes FND"
+    },
+    {
+      "diapositive": 2,
+      "titre": "Le contexte et les cinq formats"
+    },
+    {
+      "diapositive": 3,
+      "titre": "Limite 1 · Dater l’apparition et l’appui dans le même repère"
+    },
+    {
+      "diapositive": 4,
+      "titre": "Limite 2 · Ajouter une zone « écran principal »"
+    },
+    {
+      "diapositive": 5,
+      "titre": "Analyser les données depuis l’ordinateur Airbus"
+    },
+    {
+      "diapositive": 6,
+      "titre": "Lire les figures : quatre états, trois mesures"
+    },
+    {
+      "diapositive": 7,
+      "titre": "Comportements après les alarmes · Projet 1"
+    },
+    {
+      "diapositive": 8,
+      "titre": "Comportements après les alarmes · Projet 2"
+    },
+    {
+      "diapositive": 9,
+      "titre": "Temps observés · Premier point FND et appui"
+    },
+    {
+      "diapositive": 10,
+      "titre": "Temps observés · Premier point FND et appui"
+    },
+    {
+      "diapositive": 11,
+      "titre": "Avec une règle de fixation · au moins 100 ms"
+    },
+    {
+      "diapositive": 12,
+      "titre": "Avec une règle de fixation · au moins 100 ms"
+    },
+    {
+      "diapositive": 13,
+      "titre": "Comparer les cinq alarmes · Boîtes et sujets individuels"
+    },
+    {
+      "diapositive": 14,
+      "titre": "Explorer un comportement sans s’appuyer sur les AOI"
+    },
+    {
+      "diapositive": 15,
+      "titre": "ALERT_FND · Déplacement, maintien, retour et appui"
+    },
+    {
+      "diapositive": 16,
+      "titre": "Ce que ces visuels peuvent apporter à Airbus"
+    },
+    {
+      "diapositive": 17,
+      "titre": "Points à trancher pendant la discussion"
+    },
+    {
+      "diapositive": 18,
+      "titre": "Comportements après les cinq alarmes"
+    },
+    {
+      "diapositive": 19,
+      "titre": "Temps : premier point FND et appui"
+    },
+    {
+      "diapositive": 20,
+      "titre": "Variante : fixation mappée ≥100 ms"
+    },
+    {
+      "diapositive": 21,
+      "titre": "Comparaison descriptive en boîtes"
+    },
+    {
+      "diapositive": 22,
+      "titre": "Motif déplacement / maintien / retour"
+    }
+  ],
+  "sources": [
+    {
+      "fichier": "docs/contexte/point_reunion_et_rapport.md",
+      "sha256": "7977d589bee7e1992bec251f658e909c25459e7e5b12957fe0e596fe5adac876"
+    },
+    {
+      "fichier": "docs/contexte/synchronisation_prototype.md",
+      "sha256": "7e541e5f6b0783c275376eca18b96c5587fab3f4a40d7b5e39eb5aaefb521717"
+    },
+    {
+      "fichier": "inputs/projet2/README.md",
+      "sha256": "efaf7fa41715ce467354fff644d36f31c53334b49d586515ebc2e8f35980aaba"
+    },
+    {
+      "fichier": "inputs/projet2/temps_reaction_declares.csv",
+      "sha256": "fd8d5bc715dc2d83a9416d894b04b06b4615c73d59c6e9528f55e967428cceea"
+    },
+    {
+      "fichier": "results/comparaison/FND_avec_acquittement/FND_comportement_visuel_acquittement.png",
+      "sha256": "7ade2640390bf03bfd0bebc9f79cbe7b54ce01fa9b6392f139a3f3ca7daec655"
+    },
+    {
+      "fichier": "results/comparaison/boites_5_alarmes_sans_fixation/boites_5_alarmes_premier_point_FND_appui.png",
+      "sha256": "a18f6b918c2fa4756e1cc95f666a429bb4f633bb8e8ea754043ff9ef575cfd9e"
+    },
+    {
+      "fichier": "results/comparaison/boites_5_alarmes_sans_fixation/observations_representees.csv",
+      "sha256": "edbf0968f5de718c7b3951a81d780882f31fc448ad393ec0b91bc50c6848af05"
+    },
+    {
+      "fichier": "results/comparaison/boites_5_alarmes_sans_fixation/statistiques_boites.csv",
+      "sha256": "97b0ad1e60a3e807fba51e829ac76292c2e059eda7b29ca680fff6316311e824"
+    },
+    {
+      "fichier": "results/comparaison/delais_durees_FND_7_sujets/grande_figure_5_zones_alarmes_7_sujets.png",
+      "sha256": "38a4141dc1282073b799f2e121c8b3e00a571197b5cd4bb1c79a224872abbcce"
+    },
+    {
+      "fichier": "results/comparaison/delais_durees_FND_7_sujets/mesures_FND_et_appuis.csv",
+      "sha256": "c13679a3f85a2c9aa798c5d5509c038fb62534f9b42752bc504b3d78e296fd36"
+    },
+    {
+      "fichier": "results/comparaison/fixations_FND_100ms/grande_figure_5_alarmes_fixations_100ms_appuis.png",
+      "sha256": "a112dbe176874c77edc8f568afc68942cec6d3d826b1f69d2d0568dcbcdbac0a"
+    },
+    {
+      "fichier": "results/comparaison/fixations_FND_100ms/premieres_fixations_FND_100ms.csv",
+      "sha256": "e971d5b635cc03c31cb3ea8c2ecd1130ace74641ad3f846b34f14e54ac65ba99"
+    },
+    {
+      "fichier": "results/comparaison/mouvements_FND/methode_et_audit.json",
+      "sha256": "cf9ecc7c5e25753437e7a39b6c1f69e01bafce5331f13072364d10766f2df21d"
+    },
+    {
+      "fichier": "results/comparaison/mouvements_FND/retours_FND_5s_vs_12s.csv",
+      "sha256": "3c67eae657fdf1f954b7dcb8625566eaeace60f053c36b92391c3673159f9389"
+    },
+    {
+      "fichier": "results/comparaison/vue_globale_AOI_alarmes/trois_etats/fenetres_AOI_alarmes.csv",
+      "sha256": "99d1b5219e1d27ccebced7007d1d250b43e520999e4e765eb3a12cd86b68d537"
+    },
+    {
+      "fichier": "results/comparaison/vue_globale_AOI_alarmes/trois_etats/periodes_AOI_alarmes.csv",
+      "sha256": "f5ba7847317be3365aff2ddd8fb2ebd30cfdbafb5a49959be2cb76616965a39e"
+    },
+    {
+      "fichier": "results/comparaison/vue_globale_AOI_alarmes/trois_etats/regard_7_sujets_5_alarmes_trois_bandes_appuis.png",
+      "sha256": "c941bc3caa5499ea6d59c5efbd8d654a0b98568a6488c01b0b60e2c5c0dd3701"
+    }
+  ],
+  "modification": "textes et graphiques principaux = objets PowerPoint natifs ; annexes = PNG originaux",
+  "date": "2026-11-10"
+}
