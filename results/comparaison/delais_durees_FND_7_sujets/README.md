@@ -1,3 +1,20 @@
+## Nouvelle présentation : comparer les alarmes au sein de chaque sujet
+
+[Les cinq alarmes regroupées par sujet](comparaison_5_alarmes_par_sujet_regard_appui.png)
+· [SVG](comparaison_5_alarmes_par_sujet_regard_appui.svg).
+
+Cette vue transpose la figure précédente sans modifier les mesures :
+un panneau par sujet, cinq alarmes en lignes, même échelle de temps partout.
+Point bleu = premier point FND mappé disponible ; étoile rose = appui externe.
+Les légers décalages verticaux servent uniquement à séparer les symboles.
+La figure de durée cumulée n’est pas retenue comme présentation privilégiée.
+
+```bash
+python3 scripts/comparer_alarmes_par_sujet.py
+```
+
+---
+
 # Sept sujets — premier regard FND, appuis et durées cumulées
 
 [Premier regard mappé et appuis](premier_regard_FND_et_appuis_7_sujets.png)
