@@ -145,3 +145,14 @@ une présentation rouge ou du texte. Faire confirmer la correspondance précise
 ML_LARGE / ML_LIGHT / RED / TEXT avec les zones et changements visuels.
 Ne pas supposer que la master liste est la cible de ALERT_FND ni utiliser
 l’absence de point ML comme un critère de non-détection de cette alarme.
+
+## Nouvelle correspondance des alarmes et durées externes P2
+
+L’utilisatrice fournit une capture identifiant les formats :
+1 = ML_LIGHT, 2 = ML_LARGE, 3 = FND, 4 = RED, 5 = TEXT.
+Les numéros ne sont pas assimilés à un ordre temporel des essais.
+Un tableau donne 15 temps de réaction pour SUJ5–7 ; voir
+[les données transcrites et leur statut](../../inputs/projet2/README.md).
+L’unité et les bornes de mesure sont à confirmer avant calcul de délais
+ou synchronisation avec Tobii. Ces durées externes ne changent pas
+le constat d’absence de clic identifiable dans les exports Tobii seuls.
