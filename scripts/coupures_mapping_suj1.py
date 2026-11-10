@@ -1,4 +1,4 @@
-"""Audit exploratoire des coupures SUJ1, sans AOI vidéo ni interpolation.
+"""Audit exploratoire des coupures SUJ1 ou SUJ2, sans AOI vidéo ni interpolation.
 python3 scripts/coupures_mapping_suj1.py --sources /workspace/attachments
 """
 import argparse,csv,hashlib,json,os,tempfile
@@ -10,10 +10,10 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'results/SUJ1/coupures_mapping'
 
-def main(sources):
-    source,=list(Path(sources).rglob('SUJ1.xlsx'))
+def main(sources,subject='SUJ1'):
+    OUT=ROOT/'results'/subject/'coupures_mapping'
+    source,=list(Path(sources).rglob(f'{subject}.xlsx'))
     w=openpyxl.load_workbook(source,read_only=True,data_only=True)
     rows=w.active.values;headers=next(rows)
     def key(prefix):
@@ -27,7 +27,7 @@ def main(sources):
     names += [f'Gaze direction {eye} {axis}' for eye in ('left','right') for axis in 'XYZ']
     inds=[key(n) for n in names];sensor=key('Sensor');records=[]
     for row in rows:
-        if row[sensor]=='Eye Tracker':records.append([row[i] for i in inds])
+        if len(row)>sensor and row[sensor]=='Eye Tracker':records.append([row[i] if i<len(row) else None for i in inds])
     w.close();a=np.array(records,dtype=object)
     def num(n):return np.array([np.nan if x is None else float(x) for x in a[:,names.index(n)]])
     t=num(names[0])/1e6
@@ -81,7 +81,7 @@ def main(sources):
         gaps.append(dict(coupure=len(gaps)+1,debut_s=float(begin),fin_s=float(stop),duree_s=float(duration),part_regard_valide=float(frac),ancrages_FND_avant_apres=bool(bounded),oeil_direction=eye,part_type_saccade=float(np.mean(types[mask]=='Saccade')),classe=label,**metrics))
     OUT.mkdir(parents=True,exist_ok=True)
     # Traces directement observées : aucune interpolation des coordonnées manquantes.
-    with (ROOT/'results/SUJ1/alertes.csv').open(encoding='utf-8-sig') as f:
+    with (ROOT/'results'/subject/'alertes.csv').open(encoding='utf-8-sig') as f:
         onset=float(next(e for e in csv.DictReader(f) if e['alerte']=='ALERT_FND')['temps_s'])
     zoom=(t>=onset-2)&(t<=onset+12)
     fig,axes=plt.subplots(3,1,figsize=(15,9),sharex=True)
@@ -101,18 +101,18 @@ def main(sources):
             if g['debut_s']<onset+12 and g['fin_s']>onset-2:
                 ax.axvspan(max(g['debut_s']-onset,-2),min(g['fin_s']-onset,12),color='#8799be',alpha=.12)
         ax.set_xlim(-2,12)
-    fig.suptitle('SUJ1 · Regard mesuré pendant les coupures de mapping autour de FND',fontsize=17,fontweight='bold')
+    fig.suptitle(f'{subject} · Regard mesuré pendant les coupures de mapping autour de FND',fontsize=17,fontweight='bold')
     fig.text(.12,.91,'Fond bleuté : mapping absent. Les positions vidéo et directions restent mesurées ; elles ne donnent pas seules le contour du FND.',fontsize=10)
     fig.text(.12,.03,'Coordonnées vidéo et angles : repères différents, sans compensation de tête. Aucun contour FND ni AOI vidéo manuelle utilisé.',fontsize=10)
     fig.savefig(OUT/'traces_autour_ALERT_FND.png',dpi=150);fig.savefig(OUT/'traces_autour_ALERT_FND.svg');plt.close(fig)
 
-    with (OUT/'coupures_SUJ1.csv').open('w',newline='') as f:
+    with (OUT/f'coupures_{subject}.csv').open('w',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=list(gaps[0]));writer.writeheader();writer.writerows(gaps)
-    summary={'sujet':'SUJ1','source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'echantillons':len(t),'types_mouvement':{str(x):int(np.sum(types==x)) for x in set(types)},'duree_observee_s':float(dt.sum()),'mapping_present_s':float(dt[mapped].sum()),'mapping_dans_FND_s':float(dt[inside].sum()),'mapping_hors_image_s':float(dt[mapped&~inside].sum()),'mapping_absent_regard_valide_s':float(dt[missing&valid].sum()),'mapping_absent_regard_invalide_s':float(dt[missing&~valid].sum()),'classes':{c:{'nombre':sum(g['classe']==c for g in gaps),'duree_s':sum(g['duree_s'] for g in gaps if g['classe']==c)} for c in sorted(set(g['classe'] for g in gaps))},'parametres':{'ancrages_avant_apres_s':.15,'ancrages_min_points':5,'continuite_duree_max_s':.25,'continuite_validite_min':.9,'continuite_angle_max_deg':2,'continuite_excursion_p90_max_deg':2,'continuite_distance_ancrages_max_pct_diag_FND':5,'continuite_excursion_video_p90_max_pct_diag':3,'excursion_validite_min':.8,'excursion_angle_retour_max_deg':3,'excursion_p90_min_deg':5,'excursion_video_p90_min_pct_diag':5},'limites':['Aucune AOI vidéo manuelle utilisée. Aucun point interpolé.','Les classes décrivent une compatibilité, pas une preuve de localisation.','Les saccades ne sont pas une preuve de sortie du FND ; mouvements de tête non compensés.','Les durées utilisent les intervalles entre échantillons, dernière mesure prolongée de la période médiane.']}
-    events=list(csv.DictReader((ROOT/'results/SUJ1/alertes.csv').open(encoding='utf-8-sig')))
+    summary={'sujet':subject,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'echantillons':len(t),'types_mouvement':{str(x):int(np.sum(types==x)) for x in set(types)},'duree_observee_s':float(dt.sum()),'mapping_present_s':float(dt[mapped].sum()),'mapping_dans_FND_s':float(dt[inside].sum()),'mapping_hors_image_s':float(dt[mapped&~inside].sum()),'mapping_absent_regard_valide_s':float(dt[missing&valid].sum()),'mapping_absent_regard_invalide_s':float(dt[missing&~valid].sum()),'classes':{c:{'nombre':sum(g['classe']==c for g in gaps),'duree_s':sum(g['duree_s'] for g in gaps if g['classe']==c)} for c in sorted(set(g['classe'] for g in gaps))},'parametres':{'ancrages_avant_apres_s':.15,'ancrages_min_points':5,'continuite_duree_max_s':.25,'continuite_validite_min':.9,'continuite_angle_max_deg':2,'continuite_excursion_p90_max_deg':2,'continuite_distance_ancrages_max_pct_diag_FND':5,'continuite_excursion_video_p90_max_pct_diag':3,'excursion_validite_min':.8,'excursion_angle_retour_max_deg':3,'excursion_p90_min_deg':5,'excursion_video_p90_min_pct_diag':5},'limites':['Aucune AOI vidéo manuelle utilisée. Aucun point interpolé.','Les classes décrivent une compatibilité, pas une preuve de localisation.','Les saccades ne sont pas une preuve de sortie du FND ; mouvements de tête non compensés.','Les durées utilisent les intervalles entre échantillons, dernière mesure prolongée de la période médiane.']}
+    events=list(csv.DictReader((ROOT/'results'/subject/'alertes.csv').open(encoding='utf-8-sig')))
     onset=float(next(e for e in events if e['alerte']=='ALERT_FND')['temps_s'])
     summary['coupures_autour_FND_moins2_plus12']=[g for g in gaps if g['fin_s']>onset-2 and g['debut_s']<onset+12]
-    (OUT/'audit_SUJ1.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+    (OUT/f'audit_{subject}.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2))
     colors={'continuite_FND_compatible':'#39a27b','excursion_retour_candidate':'#e69535','regard_majoritairement_invalide':'#c4c9d0','non_tranche':'#8799be'}
     fig,axes=plt.subplots(2,1,figsize=(16,7));fig.subplots_adjust(top=.84,bottom=.2,hspace=.6)
     for ax,(lo,hi,title) in zip(axes,[(t[0],t[-1],'Enregistrement complet'),(onset-2,onset+12,'Zoom ALERT_FND : temps depuis le marqueur manuel')]):
@@ -127,10 +127,10 @@ def main(sources):
     axes[1].axvline(0,color='#bd3b3b',ls='--')
     from matplotlib.patches import Patch
     fig.legend(handles=[Patch(color=v,label=k.replace('_',' ')) for k,v in colors.items()],loc='lower center',ncol=2,bbox_to_anchor=(.52,.065))
-    fig.suptitle('SUJ1 · Peut-on interpréter les coupures du mapping FND ?',fontsize=18,fontweight='bold')
+    fig.suptitle(f'{subject} · Peut-on interpréter les coupures du mapping FND ?',fontsize=18,fontweight='bold')
     fig.text(.15,.9,'Aucune AOI vidéo manuelle. Vert : continuité compatible ; orange : excursion avec retour candidate, destination inconnue.',fontsize=10)
     fig.text(.1,.025,'Aucune absence de mapping n’est automatiquement classée « hors FND ». Aucun regard n’est reconstruit.',fontsize=11)
-    fig.savefig(OUT/'coupures_mapping_SUJ1.png',dpi=150);fig.savefig(OUT/'coupures_mapping_SUJ1.svg');plt.close(fig)
+    fig.savefig(OUT/f'coupures_mapping_{subject}.png',dpi=150);fig.savefig(OUT/f'coupures_mapping_{subject}.svg');plt.close(fig)
     print(json.dumps(summary,ensure_ascii=False,indent=2))
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sources',required=True);main(p.parse_args().sources)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--sources',required=True);p.add_argument('--subject',choices=['SUJ1','SUJ2'],default='SUJ1');args=p.parse_args();main(args.sources,args.subject)
