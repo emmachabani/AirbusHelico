@@ -1,0 +1,10 @@
+{
+  "appuis_secondes": {
+    "SUJ5": 3.68,
+    "SUJ6": 3.61,
+    "SUJ7": 7.99
+  },
+  "definition": "apparition de l’alarme à appui d’acquittement",
+  "alignement": "placement conditionnel sur le marqueur manuel Tobii ; correspondance des apparitions à vérifier",
+  "position_spatiale_appui": "non connue, non inférée"
+}

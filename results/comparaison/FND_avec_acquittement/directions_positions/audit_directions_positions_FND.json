@@ -1,0 +1,449 @@
+{
+  "fenetre_s": [
+    0,
+    12
+  ],
+  "reference_s": [
+    -0.5,
+    0
+  ],
+  "limites_angles_deg": [
+    [
+      -45.56850857487073,
+      48.20627834136379
+    ],
+    [
+      -43.020847272933096,
+      54.13587327938021
+    ]
+  ],
+  "sujets": [
+    {
+      "sujet": "SUJ1",
+      "projet": 1,
+      "source_sha256": "ab8fd0434ee4a805f00a0ccad495b8d7fc1e548f7cd58e93ada3761b43c61072",
+      "alarme_FND_s": 67.873922,
+      "oeil_direction": "left",
+      "baseline_deg": [
+        -5.221727138670634,
+        14.329624043733745
+      ],
+      "reference_points_valides": 49,
+      "echantillons_apres_alarme": 1170,
+      "direction_valide": 1147,
+      "points_FND": 297,
+      "points_ML": 0,
+      "points_FND_hors_ML": 297,
+      "points_FND_statut_ML_inconnu": 0,
+      "positions_numerotees": [
+        {
+          "ordre": 1,
+          "debut_s": 0.8014540000000068,
+          "fin_s": 1.0018170000000026,
+          "x_pct": 51.4792899408284,
+          "y_pct": 0.8915304606240714
+        },
+        {
+          "ordre": 2,
+          "debut_s": 1.6329250000000002,
+          "fin_s": 1.7631940000000128,
+          "x_pct": 52.465483234714,
+          "y_pct": 44.9479940564636
+        },
+        {
+          "ordre": 3,
+          "debut_s": 1.793216000000001,
+          "fin_s": 3.456271000000001,
+          "x_pct": 48.12623274161736,
+          "y_pct": 76.96879643387815
+        },
+        {
+          "ordre": 4,
+          "debut_s": 3.476261000000008,
+          "fin_s": 3.706694000000013,
+          "x_pct": 62.72189349112426,
+          "y_pct": 75.48291233283804
+        },
+        {
+          "ordre": 5,
+          "debut_s": 5.349667000000011,
+          "fin_s": 5.469885000000005,
+          "x_pct": 0.9861932938856016,
+          "y_pct": 50.445765230312034
+        },
+        {
+          "ordre": 6,
+          "debut_s": 6.601915000000005,
+          "fin_s": 6.802277000000004,
+          "x_pct": 58.57988165680474,
+          "y_pct": 69.24219910846953
+        },
+        {
+          "ordre": 7,
+          "debut_s": 6.9224960000000095,
+          "fin_s": 6.972620000000006,
+          "x_pct": 54.43786982248521,
+          "y_pct": 2.4517087667161963
+        }
+      ]
+    },
+    {
+      "sujet": "SUJ2",
+      "projet": 1,
+      "source_sha256": "4314f786b5d8c2ae2e7f1e78c18fb497d3fb261753eb5e0787a200ad91edb9d6",
+      "alarme_FND_s": 60.21864,
+      "oeil_direction": "right",
+      "baseline_deg": [
+        0.30404179288479327,
+        -2.974997827067087
+      ],
+      "reference_points_valides": 45,
+      "echantillons_apres_alarme": 1167,
+      "direction_valide": 1113,
+      "points_FND": 120,
+      "points_ML": 0,
+      "points_FND_hors_ML": 120,
+      "points_FND_statut_ML_inconnu": 0,
+      "positions_numerotees": [
+        {
+          "ordre": 1,
+          "debut_s": 0.9617390000000015,
+          "fin_s": 2.1538729999999973,
+          "x_pct": 56.01577909270217,
+          "y_pct": 74.888558692422
+        }
+      ]
+    },
+    {
+      "sujet": "SUJ3",
+      "projet": 1,
+      "source_sha256": "98f7cca80c8e0cadbb5bbc2470bdd4e6ef2e8664723c5d83340cae702f0ea402",
+      "alarme_FND_s": 102.800033,
+      "oeil_direction": "left",
+      "baseline_deg": [
+        -2.3296930183131805,
+        4.011124078676184
+      ],
+      "reference_points_valides": 50,
+      "echantillons_apres_alarme": 1191,
+      "direction_valide": 1173,
+      "points_FND": 432,
+      "points_ML": 0,
+      "points_FND_hors_ML": 432,
+      "points_FND_statut_ML_inconnu": 0,
+      "positions_numerotees": [
+        {
+          "ordre": 1,
+          "debut_s": 1.4425980000000038,
+          "fin_s": 1.9735589999999945,
+          "x_pct": 59.566074950690336,
+          "y_pct": 75.18573551263002
+        },
+        {
+          "ordre": 2,
+          "debut_s": 2.0637380000000007,
+          "fin_s": 2.3742830000000055,
+          "x_pct": 21.104536489151872,
+          "y_pct": 71.1738484398217
+        },
+        {
+          "ordre": 3,
+          "debut_s": 2.3943650000000076,
+          "fin_s": 2.5044950000000057,
+          "x_pct": 37.27810650887574,
+          "y_pct": 64.26448736998515
+        },
+        {
+          "ordre": 4,
+          "debut_s": 5.419791000000004,
+          "fin_s": 5.550044999999997,
+          "x_pct": 55.32544378698225,
+          "y_pct": 66.93907875185735
+        },
+        {
+          "ordre": 5,
+          "debut_s": 5.650210999999999,
+          "fin_s": 5.730355000000003,
+          "x_pct": 66.0749506903353,
+          "y_pct": 56.90936106983655
+        },
+        {
+          "ordre": 6,
+          "debut_s": 5.760452999999998,
+          "fin_s": 5.8706260000000015,
+          "x_pct": 42.30769230769231,
+          "y_pct": 74.51708766716196
+        },
+        {
+          "ordre": 7,
+          "debut_s": 6.000889000000001,
+          "fin_s": 6.121108000000007,
+          "x_pct": 23.274161735700197,
+          "y_pct": 68.94502228826151
+        },
+        {
+          "ordre": 8,
+          "debut_s": 6.161179000000004,
+          "fin_s": 6.261313999999999,
+          "x_pct": 52.662721893491124,
+          "y_pct": 76.82020802377414
+        },
+        {
+          "ordre": 9,
+          "debut_s": 6.3615410000000026,
+          "fin_s": 7.313236000000003,
+          "x_pct": 54.73372781065089,
+          "y_pct": 73.40267459138187
+        },
+        {
+          "ordre": 10,
+          "debut_s": 7.333256000000006,
+          "fin_s": 7.774052999999995,
+          "x_pct": 62.32741617357002,
+          "y_pct": 77.4888558692422
+        },
+        {
+          "ordre": 11,
+          "debut_s": 7.844226000000006,
+          "fin_s": 8.114684999999994,
+          "x_pct": 83.82642998027613,
+          "y_pct": 61.58989598811293
+        },
+        {
+          "ordre": 12,
+          "debut_s": 8.244951999999998,
+          "fin_s": 8.335069000000004,
+          "x_pct": 37.3767258382643,
+          "y_pct": 11.367013372956908
+        },
+        {
+          "ordre": 13,
+          "debut_s": 8.375141999999997,
+          "fin_s": 8.555482999999995,
+          "x_pct": 14.003944773175542,
+          "y_pct": 5.200594353640416
+        },
+        {
+          "ordre": 14,
+          "debut_s": 10.498984000000007,
+          "fin_s": 10.559107999999995,
+          "x_pct": 8.086785009861932,
+          "y_pct": 2.674591381872214
+        }
+      ]
+    },
+    {
+      "sujet": "SUJ4",
+      "projet": 1,
+      "source_sha256": "c99b97bf386a90ce57912533d1e8d0983ecc97447981fa71540445a416f8cac2",
+      "alarme_FND_s": 89.935971,
+      "oeil_direction": "left",
+      "baseline_deg": [
+        3.4717216635625787,
+        5.336200975464477
+      ],
+      "reference_points_valides": 35,
+      "echantillons_apres_alarme": 1168,
+      "direction_valide": 849,
+      "points_FND": 178,
+      "points_ML": 0,
+      "points_FND_hors_ML": 178,
+      "points_FND_statut_ML_inconnu": 0,
+      "positions_numerotees": [
+        {
+          "ordre": 1,
+          "debut_s": 0.7112639999999999,
+          "fin_s": 0.781400000000005,
+          "x_pct": 40.63116370808679,
+          "y_pct": 9.806835066864785
+        },
+        {
+          "ordre": 2,
+          "debut_s": 3.28594600000001,
+          "fin_s": 3.346040000000002,
+          "x_pct": 84.61538461538461,
+          "y_pct": 38.48439821693908
+        },
+        {
+          "ordre": 3,
+          "debut_s": 3.9671790000000016,
+          "fin_s": 4.027272000000011,
+          "x_pct": 64.49704142011835,
+          "y_pct": 4.011887072808321
+        },
+        {
+          "ordre": 4,
+          "debut_s": 5.1393230000000045,
+          "fin_s": 5.189374000000001,
+          "x_pct": 60.05917159763314,
+          "y_pct": 56.16641901931649
+        }
+      ]
+    },
+    {
+      "sujet": "SUJ5",
+      "projet": 2,
+      "source_sha256": "30d2d89e6cffd8f33aa10deb5352a1d34b63a38f76fb3f031b3eadcf8771f5c3",
+      "alarme_FND_s": 97.016629,
+      "oeil_direction": "left",
+      "baseline_deg": [
+        -2.3216739152344577,
+        4.884638201927468
+      ],
+      "reference_points_valides": 48,
+      "echantillons_apres_alarme": 1193,
+      "direction_valide": 1185,
+      "points_FND": 212,
+      "points_ML": 0,
+      "points_FND_hors_ML": 212,
+      "points_FND_statut_ML_inconnu": 0,
+      "positions_numerotees": [
+        {
+          "ordre": 1,
+          "debut_s": 1.2923609999999996,
+          "fin_s": 3.305962000000008,
+          "x_pct": 52.9585798816568,
+          "y_pct": 78.7518573551263
+        }
+      ]
+    },
+    {
+      "sujet": "SUJ6",
+      "projet": 2,
+      "source_sha256": "3f63fa077a5b8b2331876be71537e3984201baac976d9b7ec73854031e23fd68",
+      "alarme_FND_s": 139.027234,
+      "oeil_direction": "right",
+      "baseline_deg": [
+        1.39897765822123,
+        5.580832358936112
+      ],
+      "reference_points_valides": 50,
+      "echantillons_apres_alarme": 1191,
+      "direction_valide": 1169,
+      "points_FND": 342,
+      "points_ML": 0,
+      "points_FND_hors_ML": 342,
+      "points_FND_statut_ML_inconnu": 0,
+      "positions_numerotees": [
+        {
+          "ordre": 1,
+          "debut_s": 0.47082900000000905,
+          "fin_s": 3.786830000000009,
+          "x_pct": 44.082840236686394,
+          "y_pct": 70.28231797919763
+        }
+      ]
+    },
+    {
+      "sujet": "SUJ7",
+      "projet": 2,
+      "source_sha256": "bedb75f2d38977c8df960422cf7e9e7db6abc10c94214b68fa0a095344fd2e10",
+      "alarme_FND_s": 132.614376,
+      "oeil_direction": "left",
+      "baseline_deg": [
+        -4.938803619681678,
+        -4.5713053896929265
+      ],
+      "reference_points_valides": 50,
+      "echantillons_apres_alarme": 1183,
+      "direction_valide": 1058,
+      "points_FND": 452,
+      "points_ML": 92,
+      "points_FND_hors_ML": 360,
+      "points_FND_statut_ML_inconnu": 0,
+      "positions_numerotees": [
+        {
+          "ordre": 1,
+          "debut_s": 3.576467000000008,
+          "fin_s": 3.6566449999999975,
+          "x_pct": 42.80078895463511,
+          "y_pct": 29.12332838038633
+        },
+        {
+          "ordre": 2,
+          "debut_s": 3.6866640000000075,
+          "fin_s": 4.317797000000013,
+          "x_pct": 54.73372781065089,
+          "y_pct": 70.50520059435365
+        },
+        {
+          "ordre": 3,
+          "debut_s": 4.438013000000012,
+          "fin_s": 4.558231000000006,
+          "x_pct": 13.609467455621301,
+          "y_pct": 27.488855869242197
+        },
+        {
+          "ordre": 4,
+          "debut_s": 4.778675000000021,
+          "fin_s": 5.19939100000002,
+          "x_pct": 54.437869822485204,
+          "y_pct": 77.86032689450222
+        },
+        {
+          "ordre": 5,
+          "debut_s": 5.349658000000005,
+          "fin_s": 5.5099480000000085,
+          "x_pct": 57.98816568047337,
+          "y_pct": 82.76374442793463
+        },
+        {
+          "ordre": 6,
+          "debut_s": 5.600118000000009,
+          "fin_s": 5.680261000000002,
+          "x_pct": 43.98422090729783,
+          "y_pct": 81.42644873699851
+        },
+        {
+          "ordre": 7,
+          "debut_s": 5.710310000000021,
+          "fin_s": 6.732175000000012,
+          "x_pct": 51.282051282051285,
+          "y_pct": 78.7518573551263
+        },
+        {
+          "ordre": 8,
+          "debut_s": 6.81232,
+          "fin_s": 6.972609000000006,
+          "x_pct": 30.17751479289941,
+          "y_pct": 78.30609212481427
+        },
+        {
+          "ordre": 9,
+          "debut_s": 7.333260999999993,
+          "fin_s": 7.4033799999999985,
+          "x_pct": 56.311637080867854,
+          "y_pct": 89.9702823179792
+        },
+        {
+          "ordre": 10,
+          "debut_s": 7.623824000000013,
+          "fin_s": 7.66389700000002,
+          "x_pct": 4.1420118343195265,
+          "y_pct": 65.37890044576523
+        },
+        {
+          "ordre": 11,
+          "debut_s": 7.784113000000019,
+          "fin_s": 7.964393000000001,
+          "x_pct": 9.861932938856016,
+          "y_pct": 7.8751857355126305
+        },
+        {
+          "ordre": 12,
+          "debut_s": 8.244900000000001,
+          "fin_s": 8.80591800000002,
+          "x_pct": 64.29980276134123,
+          "y_pct": 86.1812778603269
+        },
+        {
+          "ordre": 13,
+          "debut_s": 8.825997999999998,
+          "fin_s": 8.936161999999996,
+          "x_pct": 54.536489151873766,
+          "y_pct": 64.71025260029718
+        }
+      ]
+    }
+  ]
+}
