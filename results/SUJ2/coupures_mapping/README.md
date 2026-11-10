@@ -64,3 +64,12 @@ l’empreinte de la source et les statistiques. Les durées utilisent les
 intervalles entre échantillons, avec une période médiane pour la dernière
 mesure. Les durées des coupures et du mapping ont été vérifiées comme
 complémentaires, et les paramètres sont identiques à ceux de SUJ1.
+
+## Distinction FND et master liste
+
+Sur la fenêtre −2 à +12 s autour de ALERT_FND, aucun point valide mappé
+n’est indiqué dans l’AOI ML. Les points sont distingués par l’indicateur
+AOI exporté : rose = ML (incluse dans le FND), bleu-vert = FND hors ML.
+La hauteur dans la photo ne suffit pas à identifier la master liste.
+L’absence de point ML observé ne démontre pas une absence de regard ML
+pendant les périodes sans mapping.

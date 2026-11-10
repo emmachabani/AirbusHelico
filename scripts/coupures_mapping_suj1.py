@@ -92,7 +92,16 @@ def main(sources,subject='SUJ1'):
     for j,label in enumerate(['Horizontal','Vertical']):
         axes[1].plot(t[zoom]-onset,angles['left'][zoom,j],lw=.8,label=label)
     axes[1].set_ylabel('Direction œil gauche (°)');axes[1].legend(loc='upper right')
-    axes[2].scatter(t[zoom&inside]-onset,100*my[zoom&inside]/mh[zoom&inside],s=6,label='Hauteur mappée sur FND')
+    for region,color,label in [
+        (inside&(ml==1),'#b25393','Dans ML (incluse dans le FND)'),
+        (inside&(ml==0),'#147e85','Dans le FND hors ML'),
+        (inside&~np.isin(ml,[0,1]),'#89939f','Dans le FND, statut ML indisponible'),
+    ]:
+        points=zoom&region
+        if points.any() or "statut ML" not in label:
+            axes[2].scatter(t[points]-onset,100*my[points]/mh[points],s=9,color=color,label=label)
+    if not (zoom&inside&(ml==1)).any():
+        axes[2].text(.02,.08,'Aucun point mappé dans ML sur cette fenêtre.',transform=axes[2].transAxes,color='#b25393',fontsize=11)
     axes[2].set(ylabel='Hauteur sur photo FND (%)',ylim=(105,-5),xlabel='Secondes depuis le marqueur ALERT_FND')
     axes[2].legend(loc='upper right')
     for ax in axes:
