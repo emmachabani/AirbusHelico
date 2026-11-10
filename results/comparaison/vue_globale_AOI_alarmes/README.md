@@ -1,3 +1,18 @@
+## Version actuelle : une ligne par zone
+
+[Figure à deux lignes par case](regard_7_sujets_5_alarmes_FND_ML_lignes_appuis.png)
+· [SVG](regard_7_sujets_5_alarmes_FND_ML_lignes_appuis.svg).
+
+La ligne supérieure indique le **FND entier, ML incluse**, en bleu.
+La ligne inférieure indique la **master liste seule**, en violet.
+Le blanc sur la ligne ML indique un regard dans le FND mais hors ML ;
+le gris indique une position indéterminée, et le jaune un statut ML inconnu.
+Les étoiles roses restent les appuis externes conditionnellement alignés.
+Les figures à une seule bande sont conservées comme versions précédentes.
+Les durées et périodes sous-jacentes restent identiques ; seule la présentation change.
+
+---
+
 # Vue globale : sept sujets, cinq alarmes, FND et ML
 
 [Figure PNG](regard_7_sujets_5_alarmes_FND_ML_appuis.png) ·

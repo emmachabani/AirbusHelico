@@ -62,7 +62,7 @@ def main(sources):
         events=read(folder/'alertes.csv');quality={r['alerte']:r['reserve'] for r in read(folder/'qualite_alertes.csv')}
         audits.append(dict(sujet=subject,source_sha256=str(data['sha'])))
         for j,alarm in enumerate(ALARMS):
-            ax=axes[i,j];ax.set_facecolor(COLORS['indetermine']);ax.set(xlim=(0,END),ylim=(-.5,.5),yticks=[],xticks=[0,4,8,12,16,18]);ax.tick_params(axis='x',length=0,labelsize=8)
+            ax=axes[i,j];ax.set_facecolor(COLORS['indetermine']);ax.set(xlim=(0,END),ylim=(-.7,.7),yticks=[],xticks=[0,4,8,12,16,18]);ax.tick_params(axis='x',length=0,labelsize=8)
             for spine in ax.spines.values():spine.set_visible(False)
             if i==0:ax.set_title(alarm.replace('ALERT_',''),fontsize=12,fontweight='bold',pad=15)
             if j==0:ax.set_ylabel(f'{subject}\nProjet {project}',rotation=0,labelpad=40,va='center',fontsize=10,fontweight='bold')
@@ -84,26 +84,39 @@ def main(sources):
                 if local and local[-1]['etat']==name and abs(local[-1]['fin_s']-start)<1e-8:local[-1]['fin_s']=end
                 else:local.append(dict(sujet=subject,alarme=alarm,etat=name,debut_s=start,fin_s=end))
                 durations[name]+=end-start
-            for span in local:ax.broken_barh([(span['debut_s'],span['fin_s']-span['debut_s'])],(-.22,.4),facecolors=COLORS[span['etat']],edgecolors='none')
+            # Deux pistes imbriquées : tout point ML appartient aussi au FND.
+            for y in [.18,-.18]:
+                ax.broken_barh([(0,END)],(y-.12,.24),facecolors=COLORS['indetermine'],edgecolors='none')
+            for span in local:
+                interval=[(span['debut_s'],span['fin_s']-span['debut_s'])]
+                ax.broken_barh(interval,(.06,.24),facecolors='#63b6d1',edgecolors='none')
+                if span['etat']=='ML':
+                    ax.broken_barh(interval,(-.30,.24),facecolors=COLORS['ML'],edgecolors='none')
+                elif span['etat']=='FND_hors_ML':
+                    ax.broken_barh(interval,(-.30,.24),facecolors='#ffffff',edgecolors='none')
+                else:
+                    ax.broken_barh(interval,(-.30,.24),facecolors=COLORS['FND_ML_inconnu'],edgecolors='none')
+            for y,label in [(.18,'FND'),(-.18,'ML')]:
+                ax.text(-.025,y,label,transform=ax.get_yaxis_transform(),ha='right',va='center',fontsize=6.5,color='#526174')
             spans.extend(local);durations['indetermine']=END-sum(durations.values());assert durations['indetermine']>=-1e-7
             row.update({k+'_s':v for k,v in durations.items()})
             ax.axvline(0,color='#b34848',ls='--',lw=1)
             if value is not None:
-                ax.axvline(value,color='#ae3f70',ls=':',lw=1.3);ax.scatter(value,-.33,marker='*',color='#ae3f70',s=65,zorder=5)
-                ax.text(value+.25,-.34,f'{value:g} s',fontsize=8,color='#96335e',va='center');row['appui_place']=1
+                ax.axvline(value,color='#ae3f70',ls=':',lw=1.3);ax.scatter(value,-.48,marker='*',color='#ae3f70',s=65,zorder=5)
+                ax.text(value+.25,-.49,f'{value:g} s',fontsize=8,color='#96335e',va='center');row['appui_place']=1
             reserve='Publicité signalée' if 'Publicité' in note else 'Repère à vérifier' if 'mais marqueur' in note else 'Repère approximatif' if 'approximative' in note else ''
             if reserve:ax.text(.98,.95,reserve,transform=ax.transAxes,ha='right',va='top',fontsize=7,color='#8d5610',bbox={'facecolor':'#fff0d3','edgecolor':'none','pad':1})
             summary.append(row)
         print(subject+' extrait et représenté',flush=True)
     fig.suptitle('Regard sur le FND et la master liste après les cinq types d’alarme',x=.075,ha='left',fontsize=20,fontweight='bold',y=.975)
-    fig.text(.075,.935,'7 sujets · 5 alarmes · 0–18 secondes après le marqueur manuel d’apparition · ML incluse dans le FND',fontsize=12,color='#526174')
-    handles=[Patch(color=COLORS['FND_hors_ML'],label='FND hors ML'),Patch(color=COLORS['ML'],label='Master liste (ML)'),Patch(color=COLORS['FND_ML_inconnu'],label='FND, statut ML indisponible'),Patch(color=COLORS['indetermine'],label='Position indéterminée (pas « hors FND »)'),Line2D([],[],marker='*',color='#ae3f70',ls=':',label='Appui externe : alignement à vérifier')]
+    fig.text(.075,.935,'7 sujets · 5 alarmes · 0–18 secondes après le marqueur manuel · Deux lignes : FND entier puis ML',fontsize=12,color='#526174')
+    handles=[Patch(color='#63b6d1',label='Ligne FND : dans le FND, ML incluse'),Patch(color=COLORS['ML'],label='Ligne ML : dans la master liste'),Patch(facecolor='white',edgecolor='#aab3bf',label='Ligne ML : hors ML, dans le FND'),Patch(color=COLORS['FND_ML_inconnu'],label='Statut ML indisponible'),Patch(color=COLORS['indetermine'],label='Position indéterminée (pas « hors FND »)'),Line2D([],[],marker='*',color='#ae3f70',ls=':',label='Appui externe : alignement à vérifier')]
     fig.legend(handles=handles,loc='upper left',bbox_to_anchor=(.07,.92),ncol=3,frameon=False,fontsize=10)
     fig.supxlabel('Secondes après l’apparition annotée de l’alarme',y=.115,fontsize=12)
     fig.text(.075,.06,'Appuis SUJ5–7 : durées apparition → appui fournies séparément. Placement conditionnel sur le repère Tobii ; synchronisation à vérifier.\nSans marqueur d’apparition, la durée d’appui est indiquée mais aucune chronologie du regard n’est inventée.',fontsize=10,color='#526174')
     fig.text(.075,.022,'Aucune AOI vidéo manuelle utilisée. Gris : mapping absent, mesure invalide ou enregistrement indisponible ; ce n’est pas une absence de détection.\nP1 : SUJ1–4, clignotement manuel ; P2 : SUJ5–7, automatique. FND : tout le FND clignote. Géométrie ML entre projets à confirmer.',fontsize=10,color='#526174')
     fig.subplots_adjust(left=.115,right=.98,top=.82,bottom=.18,hspace=.35,wspace=.13)
-    for ext in ['png','svg']:fig.savefig(OUT/f'regard_7_sujets_5_alarmes_FND_ML_appuis.{ext}',dpi=170)
+    for ext in ['png','svg']:fig.savefig(OUT/f'regard_7_sujets_5_alarmes_FND_ML_lignes_appuis.{ext}',dpi=170)
     plt.close(fig)
     for name,rows in [('fenetres_AOI_alarmes.csv',summary),('periodes_AOI_alarmes.csv',spans)]:
         with (OUT/name).open('w',newline='') as f:
