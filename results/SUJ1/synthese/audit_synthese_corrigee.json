@@ -1,0 +1,114 @@
+{
+  "source_sha256": "ab8fd0434ee4a805f00a0ccad495b8d7fc1e548f7cd58e93ada3761b43c61072",
+  "methode": "mapping photo FND et AOI ML ; regard valide non mappé = hors FND présumé ; aucune AOI vidéo manuelle",
+  "duree_observee_s": 131.05709299999998,
+  "durees_s": {
+    "1": 15.067220999999957,
+    "2": 1.1620719999999984,
+    "3": 0.0,
+    "4": 111.53197799999998,
+    "0": 3.295822000000035
+  },
+  "premiers_points": [
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_FND",
+      "zone": "FND entier (ML incluse)",
+      "apparition_annotee_s": 67.873922,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": 0.8014540000000068,
+      "statut": "premier point mappé disponible",
+      "reserve": "Apparition annotée manuellement par Élie"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_FND",
+      "zone": "Master liste (ML)",
+      "apparition_annotee_s": 67.873922,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": null,
+      "statut": "aucun point dans la fenêtre",
+      "reserve": "Apparition annotée manuellement par Élie"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_ML_LARGE",
+      "zone": "FND entier (ML incluse)",
+      "apparition_annotee_s": 42.948827,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": 1.0819619999999972,
+      "statut": "premier point mappé disponible",
+      "reserve": "Apparition annotée manuellement par Élie"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_ML_LARGE",
+      "zone": "Master liste (ML)",
+      "apparition_annotee_s": 42.948827,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": null,
+      "statut": "aucun point dans la fenêtre",
+      "reserve": "Apparition annotée manuellement par Élie"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_ML_LIGHT",
+      "zone": "FND entier (ML incluse)",
+      "apparition_annotee_s": 20.858843,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": 0.6612299999999998,
+      "statut": "premier point mappé disponible",
+      "reserve": "Apparition annotée manuellement par Élie"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_ML_LIGHT",
+      "zone": "Master liste (ML)",
+      "apparition_annotee_s": 20.858843,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": 1.8533749999999998,
+      "statut": "premier point mappé disponible",
+      "reserve": "Apparition annotée manuellement par Élie"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_RED",
+      "zone": "FND entier (ML incluse)",
+      "apparition_annotee_s": 83.852817,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": 2.724917000000005,
+      "statut": "premier point mappé disponible",
+      "reserve": "Publicité signalée ; essai perturbé"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_RED",
+      "zone": "Master liste (ML)",
+      "apparition_annotee_s": 83.852817,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": null,
+      "statut": "aucun point dans la fenêtre",
+      "reserve": "Publicité signalée ; essai perturbé"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_TEXT",
+      "zone": "FND entier (ML incluse)",
+      "apparition_annotee_s": 110.110339,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": 0.7213080000000076,
+      "statut": "premier point mappé disponible",
+      "reserve": "Apparition annotée manuellement par Élie"
+    },
+    {
+      "sujet": "SUJ1",
+      "alarme": "ALERT_TEXT",
+      "zone": "Master liste (ML)",
+      "apparition_annotee_s": 110.110339,
+      "fenetre_s": 10.0,
+      "premier_point_mappe_apres_repere_s": null,
+      "statut": "aucun point dans la fenêtre",
+      "reserve": "Apparition annotée manuellement par Élie"
+    }
+  ]
+}
